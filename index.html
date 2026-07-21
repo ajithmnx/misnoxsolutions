@@ -570,7 +570,35 @@ function initReveal(){
   }
   window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(apply)}},{passive:true});
 })();
-function submitForm(e){e.preventDefault();document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:rgba(255,255,255,0.04);border-radius:var(--r);border:1px solid rgba(255,255,255,0.09)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:1.2rem;font-weight:800;color:#f0f6ff;margin-bottom:8px">Thank you — enquiry received</h3><p style="color:var(--muted)">A response follows within one business day.</p></div>`}
+function submitForm(e){
+  e.preventDefault();
+  const form=e.target;
+  const btn=form.querySelector('button[type="submit"]');
+  const originalBtnHtml=btn.innerHTML;
+  btn.disabled=true;
+  btn.innerHTML='Sending…';
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form),
+    headers:{'Accept':'application/json'}
+  }).then(res=>{
+    if(res.ok){
+      document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:rgba(255,255,255,0.04);border-radius:var(--r);border:1px solid rgba(255,255,255,0.09)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:1.2rem;font-weight:800;color:#f0f6ff;margin-bottom:8px">Thank you — enquiry received</h3><p style="color:var(--muted)">A response follows within one business day.</p></div>`;
+    }else{
+      btn.disabled=false;
+      btn.innerHTML=originalBtnHtml;
+      let err=form.querySelector('.form-error');
+      if(!err){err=document.createElement('p');err.className='form-error';err.style.cssText='color:#f87171;font-size:0.85rem;margin-top:10px';form.appendChild(err);}
+      err.textContent='Something went wrong sending this — please try again or email contact@misnoxsolutions.com.au directly.';
+    }
+  }).catch(()=>{
+    btn.disabled=false;
+    btn.innerHTML=originalBtnHtml;
+    let err=form.querySelector('.form-error');
+    if(!err){err=document.createElement('p');err.className='form-error';err.style.cssText='color:#f87171;font-size:0.85rem;margin-top:10px';form.appendChild(err);}
+    err.textContent='Network error — please try again or email contact@misnoxsolutions.com.au directly.';
+  });
+}
 
 const platforms=['Microsoft Dynamics 365','Business Central','Finance & Operations','NetSuite','Oracle','SAP','Xero','MYOB','MYOB Acumatica','TechnologyOne','QuickBooks'];
 const platformsGrid=(cls='section')=>`

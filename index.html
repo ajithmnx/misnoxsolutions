@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>MISNOX Solutions | System Integration & Finance Automation</title>
-<meta name="description" content="MISNOX Solutions connects finance, procurement, and operational systems — delivering the integration architecture, automation, and controls that high-performing organisations depend on. Based in North Sydney, NSW."/>
+<meta name="description" content="MISNOX connects ERP and finance systems for Australian mid-market and enterprise organisations. Fixed-scope integration, onshore delivery, controls by design."/>
 <meta name="theme-color" content="#121828"/>
 <link rel="canonical" href="https://misnox.com.au/"/>
 
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="MISNOX Solutions"/>
 <meta property="og:title" content="MISNOX Solutions | System Integration &amp; Finance Automation"/>
-<meta property="og:description" content="Your systems connected. Your controls enforced. ERP integration, finance automation, and implementation delivery for Australian organisations."/>
+<meta property="og:description" content="MISNOX connects ERP and finance systems for Australian mid-market and enterprise organisations. Fixed-scope integration, onshore delivery, controls by design."/>
 <meta property="og:url" content="https://misnox.com.au/"/>
 <meta property="og:image" content="https://misnox.com.au/og-image.png"/>
 <meta property="og:locale" content="en_AU"/>
@@ -32,14 +32,14 @@
   "@context":"https://schema.org",
   "@type":"ProfessionalService",
   "name":"MISNOX Solutions",
-  "description":"ERP integration services in Australia. We connect Dynamics 365, Business Central, NetSuite, Xero, MYOB and other business platforms — with financial controls enforced in the workflow.",
+  "description":"ERP integration services in Australia. We connect Dynamics 365, Business Central, NetSuite, Oracle Fusion Cloud ERP, Xero, MYOB and other business platforms — with financial controls enforced in the workflow.",
   "url":"https://misnox.com.au/",
   "email":"contact@misnox.com.au",
   "telephone":"+61452222222",
   "areaServed":{"@type":"Country","name":"Australia"},
   "address":{"@type":"PostalAddress","addressLocality":"North Sydney","addressRegion":"NSW","addressCountry":"AU"},
   "sameAs":["https://linkedin.com/company/misnox-solutions"],
-  "knowsAbout":["ERP integration","Microsoft Dynamics 365","Business Central","NetSuite","Xero","MYOB","accounts payable automation","system integration","finance automation"],
+  "knowsAbout":["ERP integration","Microsoft Dynamics 365","Business Central","NetSuite","Oracle Fusion Cloud ERP","Workato","Xero","MYOB","accounts payable automation","system integration","finance automation"],
   "hasOfferCatalog":{
     "@type":"OfferCatalog","name":"Integration & Implementation Services",
     "itemListElement":[
@@ -406,7 +406,7 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
       <li><a class="nav-link" href="#contact">Contact</a></li>
     </ul>
     <div style="margin-left:12px">
-      <button class="btn btn-primary" data-cta="nav" onclick="navigate('contact')">Book a Discovery Call <span class="arrow">→</span></button>
+      <button class="btn btn-primary" data-cta="nav" onclick="navigate('contact','Complimentary systems assessment')">Book a free systems assessment <span class="arrow">→</span></button>
     </div>
     <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
       <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg>
@@ -423,6 +423,7 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
     <a href="#faq" onclick="toggleMobile()">FAQ</a>
     <a href="#why-misnox" onclick="toggleMobile()">Why MISNOX</a>
     <a href="#contact" onclick="toggleMobile()">Contact</a>
+    <a href="#contact" onclick="toggleMobile()">Book a free systems assessment</a>
   </div>
 </nav>
 
@@ -514,6 +515,7 @@ const PF={
   t1:`<span class="pf-badge" title="TechnologyOne" style="background:#1e3a6e;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.6rem">T1</span></span>`,
   xero:`<span class="pf-badge" title="Xero" style="background:#13b5ea;border-color:transparent;border-radius:50%"><span class="pf-badge-txt" style="font-size:0.7rem">X</span></span>`,
   qb:`<span class="pf-badge" title="QuickBooks" style="background:#2ca01c;border-color:transparent;border-radius:50%"><span class="pf-badge-txt" style="font-size:0.58rem">qb</span></span>`,
+  workato:`<span class="pf-badge" title="Workato" style="background:#3b4a63;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.7rem">W</span></span>`,
 };
 
 const routes={};
@@ -599,7 +601,7 @@ function submitForm(e){
   });
 }
 
-const platforms=['Microsoft Dynamics 365','Business Central','Finance & Operations','NetSuite','Oracle','SAP','Xero','MYOB','MYOB Acumatica','TechnologyOne','QuickBooks'];
+const platforms=['Microsoft Dynamics 365','Business Central','Finance & Operations','NetSuite','Oracle Fusion Cloud ERP','SAP','Xero','MYOB','MYOB Acumatica','TechnologyOne','QuickBooks','Workato'];
 const platformsGrid=(cls='section')=>`
 <section class="${cls}">
   <div class="container">
@@ -610,10 +612,12 @@ const platformsGrid=(cls='section')=>`
     <div class="grid-3">${[
       [PF.ms,'Microsoft Dynamics 365','F&O and Business Central implementations for mid-market and enterprise organisations.'],
       [PF.oracle,'Oracle NetSuite','Cloud ERP implementations for growing businesses — configuration, customisation, and migration.'],
+      [PF.oracle,'Oracle Fusion Cloud ERP','Finance and procurement integration through documented Oracle REST APIs.'],
       [PF.sap,'SAP','Implementation and integration for organisations operating complex, multi-entity environments.'],
       [PF.myob,'MYOB & MYOB Acumatica','MYOB implementations for mid-market Australian businesses.'],
       [PF.t1,'TechnologyOne','Implementations for government, education, health, and infrastructure organisations.'],
       [`<span class="pf-pair">${PF.xero}${PF.qb}</span>`,'Xero & QuickBooks','Platform setup, integration, and workflow automation.'],
+      [PF.workato,'Workato','Integration platform (iPaaS) workflows connecting ERP, finance, and procurement systems.'],
     ].map(([b,t,d])=>`<div class="card reveal"><div class="pf-head">${b}<h3>${t}</h3></div><p>${d}</p></div>`).join('')}</div>
   </div>
 </section>`;
@@ -651,7 +655,7 @@ register('home',()=>`
         <h1 class="ha1">Your systems, <span class="hl">connected</span>.<br>Your controls, <span class="hl">enforced</span>.<span class="sr-only"> — ERP integration services for Australian mid-market and enterprise organisations</span></h1>
         <p class="hero-sub ha2">Integration architecture, implementation, and managed operations for ERP, finance, and procurement platforms — engineered so data moves automatically and controls hold.</p>
         <div class="hero-actions ha3">
-          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="navigate('contact')">Book a Discovery Call <span class="arrow">→</span></button>
+          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="navigate('contact','Complimentary systems assessment')">Book a free systems assessment <span class="arrow">→</span></button>
           <button class="btn btn-ghost btn-lg" data-cta="hero-secondary" onclick="navigate('services')">Explore Capabilities</button>
         </div>
         <div class="hero-promises ha4">
@@ -871,7 +875,7 @@ ${platformsGrid('section section-alt')}
           <h3>Complimentary systems assessment</h3>
           <p>Submit a summary of the current system landscape and receive a concise written assessment of the integration gaps.</p>
         </div>
-        <button class="btn btn-primary" data-cta="lead-assessment" onclick="navigate('contact','Free Systems Assessment')">Request an Assessment <span class="arrow">→</span></button>
+        <button class="btn btn-primary" data-cta="lead-assessment" onclick="navigate('contact','Complimentary systems assessment')">Request an Assessment <span class="arrow">→</span></button>
       </div>
     </div>
   </div>
@@ -945,7 +949,7 @@ register('services',()=>`
         </div>
         <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Connected via documented APIs and middleware — typically as the counterpart system in an integration.</p>
         <div class="chips" style="margin-top:0">
-          ${['NetSuite','SAP','Oracle','TechnologyOne','QuickBooks','Salesforce','Power BI','Azure Integration Services','Boomi','MuleSoft'].map(c=>`<span class="chip">${c}</span>`).join('')}
+          ${['NetSuite','SAP','Oracle Fusion Cloud ERP','TechnologyOne','QuickBooks','Salesforce','Power BI','Azure Integration Services','Boomi','MuleSoft','Workato'].map(c=>`<span class="chip">${c}</span>`).join('')}
         </div>
       </div>
     </div>
@@ -1163,7 +1167,7 @@ register('contact',()=>`
         <div><label for="f-email">Email Address *</label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com.au"></div>
         <div><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Your organisation"></div>
         <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="04XX XXX XXX"></div>
-        <div class="form-full"><label for="f-service">Service Interest</label><select id="f-service" name="service"><option value="">Select a service...</option><option>ERP Implementation</option><option>System Integration</option><option>API Integration</option><option>Data Migration</option><option>Managed Support</option><option>Advisory &amp; Architecture</option><option>Free Systems Assessment</option><option>Other</option></select></div>
+        <div class="form-full"><label for="f-service">Service Interest</label><select id="f-service" name="service"><option value="">Select a service...</option><option>Complimentary systems assessment</option><option>ERP Implementation</option><option>System Integration</option><option>API Integration</option><option>Data Migration</option><option>Managed Support</option><option>Advisory &amp; Architecture</option><option>Other</option></select></div>
         <div class="form-full"><label for="f-message">Message *</label><textarea id="f-message" name="message" required placeholder="Tell us about your current systems, the problem you're solving, or the project you're planning..."></textarea></div>
       </div>
       <!-- Honeypot spam trap -->
@@ -1175,10 +1179,10 @@ register('contact',()=>`
     <!-- Direct booking alternative -->
     <div style="margin-top:24px;padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
       <div>
-        <p style="font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:3px">Prefer to book directly?</p>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55)">Pick a time directly in our calendar.</p>
+        <p style="font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:3px">Prefer to start with an assessment?</p>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55)">Select the complimentary systems assessment in the form above.</p>
       </div>
-      <a class="btn btn-ghost" href="https://calendly.com/YOUR_HANDLE" target="_blank" rel="noopener" data-cta="calendly-direct">Book a Time <span class="arrow">→</span></a>
+      <a class="btn btn-ghost" href="#contact" data-cta="contact-assessment" onclick="event.preventDefault();navigate('contact','Complimentary systems assessment')">Book a free systems assessment <span class="arrow">→</span></a>
     </div>
   </div>
   <div class="reveal reveal-delay-1">

@@ -23,8 +23,13 @@
 <meta name="twitter:description" content="Your systems connected. Your controls enforced. ERP integration and finance automation delivered in-house."/>
 <meta name="twitter:image" content="https://misnox.com.au/og-image.png"/>
 
-<!-- Favicon (inline SVG — no external file needed) -->
+<!-- Favicon (inline SVG, no external file needed) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230ea5e9'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='system-ui,sans-serif' font-size='58' font-weight='900' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E"/>
+
+<!-- Fonts: serif for the hero title only -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&amp;display=swap" rel="stylesheet"/>
 
 <!-- Local business structured data -->
 <script type="application/ld+json">
@@ -32,7 +37,7 @@
   "@context":"https://schema.org",
   "@type":"ProfessionalService",
   "name":"MISNOX Solutions",
-  "description":"ERP integration services in Australia. We connect Dynamics 365, Business Central, NetSuite, Oracle Fusion Cloud ERP, Xero, MYOB and other business platforms — with financial controls enforced in the workflow.",
+  "description":"ERP integration services in Australia. We connect Dynamics 365, Business Central, NetSuite, Oracle Fusion Cloud ERP, Xero, MYOB and other business platforms, with financial controls enforced in the workflow.",
   "url":"https://misnox.com.au/",
   "email":"contact@misnox.com.au",
   "telephone":"+61452222222",
@@ -78,7 +83,7 @@ a{text-decoration:none;color:inherit}
 /* ── UTIL ── */
 .container{max-width:1160px;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:16px}
-.section{padding:96px 0}.section-sm{padding:60px 0}
+.section{padding:128px 0}.section-sm{padding:72px 0}.section-roomy{padding:168px 0}
 
 /* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(34px) scale(0.985);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1);will-change:opacity,transform}
@@ -118,7 +123,7 @@ a{text-decoration:none;color:inherit}
 .mobile-menu a{display:block;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.9375rem;color:rgba(255,255,255,0.82)}
 
 /* ════════════════════════════════
-   HERO — split with flow stack
+   HERO: split with flow stack
 ════════════════════════════════ */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 60% at 75% 30%,#182036 0%,var(--bg) 60%);padding-top:68px}
 .hero-glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.13) 0%,transparent 65%);right:-140px;top:8%;pointer-events:none}
@@ -131,13 +136,12 @@ a{text-decoration:none;color:inherit}
 .ha0{animation-delay:0.05s}.ha1{animation-delay:0.16s}.ha2{animation-delay:0.28s}.ha3{animation-delay:0.4s}.ha4{animation-delay:0.52s}
 
 .hero-pill{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.28);border-radius:100px;font-size:0.72rem;font-weight:700;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:30px}
-.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--accent2)}
 
-.hero h1{font-size:clamp(2.6rem,4.8vw,4.1rem);font-weight:800;line-height:1.08;letter-spacing:-0.032em;color:#fff;margin-bottom:24px}
+.hero h1{font-family:'Fraunces',Georgia,'Times New Roman',serif;font-size:clamp(2.9rem,5.4vw,4.7rem);font-weight:600;line-height:1.04;letter-spacing:-0.02em;color:#fff;margin-bottom:28px}
 .hero h1 .hl{position:relative;white-space:nowrap;color:var(--accent2)}
 .hero h1 .hl::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:9px;background:rgba(99,102,241,0.22);border-radius:3px;z-index:-1}
 
-.hero-sub{font-size:1.03rem;color:rgba(255,255,255,0.62);max-width:480px;line-height:1.75;margin-bottom:36px}
+.hero-sub{font-size:1.0625rem;color:rgba(255,255,255,0.64);max-width:480px;line-height:1.75;margin-bottom:40px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
 
 /* ── FLOW STACK (right panel) ── */
@@ -156,11 +160,8 @@ a{text-decoration:none;color:inherit}
 .fs-checks{display:flex;flex-direction:column;gap:7px;margin-top:13px;padding-top:13px;border-top:1px solid rgba(255,255,255,0.09)}
 .fs-check{display:flex;align-items:center;gap:9px;font-size:0.78rem;color:rgba(255,255,255,0.68)}
 .fs-check::before{content:'✓';width:15px;height:15px;border-radius:50%;background:rgba(52,211,153,0.15);color:var(--green);font-size:0.62rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-/* connectors with travelling pulse */
-.fs-link{width:2px;height:34px;background:rgba(255,255,255,0.12);margin:0 auto;position:relative;overflow:visible}
-.fs-pulse{position:absolute;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px rgba(129,140,248,0.8);animation:pulseDown 2.6s ease-in-out infinite}
-.fs-link-2 .fs-pulse{animation-delay:1.3s}
-@keyframes pulseDown{0%{top:-4px;opacity:0}12%{opacity:1}88%{opacity:1}100%{top:calc(100% - 3px);opacity:0}}
+/* static connectors between cards */
+.fs-link{width:2px;height:34px;background:rgba(255,255,255,0.12);margin:0 auto}
 .fs-note{text-align:center;font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:16px;letter-spacing:0.05em;font-style:italic}
 
 /* Hero promise strip *//* Hero promise strip */
@@ -207,9 +208,9 @@ details summary:focus-visible{outline:2px solid var(--accent2);outline-offset:4p
 .ps-item p{font-size:0.8125rem;color:var(--muted);line-height:1.6}
 
 /* ── SECTION STYLES ── */
-h2.st{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;color:#f0f6ff;letter-spacing:-0.028em;line-height:1.14;margin-bottom:14px}
-.sd{font-size:1rem;color:rgba(255,255,255,0.62);max-width:560px;line-height:1.7}
-.sh{margin-bottom:52px}.sh.c{text-align:center;display:flex;flex-direction:column;align-items:center}
+h2.st{font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:800;color:#f0f6ff;letter-spacing:-0.035em;line-height:1.08;margin-bottom:18px}
+.sd{font-size:1.0625rem;color:rgba(255,255,255,0.62);max-width:580px;line-height:1.75}
+.sh{margin-bottom:64px}.sh.c{text-align:center;display:flex;flex-direction:column;align-items:center}
 .sh.c::before{content:'';width:34px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--teal));margin-bottom:18px}
 .sh.c .sd{text-align:center}
 
@@ -235,15 +236,15 @@ h2.st{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;color:#f0f6ff;letter-
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .why-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);padding:32px;transition:var(--tr)}
 .why-card:hover{border-color:rgba(99,102,241,0.25);background:rgba(99,102,241,0.03)}
-.why-card h3{font-size:1rem;font-weight:700;color:#f0f6ff;margin-bottom:10px;margin-top:18px}
+.why-card h3{font-size:1.0625rem;font-weight:700;color:#f0f6ff;margin-bottom:10px;margin-top:18px}
 .why-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
 
 /* ── CTA BAND ── */
-.cta-band{padding:90px 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#1a2140 0%,#232a52 100%);border-top:1px solid rgba(255,255,255,0.08)}
+.cta-band{padding:120px 0;position:relative;overflow:hidden;background:linear-gradient(135deg,#1a2140 0%,#232a52 100%);border-top:1px solid rgba(255,255,255,0.08)}
 .cta-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(129,140,248,0.14) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,black 0%,transparent 100%);pointer-events:none}
 .cta-band::after{content:none}
 .cta-inner{position:relative;z-index:1;text-align:center;max-width:600px;margin:0 auto}
-.cta-inner h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:14px}
+.cta-inner h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:14px}
 .cta-inner p{font-size:1.0625rem;color:rgba(255,255,255,0.68);margin-bottom:36px;line-height:1.7}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
@@ -284,7 +285,7 @@ h2.st{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;color:#f0f6ff;letter-
 .num-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
 .card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);padding:28px;transition:var(--tr)}
 .card:hover{border-color:rgba(99,102,241,0.25);transform:translateY(-3px)}
-.card h3{font-size:1rem;font-weight:700;color:#f0f6ff;margin-bottom:8px}
+.card h3{font-size:1.0625rem;font-weight:700;color:#f0f6ff;margin-bottom:8px;letter-spacing:-0.01em}
 .card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
 .card-link{display:inline-flex;align-items:center;gap:6px;font-size:0.8125rem;font-weight:600;color:var(--accent);margin-top:14px;transition:gap var(--tr)}
 .card-link:hover{gap:10px}
@@ -294,12 +295,24 @@ h2.st{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;color:#f0f6ff;letter-
 .outcome-card h3{font-size:0.9375rem;font-weight:700;color:#f0f6ff;margin-bottom:7px}
 .outcome-card p{font-size:0.85rem;color:var(--muted);line-height:1.65}
 
+/* ── PLAIN LIST + PROSE (asymmetric sections) ── */
+.start-list{list-style:none;max-width:860px;border-top:1px solid rgba(255,255,255,0.1)}
+.start-list li{display:grid;grid-template-columns:72px 1fr;gap:6px 24px;padding:30px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.start-list .n{font-size:0.85rem;font-weight:700;color:var(--accent2);letter-spacing:0.08em;padding-top:5px}
+.start-list h3{font-size:1.25rem;font-weight:700;color:#f0f6ff;letter-spacing:-0.015em;margin-bottom:6px}
+.start-list p{font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:640px}
+.prose{max-width:700px}
+.prose p{font-size:1.125rem;line-height:1.8;color:rgba(255,255,255,0.7);margin-bottom:28px}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:#fff;font-weight:700}
+.aside-line{margin-top:40px;font-size:0.95rem;color:rgba(255,255,255,0.55);line-height:1.7;max-width:640px}
+
 /* ── PAGE HERO ── */
-.page-hero{padding:140px 0 72px;background:var(--navy);position:relative;overflow:hidden}
+.page-hero{padding:168px 0 96px;background:var(--navy);position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.08) 0%,transparent 65%);right:-100px;top:-100px;pointer-events:none}
 .page-hero-content{position:relative;z-index:1;max-width:680px}
 .page-hero .eyebrow{color:var(--accent2)}
-.page-hero h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.1;margin-bottom:18px}
+.page-hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;color:#fff;letter-spacing:-0.038em;line-height:1.05;margin-bottom:22px}
 .page-hero p{font-size:1.0625rem;color:rgba(255,255,255,0.68);line-height:1.7;max-width:560px}
 .section-dark{background:var(--navy);color:#fff}
 .section-alt{background:var(--bg2)}
@@ -341,9 +354,11 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){.hero-split{grid-template-columns:1fr;gap:52px}.flow-stack{margin:0 auto}.bento{grid-template-columns:repeat(2,1fr)}.bcard-wide{grid-column:span 2}.why-grid{grid-template-columns:repeat(2,1fr)}.process-strip{grid-template-columns:repeat(2,1fr);gap:32px}.process-strip::before{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.split{grid-template-columns:1fr;gap:40px}.split.r{direction:ltr}.grid-3{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
-  .section{padding:56px 0}.section-sm{padding:44px 0}
+  .section{padding:76px 0}.section-sm{padding:48px 0}.section-roomy{padding:96px 0}
+  .start-list li{grid-template-columns:40px 1fr;gap:4px 14px;padding:24px 0}
+  .prose p{font-size:1.03rem}
   .container{padding:0 20px}
-  .hero h1{font-size:2.2rem}
+  .hero h1{font-size:2.5rem}
   .hero-sub{font-size:0.98rem}
   .hero-split{grid-template-columns:1fr;gap:48px;padding:56px 0}
   .flow-stack{margin:0 auto;max-width:400px}
@@ -360,9 +375,9 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
   .hero-actions{flex-direction:column;width:100%;max-width:340px}
   .hero-actions .btn{width:100%;justify-content:center}
   .sh{margin-bottom:38px}
-  h2.st{font-size:1.65rem}
-  .page-hero{padding:120px 0 56px}
-  .cta-band{padding:64px 0}
+  h2.st{font-size:1.95rem}
+  .page-hero{padding:128px 0 64px}
+  .cta-band{padding:80px 0}
   .platform-strip .container{gap:12px}
   .pstrip-items{font-size:0.76rem;line-height:1.9}
 }
@@ -370,7 +385,7 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
   .hero-promises{flex-direction:column;gap:10px}
   .fs-card{padding:15px 17px}
 }
-@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.container{padding:0 16px}.btn-lg{padding:14px 24px;font-size:0.9rem}.card,.bcard,.why-card{padding:22px}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.hero h1{font-size:2.25rem}.container{padding:0 16px}.btn-lg{padding:14px 24px;font-size:0.9rem}.card,.bcard,.why-card{padding:22px}}
 </style>
 </head>
 <body>
@@ -379,7 +394,7 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
 
 <nav id="main-nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a class="nav-logo" href="#home" aria-label="MISNOX Solutions — home">
+    <a class="nav-logo" href="#home" aria-label="MISNOX Solutions home">
       <div class="logo-mark">M</div>
       <span>MISNOX <span class="logo-sub">Solutions</span></span>
     </a>
@@ -423,7 +438,7 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
     <a href="#faq" onclick="toggleMobile()">FAQ</a>
     <a href="#why-misnox" onclick="toggleMobile()">Why MISNOX</a>
     <a href="#contact" onclick="toggleMobile()">Contact</a>
-    <a href="#contact" onclick="toggleMobile()">Book a free systems assessment</a>
+    <a href="#contact" data-cta="mobile-assessment" onclick="event.preventDefault();toggleMobile();navigate('contact','Complimentary systems assessment')">Book a free systems assessment</a>
   </div>
 </nav>
 
@@ -520,13 +535,35 @@ const PF={
 
 const routes={};
 function register(n,f){routes[n]=f}
-function navigate(p,prefill){
-  window.location.hash=p;render(p);window.scrollTo({top:0,behavior:'smooth'});
-  document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.textContent.trim().toLowerCase().includes(p.replace('-',' '))));
-  if(prefill){const sel=document.getElementById('f-service');if(sel){sel.value=prefill;sel.style.borderColor='rgba(99,102,241,0.5)';}}
+/* Enquiry option to preselect on the contact page. Kept until the user leaves
+   the contact page, and re-applied after every render so a re-render
+   (e.g. from the hashchange event) cannot clear it. */
+let pendingPrefill=null;
+let currentPage=null;
+function applyPrefill(){
+  if(!pendingPrefill)return;
+  const sel=document.getElementById('f-service');
+  if(sel){sel.value=pendingPrefill;sel.style.borderColor='rgba(99,102,241,0.5)';}
 }
-function render(p){document.getElementById('app').innerHTML=(routes[p]||routes['home'])();initReveal()}
-window.addEventListener('hashchange',()=>{const p=window.location.hash.replace('#','')||'home';render(p);window.scrollTo({top:0})});
+function setActiveNav(p){
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.textContent.trim().toLowerCase().includes(p.replace('-',' '))));
+}
+function navigate(p,prefill){
+  pendingPrefill=prefill||null;
+  render(p);
+  if(window.location.hash.replace('#','')!==p)window.location.hash=p;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function render(p){
+  if(!routes[p])p='home';
+  if(p!=='contact')pendingPrefill=null;
+  currentPage=p;
+  document.getElementById('app').innerHTML=routes[p]();
+  if(p==='contact')applyPrefill();
+  setActiveNav(p);
+  initReveal();
+}
+window.addEventListener('hashchange',()=>{const p=window.location.hash.replace('#','')||'home';if(p!==currentPage){render(p);window.scrollTo({top:0})}else if(p==='contact')applyPrefill()});
 window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>24),{passive:true});
 function toggleMobile(){
   const m=document.getElementById('mobile-menu'),b=document.querySelector('.mobile-toggle');
@@ -534,7 +571,7 @@ function toggleMobile(){
   m.style.display=open?'block':'none';
   if(b)b.setAttribute('aria-expanded',String(open));
 }
-/* Analytics hook — fires on every CTA click. Wire to GA4/Plausible when ready. */
+/* Analytics hook: fires on every CTA click. Wire to GA4/Plausible when ready. */
 function track(event,detail){
   if(window.gtag)window.gtag('event',event,detail||{});
   if(window.plausible)window.plausible(event,{props:detail||{}});
@@ -584,20 +621,20 @@ function submitForm(e){
     headers:{'Accept':'application/json'}
   }).then(res=>{
     if(res.ok){
-      document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:rgba(255,255,255,0.04);border-radius:var(--r);border:1px solid rgba(255,255,255,0.09)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:1.2rem;font-weight:800;color:#f0f6ff;margin-bottom:8px">Thank you — enquiry received</h3><p style="color:var(--muted)">A response follows within one business day.</p></div>`;
+      document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:rgba(255,255,255,0.04);border-radius:var(--r);border:1px solid rgba(255,255,255,0.09)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:1.2rem;font-weight:800;color:#f0f6ff;margin-bottom:8px">Thanks, your enquiry is in</h3><p style="color:var(--muted)">We will reply within one business day.</p></div>`;
     }else{
       btn.disabled=false;
       btn.innerHTML=originalBtnHtml;
       let err=form.querySelector('.form-error');
       if(!err){err=document.createElement('p');err.className='form-error';err.style.cssText='color:#f87171;font-size:0.85rem;margin-top:10px';form.appendChild(err);}
-      err.textContent='Something went wrong sending this — please try again or email contact@misnox.com.au directly.';
+      err.textContent='Something went wrong sending this. Please try again or email contact@misnox.com.au directly.';
     }
   }).catch(()=>{
     btn.disabled=false;
     btn.innerHTML=originalBtnHtml;
     let err=form.querySelector('.form-error');
     if(!err){err=document.createElement('p');err.className='form-error';err.style.cssText='color:#f87171;font-size:0.85rem;margin-top:10px';form.appendChild(err);}
-    err.textContent='Network error — please try again or email contact@misnox.com.au directly.';
+    err.textContent='Network error. Please try again or email contact@misnox.com.au directly.';
   });
 }
 
@@ -605,13 +642,14 @@ const platforms=['Microsoft Dynamics 365','Business Central','Finance & Operatio
 const platformsGrid=(cls='section')=>`
 <section class="${cls}">
   <div class="container">
-    <div class="sh c reveal">
+    <div class="sh reveal">
       <p class="eyebrow">Platforms</p>
-      <h2 class="st">Implementation Capability Across Leading ERP Platforms</h2>
+      <h2 class="st">Platforms we work in</h2>
+      <p class="sd">Implementation and integration across the main ERP and finance platforms used in Australia.</p>
     </div>
     <div class="grid-3">${[
       [PF.ms,'Microsoft Dynamics 365','F&O and Business Central implementations for mid-market and enterprise organisations.'],
-      [PF.oracle,'Oracle NetSuite','Cloud ERP implementations for growing businesses — configuration, customisation, and migration.'],
+      [PF.oracle,'Oracle NetSuite','Cloud ERP implementations for growing businesses: configuration, customisation and migration.'],
       [PF.oracle,'Oracle Fusion Cloud ERP','Finance and procurement integration through documented Oracle REST APIs.'],
       [PF.sap,'SAP','Implementation and integration for organisations operating complex, multi-entity environments.'],
       [PF.myob,'MYOB & MYOB Acumatica','MYOB implementations for mid-market Australian businesses.'],
@@ -637,7 +675,7 @@ const ctaBand=(title,desc,b1='Book a Discovery Call',b2='Explore Services',p2='s
 </section>`;
 
 // ══════════════════════════════════════
-//  HOME — V3
+//  HOME V3
 // ══════════════════════════════════════
 register('home',()=>`
 <section class="hero">
@@ -648,18 +686,15 @@ register('home',()=>`
 
       <!-- LEFT -->
       <div class="hero-left">
-        <div class="hero-pill ha0">
-          <div class="hero-pill-dot"></div>
-          Integration &amp; Finance Systems · Sydney
-        </div>
-        <h1 class="ha1">Your systems, <span class="hl">connected</span>.<br>Your controls, <span class="hl">enforced</span>.<span class="sr-only"> — ERP integration services for Australian mid-market and enterprise organisations</span></h1>
-        <p class="hero-sub ha2">Integration architecture, implementation, and managed operations for ERP, finance, and procurement platforms — engineered so data moves automatically and controls hold.</p>
+        <div class="hero-pill ha0">Integration &amp; finance systems · North Sydney</div>
+        <h1 class="ha1">Your systems, <span class="hl">connected</span>.<br>Your controls, <span class="hl">enforced</span>.<span class="sr-only"> ERP integration services for Australian mid-market and enterprise organisations.</span></h1>
+        <p class="hero-sub ha2">Integration architecture, implementation and managed operations for ERP, finance and procurement platforms. Data moves on its own, and the controls hold.</p>
         <div class="hero-actions ha3">
           <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="navigate('contact','Complimentary systems assessment')">Book a free systems assessment <span class="arrow">→</span></button>
           <button class="btn btn-ghost btn-lg" data-cta="hero-secondary" onclick="navigate('services')">Explore Capabilities</button>
         </div>
         <div class="hero-promises ha4">
-          ${['Fixed-scope engagements','Client-owned IP','Australian delivery'].map(t=>`<span class="hp-item">${t}</span>`).join('')}
+          ${['Fixed-scope engagements','You own the IP','Onshore delivery'].map(t=>`<span class="hp-item">${t}</span>`).join('')}
         </div>
       </div>
 
@@ -678,7 +713,7 @@ register('home',()=>`
           </div>
         </div>
 
-        <div class="fs-link"><span class="fs-pulse"></span></div>
+        <div class="fs-link" aria-hidden="true"></div>
 
         <div class="fs-card fs-hub">
           <div class="fs-head">
@@ -691,7 +726,7 @@ register('home',()=>`
           </div>
         </div>
 
-        <div class="fs-link fs-link-2"><span class="fs-pulse"></span></div>
+        <div class="fs-link" aria-hidden="true"></div>
 
         <div class="fs-card">
           <div class="fs-head">
@@ -706,7 +741,7 @@ register('home',()=>`
           </div>
         </div>
 
-        <p class="fs-note">Illustrative — one invoice's journey through a MISNOX build</p>
+        <p class="fs-note">Illustrative: one invoice's journey through a MISNOX build</p>
       </div>
 
     </div>
@@ -716,13 +751,13 @@ register('home',()=>`
 ${platformsGrid('section section-alt')}
 
 
-<!-- BENTO SERVICES -->
+<!-- WHAT WE BUILD -->
 <section class="section">
   <div class="container">
     <div class="sh c reveal">
       <p class="eyebrow">Capabilities</p>
-      <h2 class="st">Capabilities</h2>
-      <p class="sd">Implementation, integration, and managed operations across ERP and finance platforms.</p>
+      <h2 class="st">What we build</h2>
+      <p class="sd">Implementation, integration and managed operations across ERP and finance platforms.</p>
     </div>
     <div class="bento reveal reveal-delay-1">
       <!-- Wide card -->
@@ -731,23 +766,22 @@ ${platformsGrid('section section-alt')}
         <div style="position:relative;z-index:1">
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
             <div class="bcard-icon" style="margin-bottom:0">${ic('gitmerge',22)}</div>
-            <h3 style="font-size:1.25rem;margin-bottom:0">System Integration</h3>
+            <h3 style="font-size:1.35rem;margin-bottom:0">System integration</h3>
           </div>
-          <p style="font-size:0.9375rem;line-height:1.7;max-width:560px;margin-bottom:20px">Built on platform-native APIs and standard middleware — no proprietary connectors.</p>
-          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:10px">Typical Flows</p>
+          <p style="font-size:0.9375rem;line-height:1.7;max-width:560px;margin-bottom:20px">Built on platform-native APIs and standard middleware. No proprietary connectors.</p>
+          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:10px">Typical flows</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px">
-            ${['Supplier invoices → ERP · 3-way match','PO ↔ receipt sync','GL consolidation across entities','Supplier master governance','Payment files with approval controls'].map(t=>`<span style="padding:7px 15px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.22);border-radius:100px;font-size:0.76rem;font-weight:600;color:var(--accent2);white-space:nowrap">${t}</span>`).join('')}
+            ${['Supplier invoices → ERP · 3-way match','PO ↔ receipt sync','GL consolidation across entities','Supplier bank detail change checks','Payment files with approval controls'].map(t=>`<span style="padding:7px 15px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.22);border-radius:100px;font-size:0.76rem;font-weight:600;color:var(--accent2);white-space:nowrap">${t}</span>`).join('')}
           </div>
           <a class="bcard-cta" onclick="navigate('services')">All services <span class="arrow">→</span></a>
         </div>
       </div>
-      <!-- Regular cards -->
+      <!-- Regular cards (data migration folded into ERP implementations) -->
       ${[
-        ['cpu','ERP Implementations','Structured delivery from scoping through integration, migration, and go-live.','erp'],
-        ['trending','Finance Automation','AP, procurement, and finance workflows — automated end-to-end.', null],
-        ['cloud','API & Middleware','Scalable integration architecture for cloud, on-prem, and hybrid environments.',null],
-        ['database','Data Migration','Validated migration for platform deployments, upgrades, and consolidations.',null],
-        ['wrench','Managed Support','Proactive monitoring and continuous improvement for live integration environments.',null],
+        ['cpu','ERP implementations','Scoping, configuration, data migration and go-live. Migrated balances are reconciled back to the source system.','erp'],
+        ['trending','Finance automation','AP, procurement and finance workflows, automated end to end.',null],
+        ['cloud','API and middleware','Integration architecture for cloud, on-prem and hybrid setups, including iPaaS such as Workato.',null],
+        ['wrench','Managed support','Monitoring and ongoing improvement for live integrations, from go-live.',null],
       ].map(([icon,title,desc,page])=>`
       <div class="bcard">
         <div class="bcard-icon">${ic(icon,20)}</div>
@@ -759,42 +793,39 @@ ${platformsGrid('section section-alt')}
   </div>
 </section>
 
-<!-- PROBLEM — symptom-led -->
+<!-- WHERE IT STARTS: plain numbered list, no cards -->
 <section class="section section-alt">
   <div class="container">
-    <div class="sh c reveal">
-      <p class="eyebrow">Engagement Drivers</p>
-      <h2 class="st">Why Organisations Engage MISNOX</h2>
-      <p class="sd">Most mandates begin with one of four conditions.</p>
+    <div class="sh reveal">
+      <p class="eyebrow">Common starting points</p>
+      <h2 class="st">Where it usually starts</h2>
+      <p class="sd">Most projects begin with one of these.</p>
     </div>
-    <div class="grid-2 reveal reveal-delay-1">
+    <ol class="start-list reveal reveal-delay-1">
       ${[
-        ['Finance reconciles for days every month-end','Manual journals, intercompany clearing in Excel, and revenue that doesn\'t tie back to operations. Usually a sign that systems which should be connected aren\'t.'],
-        ['Someone re-keys the same data twice','Invoices entered in one platform and again in the ERP. Time lost, and a common source of errors.'],
-        ['Approval limits exist on paper, not in the workflow','The delegations policy says $50k needs two sign-offs, but the systems don\'t enforce it.'],
-        ['Failures are found late — by accident','A sync stops silently and nobody notices until the numbers look wrong the following week.'],
-      ].map(([t,d])=>`
-      <div class="card" style="border-left:3px solid rgba(239,68,68,0.4)">
-        <h3 style="margin-bottom:10px">${t}</h3>
-        <p>${d}</p>
-      </div>`).join('')}
-    </div>
+        ['Month-end takes days of reconciling','Manual journals, intercompany clearing in Excel, and revenue that doesn\'t tie back to operations. Usually a sign that systems which should be connected aren\'t.'],
+        ['Someone keys the same data in twice','Invoices entered in one platform and again in the ERP. Time lost, and a common source of errors.'],
+        ['Approval limits live on paper, not in the system','The delegations policy says $50k needs two sign-offs, but nothing enforces it. Supplier bank detail changes often go through the same way, unchecked.'],
+        ['Failures turn up late, by accident','A sync stops silently and nobody notices until the numbers look wrong the following week.'],
+      ].map(([t,d],i)=>`
+      <li><span class="n">0${i+1}</span><div><h3>${t}</h3><p>${d}</p></div></li>`).join('')}
+    </ol>
   </div>
 </section>
 
-<!-- WHO WE HELP — personas -->
+<!-- WHO IT'S FOR -->
 <section class="section">
   <div class="container">
     <div class="sh c reveal">
-      <p class="eyebrow">Stakeholders</p>
-      <h2 class="st">Built for Finance, Technology, and Operations</h2>
-      <p class="sd">Integration programmes answer to all three. Each receives what it requires.</p>
+      <p class="eyebrow">Finance, IT and operations</p>
+      <h2 class="st">Who it's for</h2>
+      <p class="sd">Integration projects answer to all three teams. Each one needs something different.</p>
     </div>
     <div class="grid-3">
       ${[
-        ['chart','Finance Leaders','Approval logic, three-way match, and reconciliation built into the workflow — so the close is faster and the audit trail already exists.',['Faster close','Enforced approvals','Audit-ready trails']],
-        ['cpu','IT &amp; Architecture','Documented architecture on platform-native APIs. No proprietary black boxes, and a handover your team can actually maintain.',['Documented design','No vendor lock-in','Clean handover']],
-        ['workflow','Operations','Supplier onboarding, PO matching, and data sync automated — with exception handling so edge cases surface instead of failing silently.',['Less re-keying','Exception alerting','Reliable sync']],
+        ['chart','Finance leaders','Approval workflows, three-way match and reconciliation built into the process, so the close is faster and the audit trail already exists.',['Faster close','Enforced approvals','Audit trails']],
+        ['cpu','IT and architecture','Documented architecture on platform-native APIs, such as Oracle Fusion Cloud ERP\'s REST APIs. No black boxes, and a handover your team can maintain.',['Documented design','No vendor lock-in','Clean handover']],
+        ['workflow','Operations','Supplier onboarding, PO matching and data sync automated, with exception handling so edge cases surface instead of failing silently.',['Less re-keying','Exception alerts']],
       ].map(([icon,t,d,tags])=>`
       <div class="why-card reveal">
         <div class="card-icon">${ic(icon,22)}</div>
@@ -806,40 +837,33 @@ ${platformsGrid('section section-alt')}
   </div>
 </section>
 
-<!-- WHY MISNOX -->
-<section class="section section-alt">
+<!-- WHAT YOU GET: plain prose with whitespace -->
+<section class="section-roomy section-alt">
   <div class="container">
-    <div class="sh c reveal">
-      <p class="eyebrow">Principles of Engagement</p>
-      <h2 class="st">Four Commitments</h2>
-    </div>
-    <div class="grid-2">
-      ${[
-        ['lock','Client-owned delivery','All code, configuration, and documentation transfers to the client. A successor team can operate from the documentation alone.'],
-        ['shield','Controls by design','Approval thresholds, segregation of duties, and three-way match are embedded in the integration architecture — never retrofitted.'],
-        ['landmark','Sovereign delivery','All work performed onshore, within Australian jurisdiction. Client data remains in the client\'s environment.'],
-        ['target','Fixed-scope commercials','Engagements are priced against an agreed design document. Variations are quoted prior to commencement.'],
-      ].map(([icon,t,d])=>`
-      <div class="why-card reveal">
-        <div class="card-icon">${ic(icon,22)}</div>
-        <h3 style="margin-top:0">${t}</h3>
-        <p>${d}</p>
-      </div>`).join('')}
+    <div class="reveal" style="max-width:700px">
+      <p class="eyebrow">How we work</p>
+      <h2 class="st" style="margin-bottom:40px">What you get</h2>
+      <div class="prose">
+        <p><strong>A fixed scope.</strong> Work is priced against an agreed design document. If the scope changes, the variation is quoted before anyone starts on it.</p>
+        <p><strong>Everything we build is yours.</strong> Code, configuration and documentation all transfer to you. A successor team can run it from the documentation alone.</p>
+        <p><strong>Onshore delivery, and your data stays with you.</strong> The work is done in Australia. MISNOX does not host client data. Integrations run in your environment.</p>
+        <p><strong>Controls from day one.</strong> Approval workflows, segregation of duties and bank detail change checks go into the design. They are not bolted on later.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP — links out to proof pages -->
+<!-- TRUST STRIP: links out to proof pages -->
 <section class="section">
   <div class="container">
     <div class="grid-3">
       ${[
-        ['Delivery','Four phases with named deliverables and exit criteria at each.','delivery','Methodology'],
-        ['Security','Integrations run inside the client environment. MISNOX does not host or retain client data.','security','Security & data handling'],
-        ['Questions','Prebuilt vs custom, ownership, timelines, and support.','faq','FAQ'],
+        ['Delivery','Four phases: discover, design, deliver, support. Each has named deliverables and exit criteria.','delivery','How a build runs'],
+        ['Security','Integrations run inside your environment. MISNOX does not host or keep client data, and credentials stay in your own secret store, such as Azure Key Vault.','security','Security and data handling'],
+        ['Questions','Prebuilt or custom, ownership, timelines and support.','faq','FAQ'],
       ].map(([t,d,page,link])=>`
       <div class="reveal" style="padding:8px 0">
-        <h3 style="font-size:1.05rem;font-weight:700;color:#f0f6ff;margin-bottom:10px">${t}</h3>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#f0f6ff;margin-bottom:10px">${t}</h3>
         <p style="font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:16px">${d}</p>
         <a class="card-link" onclick="navigate('${page}')">${link} <span class="arrow">→</span></a>
       </div>`).join('')}
@@ -847,90 +871,96 @@ ${platformsGrid('section section-alt')}
   </div>
 </section>
 
-<!-- CHECKLIST -->
+<!-- WHAT EVERY BUILD INCLUDES -->
 <section class="section section-alt" style="position:relative;overflow:hidden">
   <div aria-hidden="true" data-parallax="0.1" style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,0.06) 0%,transparent 65%);left:-180px;top:30%;pointer-events:none"></div>
   <div class="container">
-    <div class="sh c reveal">
-      <p class="eyebrow">The Delivery Standard</p>
-      <h2 class="st">Six Conditions of Every Build</h2>
+    <div class="sh reveal">
+      <p class="eyebrow">In every build</p>
+      <h2 class="st">What every build includes</h2>
     </div>
     <div class="ck-grid reveal reveal-delay-1">
       ${[
-        ['Systems speak to each other','Data flows end-to-end without manual re-entry.'],
-        ['Controls in the workflow','Approval thresholds, segregation of duties, and audit trails embedded at workflow level.'],
-        ['One version of the truth','A single, reconciled source of financial data across connected platforms.'],
-        ['Exceptions are caught','Error handling and alerting configured on every integration.'],
-        ['Go-live without disruption','UAT, cutover planning, and rollback prepared before deployment.'],
-        ['Support is proactive','Monitoring and response in place from day one.'],
+        ['Connected systems, one set of numbers','Data flows end to end without re-keying, and figures reconcile across the connected platforms.'],
+        ['Controls in the workflow','Approval thresholds, segregation of duties and audit trails, enforced by the system.'],
+        ['Exceptions are caught','Error handling and alerting on every integration.'],
+        ['A planned go-live','UAT, cutover planning and a rollback plan, all ready before deployment.'],
+        ['Support from day one','Monitoring and response in place from go-live.'],
       ].map(([t,d])=>`
       <div class="ck-item">
         <div class="ck-icon"><svg viewBox="0 0 14 14"><polyline points="2 7 5.5 10.5 12 3.5" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div><strong>${t}</strong><span>${d}</span></div>
       </div>`).join('')}
     </div>
-    <div style="margin-top:44px" class="reveal">
+    <div style="margin-top:56px" class="reveal">
       <div class="lead-box">
         <div>
-          <h3>Complimentary systems assessment</h3>
-          <p>Submit a summary of the current system landscape and receive a concise written assessment of the integration gaps.</p>
+          <h3>Start with a complimentary systems assessment</h3>
+          <p>Send a summary of your current systems and get a short written assessment of the integration gaps.</p>
         </div>
-        <button class="btn btn-primary" data-cta="lead-assessment" onclick="navigate('contact','Complimentary systems assessment')">Request an Assessment <span class="arrow">→</span></button>
+        <button class="btn btn-primary" data-cta="lead-assessment" onclick="navigate('contact','Complimentary systems assessment')">Request an assessment <span class="arrow">→</span></button>
       </div>
     </div>
   </div>
 </section>
 
-${ctaBand('Begin the Conversation','Implementation, integration, or managed operations — enquiries receive a response within one business day.')}`);
+${ctaBand('Tell us what needs connecting','Implementation, integration or managed operations. Enquiries get a response within one business day.')}`);
 
 // ══ ABOUT ══
 register('about',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">About MISNOX Solutions</p><h1>An Integration and Finance Systems Practice</h1><p>MISNOX connects, automates, and supports the platforms at the core of finance and procurement operations.</p></div></div></section>
-<section class="section"><div class="container"><div style="max-width:720px">
-  <div class="reveal"><p class="eyebrow">The Practice</p><h2 class="st">A Single Discipline</h2><p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">MISNOX practises a single discipline: connecting ERP, finance, and procurement systems, and keeping those connections running. Implementation, integration, automation, and managed operations — nothing else.</p><div class="chips" style="margin-top:28px">${['ERP Implementations','System Integrations','API & Middleware','Data Migration','Workflow Automation','Managed Support','Integration Advisory'].map(c=>`<span class="chip">${c}</span>`).join('')}</div></div>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">About MISNOX Solutions</p><h1>We connect finance systems and keep them running</h1><p>MISNOX Solutions is based in North Sydney. We do ERP integration and finance automation for Australian mid-market and enterprise organisations.</p></div></div></section>
+<section class="section-roomy"><div class="container"><div style="max-width:720px">
+  <div class="reveal"><p class="eyebrow">What we do</p><h2 class="st">Integration work, and nothing else</h2>
+  <div class="prose" style="margin-top:28px">
+    <p>Our whole practice is connecting ERP, finance and procurement systems, then keeping those connections running. Implementation, integration, automation and managed operations. We don't sell a connector product of our own.</p>
+    <p>A typical piece of work: supplier invoices arrive in Xero, pass a three-way match and an approval threshold, then post to Business Central with an audit trail written along the way.</p>
+  </div>
+  <div class="chips" style="margin-top:36px">${['ERP Implementations','System Integrations','API & Middleware','Data Migration','Workflow Automation','Managed Support','Integration Advisory'].map(c=>`<span class="chip">${c}</span>`).join('')}</div></div>
 </div></div></section>
 <section class="section section-alt"><div class="container">
-  <div class="sh c reveal"><p class="eyebrow">Operating Principles</p><h2 class="st">Values in Practice</h2><p class="sd">Principles that govern every engagement, recommendation, and line of configuration delivered.</p></div>
-<div class="grid-2">${[['01','Production over presentation','Success is measured by what operates in production.'],['02','Independent recommendations','Advice reflects the client environment, not vendor margin.'],['03','Commercial awareness','Budget, timeline, and risk shape every recommendation.'],['04','Transparency','Clear communication, honest progress reporting, and no surprises.']].map(([n,t,d])=>`<div class="num-card reveal"><div class="num">${n}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
+  <div class="sh reveal"><p class="eyebrow">How we decide</p><h2 class="st">How we make calls on a project</h2></div>
+  <ol class="start-list reveal">${[
+    ['Production over presentation','Success is measured by what runs in production.'],
+    ['Independent, with an eye on cost','Advice reflects your environment, not vendor margin. Budget, timeline and risk shape every recommendation.'],
+    ['No surprises','Clear communication and honest progress reports. Scope is fixed, and any change is quoted before work starts.'],
+  ].map(([t,d],i)=>`<li><span class="n">0${i+1}</span><div><h3>${t}</h3><p>${d}</p></div></li>`).join('')}</ol>
 </div></section>
-${ctaBand('Get in Touch','Outline the programme under consideration.','Contact Us','View Services')}`);
+${ctaBand('Got a project in mind?','Tell us which systems are involved and what needs to happen between them.','Contact us','View services')}`);
 
 // ══ SERVICES ══
 register('services',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Our Services</p><h1>Services</h1><p>ERP implementation, system integration, and managed operations — delivered end-to-end, in-house.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Services</p><h1>Integration, implementation and support</h1><p>ERP implementation, system integration and managed operations, delivered end to end by our own onshore team.</p></div></div></section>
 <section class="section"><div class="container"><div class="grid-3">${[
-  ['cpu','System Implementations','Scoping, configuration, integration, migration, and go-live — structured end-to-end delivery.','erp'],
-  ['gitmerge','System Integrations','Finance, procurement, HR, CRM, and operational platforms — connected and synchronised.',null],
-  ['network','API Integrations','REST, SOAP, GraphQL, and platform APIs — designed, built, and maintained for production reliability.',null],
-  ['cloud','Middleware & iPaaS','Scalable integration middleware for multi-system environments.',null],
-  ['zap','Workflow Automation','Invoice processing, approval routing, and data sync — automated end-to-end.',null],
-  ['database','Data Migration','Validated data migration for platform deployments, upgrades, and consolidations.',null],
-  ['layers','Data Synchronisation','Real-time and scheduled sync across platforms — with conflict resolution and audit trails.',null],
-  ['users','Supplier Onboarding','Automated onboarding connecting compliance, verification, and ERP master data.',null],
-  ['chart','Finance & Procurement Integration','AP, AR, GL, PO, and payment processing — integrated across your finance stack.',null],
-  ['wrench','Managed Support','Proactive monitoring and continuous improvement for live integration environments.',null],
-  ['search','Integration Advisory','Architecture reviews, platform assessments, and integration roadmaps.',null],
-].map(([icon,title,desc,page])=>`<div class="card reveal"><div class="card-icon">${ic(icon,22)}</div><h3>${title}</h3><p>${desc}</p>${page?`<a class="card-link" onclick="navigate('${page}')">Learn more <span class="arrow">→</span></a>`:''}</div>`).join('')}</div></div></section>
-<!-- PLATFORM DEPTH — tiered -->
+  ['cpu','System implementations','Scoping, configuration, integration, migration and go-live, run as one structured delivery.','erp'],
+  ['gitmerge','System integrations','Finance, procurement, HR, CRM and operational platforms, kept in sync in real time or on a schedule, with audit trails.',null],
+  ['network','APIs and middleware','REST, SOAP and GraphQL APIs, plus iPaaS platforms such as Workato. Built and maintained for production.',null],
+  ['zap','Workflow automation','Invoice processing, approval routing and data sync, automated end to end.',null],
+  ['database','Data migration','Validated migration for deployments, upgrades and consolidations, with balances reconciled to the source.',null],
+  ['users','Supplier onboarding','Onboarding that links compliance, verification and ERP master data, including bank detail change checks.',null],
+  ['chart','Finance and procurement integration','AP, AR, GL, PO and payment processing, integrated across your finance stack.',null],
+  ['wrench','Managed support','Monitoring and ongoing improvement for live integrations.',null],
+].map(([icon,title,desc,page])=>`<div class="card reveal"><div class="card-icon">${ic(icon,22)}</div><h3>${title}</h3><p>${desc}</p>${page?`<a class="card-link" onclick="navigate('${page}')">Learn more <span class="arrow">→</span></a>`:''}</div>`).join('')}</div>
+<p class="aside-line reveal">Need an outside view first? Integration advisory covers architecture reviews, platform assessments and integration roadmaps.</p></div></section>
+<!-- PLATFORM DEPTH: tiered -->
 <section class="section section-alt">
   <div class="container">
     <div class="sh c reveal">
-      <p class="eyebrow">Platform Capability</p>
-      <h2 class="st">Depth Where It Counts</h2>
-      <p class="sd">Depth is concentrated deliberately on fewer platforms. Where first-hand depth does not exist, integration proceeds through documented APIs — stated plainly, never implied.</p>
+      <p class="eyebrow">Platform capability</p>
+      <h2 class="st">Platforms we know well, and the rest</h2>
+      <p class="sd">We keep our depth on a few platforms. For the others we integrate through documented APIs, and we say so up front.</p>
     </div>
     <div class="grid-2 reveal reveal-delay-1">
       <div style="background:linear-gradient(135deg,rgba(99,102,241,0.08),rgba(139,92,246,0.03));border:1px solid rgba(99,102,241,0.22);border-radius:var(--r);padding:32px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
           <span style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></span>
-          <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0">Core Expertise</h3>
+          <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin:0">Core expertise</h3>
         </div>
-        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Platforms in daily practice — data models, APIs, configuration frameworks, and known constraints.</p>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Platforms in daily practice: data models, APIs, configuration frameworks and known constraints.</p>
         <div style="display:flex;flex-direction:column;gap:12px">
           ${[
-            [PF.ms,'Dynamics 365 Business Central','Mid-market ERP — distributors, project businesses, Microsoft 365 estates'],
-            [PF.ms,'Dynamics 365 Finance & Operations','Enterprise scale — complex finance, multi-entity operations'],
-            [`<span class="pf-pair">${PF.xero}${PF.myob}</span>`,'Xero & MYOB','SME finance platforms — often the integration counterpart to a larger ERP'],
+            [PF.ms,'Dynamics 365 Business Central','Mid-market ERP for distributors, project businesses and Microsoft 365 estates'],
+            [PF.ms,'Dynamics 365 Finance & Operations','Enterprise scale, complex finance and multi-entity operations'],
+            [`<span class="pf-pair">${PF.xero}${PF.myob}</span>`,'Xero & MYOB','SME finance platforms, often the other side of an integration with a larger ERP'],
             [PF.myob,'MYOB Acumatica','Growing mid-market organisations needing advanced ERP capability'],
           ].map(([b,t,d])=>`
           <div style="display:flex;gap:13px;align-items:flex-start;padding:12px 16px;background:rgba(99,102,241,0.05);border:1px solid rgba(99,102,241,0.15);border-radius:10px">
@@ -945,29 +975,30 @@ register('services',()=>`
       <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);padding:32px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
           <span style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3)"></span>
-          <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0">Also Integrate With</h3>
+          <h3 style="font-size:1.15rem;font-weight:700;color:#fff;margin:0">We also integrate with</h3>
         </div>
-        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Connected via documented APIs and middleware — typically as the counterpart system in an integration.</p>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Connected through documented APIs and middleware, usually as the other side of an integration. Oracle Fusion Cloud ERP, for example, connects through its REST APIs.</p>
         <div class="chips" style="margin-top:0">
           ${['NetSuite','SAP','Oracle Fusion Cloud ERP','TechnologyOne','QuickBooks','Salesforce','Power BI','Azure Integration Services','Boomi','MuleSoft','Workato'].map(c=>`<span class="chip">${c}</span>`).join('')}
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">If a platform exposes an API, it can usually be integrated — the lists above reflect depth, not limits.</p>
+    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">If a platform has an API, it can usually be integrated. These lists show depth, not limits.</p>
   </div>
 </section>
 <!-- ENGAGEMENT SHAPE -->
 <section class="section">
   <div class="container">
-    <div class="sh c reveal">
-      <p class="eyebrow">How Engagements Work</p>
-      <h2 class="st">How Engagements Are Structured</h2>
+    <div class="sh reveal">
+      <p class="eyebrow">How engagements work</p>
+      <h2 class="st">Three ways to engage</h2>
+      <p class="sd">Most clients start with a complimentary systems assessment: send a summary of your current systems and we send back a short written view of the integration gaps. From there:</p>
     </div>
     <div class="grid-3">
       ${[
-        ['search','Discovery Engagement','A short, paid engagement to map your systems, data flows, and integration gaps. Fixed price, fixed duration. Documentation remains with the client regardless of continuation.','Typically 2–3 weeks'],
-        ['cpu','Project Delivery','Implementations and integrations quoted as fixed-scope, fixed-price work against an agreed design document. Change requests are priced transparently, not absorbed into a running meter.','Single integration: typically 4–8 weeks'],
-        ['wrench','Managed Support','Monthly retainer covering monitoring, exception handling, and continuous optimisation of live integrations. Scaled to the number of integrations under management.','Monthly, from go-live'],
+        ['search','Discovery engagement','A short, paid engagement to map your systems, data flows and integration gaps. Fixed price, fixed duration. You keep the documentation whether or not you go further.','Typically 2 to 3 weeks'],
+        ['cpu','Project delivery','Implementations and integrations quoted as fixed-scope, fixed-price work against an agreed design document. Change requests are priced openly, not absorbed into a running meter.','Single integration: typically 4 to 8 weeks'],
+        ['wrench','Managed support','A monthly retainer covering monitoring, exception handling and ongoing tuning of live integrations, scaled to the number of integrations we look after.','Monthly, from go-live'],
       ].map(([icon,t,d,tag])=>`
       <div class="card reveal">
         <div class="card-icon">${ic(icon,22)}</div>
@@ -976,57 +1007,56 @@ register('services',()=>`
         <div class="chips" style="margin-top:16px"><span class="chip">${tag}</span></div>
       </div>`).join('')}
     </div>
-    <p style="text-align:center;margin-top:32px;font-size:0.9rem;color:rgba(255,255,255,0.5);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7" class="reveal">Engagements typically run discovery → fixed-scope delivery → managed support, and may conclude at any stage — all work produced transfers with the client.</p>
+    <p class="aside-line reveal">Engagements usually run discovery, then fixed-scope delivery, then managed support. You can stop at any stage, and everything produced stays with you.</p>
   </div>
 </section>
-${ctaBand('Discuss a Programme','Outline the systems involved and the connections required — practical guidance follows.','Book a Discovery Call','Contact Us','contact')}`);
+${ctaBand('Have systems that need connecting?','Outline the systems involved and the connections you need. We will come back with practical guidance.','Book a Discovery Call','Contact us','contact')}`);
 
 // ══ ERP ══
 register('erp',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">System Implementation Services</p><h1>ERP Implementations</h1><p>Scoping, configuration, integration, migration, and go-live — delivered under a structured, governed process.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">System Implementation Services</p><h1>ERP Implementations</h1><p>Scoping, configuration, integration, migration and go-live, run under a structured, governed process.</p></div></div></section>
 <section class="section"><div class="container"><div class="split">
-  <div class="reveal"><p class="eyebrow">Delivery Model</p><h2 class="st">How Implementations Run</h2><p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">Implementations succeed or fail on requirements, configuration, and migration quality — so each phase is governed and signed off.</p></div>
-  <div class="reveal reveal-delay-1"><div class="steps">${[['Discovery & Requirements','Comprehensive analysis of business processes, pain points, and success criteria.'],['Solution Design & Architecture','Detailed blueprints, integration architecture, data models, and configuration specs.'],['Configuration & Development','Platform setup, module configuration, custom development, and integration build.'],['Data Migration & Integration','Structured extraction, transformation, validation, and loading.'],['Testing & Quality Assurance','Unit, integration, UAT, and regression testing with documented sign-off.'],['Deployment & Change Management','Staged rollout, user training, and controlled go-live.'],['Post Go-Live Support','Hypercare, performance tuning, and continuous improvement.']].map(([t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div>
+  <div class="reveal"><p class="eyebrow">Delivery Model</p><h2 class="st">Seven phases, each one signed off</h2><p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">Implementations succeed or fail on requirements, configuration and migration quality. So each phase is governed and signed off before the next begins.</p></div>
+  <div class="reveal reveal-delay-1"><div class="steps">${[['Discovery & Requirements','Comprehensive analysis of business processes, pain points, and success criteria.'],['Solution Design & Architecture','Detailed blueprints, integration architecture, data models, and configuration specs.'],['Configuration & Development','Platform setup, module configuration, custom development, and integration build.'],['Data Migration & Integration','Structured extraction, transformation, validation and loading, with balances reconciled back to the source system.'],['Testing & Quality Assurance','Unit, integration, UAT, and regression testing with documented sign-off.'],['Deployment & Change Management','Staged rollout, user training, and controlled go-live.'],['Post Go-Live Support','Hypercare, performance tuning, and continuous improvement.']].map(([t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div>
 </div></div></section>
 ${platformsGrid('section section-alt')}
-${ctaBand('Planning an Implementation?','A realistic view of approach, timeline, and resourcing — before commitment.','Book a Discovery Call','View All Services')}`);
+${ctaBand('Planning an Implementation?','A realistic view of approach, timeline and resourcing, before you commit.','Book a Discovery Call','View All Services')}`);
 
 // ══ INDUSTRIES ══
 register('industries',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Industries</p><h1>Industries</h1><p>Finance, procurement, enterprise, and professional services organisations.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Industries</p><h1>Who we work with</h1><p>Finance, procurement, enterprise and professional services organisations across the Australian mid-market and enterprise.</p></div></div></section>
 <section class="section"><div class="container"><div class="grid-2">${[
-  ['Finance','chart','Accurate reporting, payment controls, and finance workflow automation — end to end.',['Multi-Entity ERP','AP/AR Automation','Audit-Ready Flows','Platform Migration','Data Synchronisation']],
-  ['Procurement','package','Supplier management, P2P automation, and connected procurement operations.',['P2P Automation','Supplier Onboarding','Procurement Controls','Master Data Sync','Compliance Workflows']],
-  ['Enterprise','network','Multi-system environments demanding governance, data control, and integration rigour.',['Secure Architecture','Segregation of Duties','API & Middleware','Data Governance','Operational Sync']],
-  ['Professional Services','briefcase','Connected finance, resource, and billing systems for project-driven organisations.',['Project Accounting','CRM Integration','Billing Automation','Resource Planning','Practice Management Sync']],
-].map(([title,icon,desc,points],i)=>`<div class="card reveal" style="padding:28px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><div style="width:42px;height:42px;border-radius:11px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0">${ic(icon,18)}</div><div><p style="font-size:0.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px">0${i+1}</p><h3 style="font-size:1.1rem;font-weight:700;color:#f0f6ff;margin:0">${title}</h3></div></div><p style="color:var(--muted);font-size:0.875rem;line-height:1.65;margin-bottom:16px">${desc}</p><div class="chips" style="margin-top:0">${points.map(p=>`<span class="chip">${p}</span>`).join('')}</div></div>`).join('')}</div></div></section>
-${ctaBand('Discuss a Programme','Sector and system context reviewed; fit advised candidly.','Book a Discovery Call','View Services')}`);
+  ['Finance','chart','Accurate reporting, payment controls and finance workflow automation. Supplier bank detail changes are checked before they reach a payment run.',['Multi-Entity ERP','AP/AR Automation','Audit Trails','Bank Detail Change Checks','Platform Migration']],
+  ['Procurement','package','Supplier management, procure-to-pay automation and connected procurement operations.',['P2P Automation','Supplier Onboarding','Approval Workflows','Master Data Sync']],
+  ['Enterprise','network','Multi-system environments that need governance, data control and careful integration.',['Segregation of Duties','API & Middleware','Data Governance','Secure Architecture']],
+  ['Professional Services','briefcase','Connected finance, resource and billing systems for project-driven organisations.',['Project Accounting','CRM Integration','Billing Automation']],
+].map(([title,icon,desc,points],i)=>`<div class="card reveal" style="padding:28px"><div style="display:flex;align-items:center;gap:14px;margin-bottom:16px"><div style="width:42px;height:42px;border-radius:11px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0">${ic(icon,18)}</div><div><p style="font-size:0.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px">0${i+1}</p><h3 style="font-size:1.2rem;font-weight:700;color:#f0f6ff;margin:0">${title}</h3></div></div><p style="color:var(--muted);font-size:0.875rem;line-height:1.65;margin-bottom:16px">${desc}</p><div class="chips" style="margin-top:0">${points.map(p=>`<span class="chip">${p}</span>`).join('')}</div></div>`).join('')}</div></div></section>
+${ctaBand('Not sure you fit?','Tell us your sector and systems, and we will tell you honestly whether we are the right fit.','Book a Discovery Call','View services')}`);
 
 // ══ WHY MISNOX ══
 register('why-misnox',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Why MISNOX Solutions</p><h1>Why MISNOX</h1><p>What working with us looks like in practice.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Why MISNOX Solutions</p><h1>Why work with us</h1><p>What working with us looks like in practice.</p></div></div></section>
 <section class="section"><div class="container"><div class="grid-2">${[
-  ['gitmerge','Integration Specialists','Built around a single discipline — system integration, ERP connectivity, and implementation delivery.'],
-  ['database','Platform Depth','Working knowledge of how leading ERP and finance platforms operate internally — data models, APIs, and configuration frameworks.'],
-  ['globe','Commercial Context','Fluency in the regulatory, compliance, and operational realities of complex finance environments.'],
-  ['target','Outcome-Focused','Engagements structured around measurable outcomes, with success criteria agreed before commencement.'],
-  ['shield','Enterprise Governance','Structured change control, documented design decisions, and formal sign-off — on every engagement.'],
-  ['layers','End-to-End Accountability','The consultants who design the solution deliver and support it — no handover between sales and delivery.'],
+  ['database','Platform depth','Working knowledge of how ERP and finance platforms work inside: data models, APIs and configuration frameworks. Integration is all we do.'],
+  ['target','Success criteria agreed up front','Engagements are built around measurable outcomes, with success criteria agreed before work starts and a fixed scope to match.'],
+  ['shield','Governance on every job','Structured change control, documented design decisions and formal sign-off, every time.'],
+  ['layers','One team, start to finish','The consultants who design the solution also deliver and support it. No handover between sales and delivery.'],
+  ['landmark','Onshore, and no data hosting','Delivery happens in Australia and MISNOX hosts no client data. Integrations run in your environment, and you own everything we build.'],
 ].map(([icon,t,d])=>`<div class="card reveal" style="display:flex;gap:16px;align-items:flex-start"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)">${ic(icon,22)}</div><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div></section>
-${ctaBand('Start a Conversation','Outline the ERP or integration programme under consideration.','Book a Discovery Call','View Services')}`);
+${ctaBand('Start a conversation','Outline the ERP or integration programme you are considering.','Book a Discovery Call','View services')}`);
 
 // ══ SECURITY & DATA HANDLING ══
 register('security',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Security &amp; Data Handling</p><h1>Client Data Remains in Client Environments</h1><p>MISNOX integrations run inside client infrastructure. No hosting, warehousing, or retention of financial data. This page sets out how access, credentials, and data are handled during and after an engagement.</p></div></div></section>
 
 <section class="section"><div class="container">
-  <div class="sh reveal"><p class="eyebrow">Operating Model</p><h2 class="st">Delivery Inside the Client Tenancy</h2><p class="sd">The defining feature of the MISNOX security posture: integrations run in the client environment, under client controls, with client logging.</p></div>
+  <div class="sh reveal"><p class="eyebrow">Operating Model</p><h2 class="st">We work inside your tenancy</h2><p class="sd">The core of how we handle security: integrations run in your environment, under your controls, with your logging.</p></div>
   <div class="grid-2">${[
     ['landmark','Data Residency','The delivery team is Australian-based and all work is performed onshore. No offshore development; no data leaving Australian jurisdiction. Integrations deploy into the client\'s nominated region.'],
     ['database','No Data Retention','MISNOX does not store client transactional or financial data. Integrations move data directly between client systems. Testing uses de-identified or synthetic records wherever practical; any client data is deleted at engagement close.'],
-    ['lock','Credential Handling','Credentials reside in the client\'s secret store — Azure Key Vault, AWS Secrets Manager, or equivalent. Client credentials are never held in MISNOX systems, email, or documentation. Access is via named accounts the client provisions and can revoke.'],
-    ['shield','Least Privilege Access','Every service account is scoped to the minimum permissions the integration requires, with each account\'s access documented for independent review by the client\'s security team.'],
-    ['network','Encryption','All data in transit uses TLS 1.2 or above. Integration endpoints are authenticated — no anonymous endpoints, no unencrypted transfers. Where a legacy platform cannot meet this standard, it is flagged before build, not after.'],
+    ['lock','Credential Handling','Credentials live in the client\'s secret store, such as Azure Key Vault, AWS Secrets Manager or equivalent. Client credentials are never held in MISNOX systems, email, or documentation. Access is via named accounts the client provisions and can revoke.'],
+    ['shield','Least Privilege Access','Every service account is scoped to the minimum permissions the integration requires, with each account\'s access documented for independent review by the client\'s security team. Access is set up so segregation of duties holds.'],
+    ['network','Encryption','All data in transit uses TLS 1.2 or above. Integration endpoints are authenticated. No anonymous endpoints and no unencrypted transfers. Where a legacy platform cannot meet this standard, it is flagged before build, not after.'],
     ['check','Access Revocation','At engagement close, a documented register of every account, key, and permission granted during the work is provided, enabling verified revocation. Offboarding is a deliverable.'],
   ].map(([icon,t,d])=>`<div class="card reveal" style="display:flex;gap:16px;align-items:flex-start"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)">${ic(icon,22)}</div><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div>
 </div></section>
@@ -1034,14 +1064,14 @@ register('security',()=>`
 <section class="section section-alt"><div class="container">
   <div class="sh c reveal"><p class="eyebrow">Running Integrations</p><h2 class="st">What Happens When Something Fails</h2><p class="sd">Integrations fail. Networks drop, APIs deprecate, upstream systems change. What matters is whether the failure is detected, contained, and recoverable.</p></div>
   <div class="grid-3">${[
-    ['zap','Detection','Every integration is built with logging and alerting from day one. Failures raise an alert to the client\'s nominated channel — not a silent error in an unread log.'],
+    ['zap','Detection','Every integration is built with logging and alerting from day one. Failures raise an alert to the client\'s nominated channel, not a silent error in an unread log.'],
     ['workflow','Containment','Failed records are quarantined rather than dropped or partially written. A failed batch never leaves the ERP half-updated.'],
     ['trending','Recovery','Integrations are built to be replayable. Once the cause is resolved, quarantined records reprocess without manual re-entry or duplicate posting.'],
   ].map(([icon,t,d])=>`<div class="glass-card reveal"><div style="color:var(--accent2);margin-bottom:14px">${ic(icon,26)}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
   <div style="max-width:760px;margin:44px auto 0;padding:28px 32px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r)" class="reveal">
     <h3 style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:14px">Support response targets</h3>
     <div style="display:flex;flex-direction:column;gap:10px">
-      ${[['Critical','Integration down, business process blocked','Within 2 business hours'],['High','Degraded — failures occurring but process continuing','Within 4 business hours'],['Standard','Non-urgent issue, question, or change request','Within 1 business day']].map(([sev,desc,t])=>`
+      ${[['Critical','Integration down, business process blocked','Within 2 business hours'],['High','Degraded: failures occurring but process continuing','Within 4 business hours'],['Standard','Non-urgent issue, question, or change request','Within 1 business day']].map(([sev,desc,t])=>`
       <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06)">
         <div><span style="font-size:0.82rem;font-weight:700;color:var(--accent2)">${sev}</span><p style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:2px">${desc}</p></div>
         <span style="font-size:0.85rem;font-weight:600;color:#fff;white-space:nowrap">${t}</span>
@@ -1054,26 +1084,26 @@ ${ctaBand('Security Questions','The full posture can be walked through with your
 
 // ══ DELIVERY METHODOLOGY ══
 register('delivery',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Delivery Methodology</p><h1>Delivery Methodology</h1><p>Four phases, each with defined inputs, deliverables, and exit criteria — what is produced, when it arrives, and what must be true before the next phase begins.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Delivery methodology</p><h1>How a build runs</h1><p>Four phases, each with defined inputs, deliverables and exit criteria. You know what is produced, when it arrives, and what must be true before the next phase starts.</p></div></div></section>
 
 <section class="section"><div class="container">
   ${[
-    ['01','Discover · 2–3 weeks','Understand the environment before proposing anything.',
-      ['Current systems inventory and integration touchpoints','Data flow mapping — what moves, when, and who owns it','Control objectives: approval thresholds, SoD requirements, audit needs','Constraints: licensing, upgrade cycles, internal capacity'],
+    ['01','Discover · 2 to 3 weeks','Understand the environment before proposing anything.',
+      ['Current systems inventory and integration touchpoints','Data flow mapping: what moves, when, and who owns it','Control objectives: approval thresholds, SoD requirements, audit needs','Constraints: licensing, upgrade cycles, internal capacity'],
       ['Integration Assessment document','Systems and data flow map','Prioritised gap list with indicative effort'],
       'The client confirms the assessment reflects reality and priorities stand.'],
-    ['02','Design · 2–4 weeks','Document the solution before writing code.',
-      ['Integration architecture and pattern selection','Field-level data mappings and transformation rules','Error handling, retry, and exception routing design','Security model: accounts, permissions, credential storage','Test scenarios including negative and edge cases'],
+    ['02','Design · 2 to 4 weeks','Document the solution before writing code.',
+      ['Integration architecture and pattern selection','Field-level data mappings and transformation rules','Error handling, retry, and exception routing design','Security model: accounts, permissions, credential storage','Control design: approval workflows, bank detail change checks, audit trails','Test scenarios including negative and edge cases'],
       ['Integration Design Document','Field mapping specification','Test plan with acceptance criteria'],
       'Design document signed off by finance, technology, and operations stakeholders.'],
-    ['03','Deliver · 4–12 weeks','Build, test, and deploy against the agreed design.',
+    ['03','Deliver · 4 to 12 weeks','Build, test, and deploy against the agreed design.',
       ['Development in a non-production environment','Unit and integration testing against the test plan','User acceptance testing with your team','Cutover rehearsal and rollback plan','Production deployment in a controlled window'],
       ['Working integration in production','UAT sign-off record','Cutover runbook and rollback procedure','Technical documentation and handover pack'],
       'UAT signed off, cutover executed, and the client team can operate the solution.'],
     ['04','Support · Ongoing','Keep it running and improve it over time.',
       ['Monitoring and alerting configured to your channels','Exception review and resolution','Platform upgrade impact assessment','Periodic optimisation review'],
       ['Support handbook','Monitoring and alert configuration','Regular exception and performance reporting'],
-      'Ongoing — reviewed at agreed intervals.'],
+      'Ongoing, reviewed at agreed intervals.'],
   ].map(([n,t,intro,activities,deliverables,exit],i)=>`
   <div class="reveal" style="margin-bottom:${i<3?'56px':'0'};padding-bottom:${i<3?'56px':'0'};${i<3?'border-bottom:1px solid rgba(255,255,255,0.07)':''}">
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
@@ -1089,37 +1119,38 @@ register('delivery',()=>`
 </div></section>
 
 <section class="section section-alt"><div class="container">
-  <div class="sh c reveal"><p class="eyebrow">Governance</p><h2 class="st">Governance During Delivery</h2></div>
+  <div class="sh c reveal"><p class="eyebrow">Governance</p><h2 class="st">What you hear from us while we build</h2></div>
   <div class="grid-3">${[
     ['users','Weekly Status','A concise written status each week: what moved, what is blocked, what changed.'],
     ['target','Change Control','Scope variations are documented, priced, and approved before work commences.'],
-    ['check','Single Point of Accountability','One named consultant accountable for the engagement end-to-end — the same consultant who designed it.'],
+    ['check','Single Point of Accountability','One named consultant accountable for the engagement end to end. The same person who designed it.'],
   ].map(([icon,t,d])=>`<div class="glass-card reveal"><div style="color:var(--accent2);margin-bottom:14px">${ic(icon,26)}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
 </div></section>
 ${ctaBand('Start With Discovery','A discovery engagement maps your systems and shows what integration would involve.','Book a Discovery Call','View Services')}`);
 
 // ══ FAQ ══
 register('faq',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Frequently Asked Questions</p><h1>Frequently Asked Questions</h1><p>Straight answers to the questions asked before engaging.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">FAQ</p><h1>Questions we get before we start</h1><p>Straight answers to what people ask before engaging us.</p></div></div></section>
 
 <section class="section"><div class="container" style="max-width:840px">
   ${[
     ['Engagement',[
-      ['Are your integrations prebuilt or custom?','Custom, built on platform-native APIs and mainstream middleware. MISNOX does not sell a proprietary connector product. Proven patterns are reused across engagements — the speed benefit of prior work without lock-in to MISNOX-specific technology.'],
+      ['Are your integrations prebuilt or custom?','Custom, built on platform-native APIs and mainstream middleware. MISNOX does not sell a proprietary connector product. Proven patterns are reused across engagements, so you get the speed of prior work without lock-in to MISNOX-specific technology.'],
       ['Who owns what you build?','The client. Code, configuration, documentation, and design artefacts transfer in full. Should the engagement end, everything continues to run and a successor partner can operate from the documentation.'],
       ['How long does a typical integration take?','A single point-to-point integration typically runs four to eight weeks from discovery to production. Multi-system programmes and ERP implementations run considerably longer. An indicative range is given at discovery; a firm timeline at design sign-off.'],
-      ['Do you work alongside our internal IT team?','Yes — preferably. Internal IT holds the environment knowledge that makes integrations succeed. MISNOX operates either as an extension of the internal team or delivers end-to-end with defined touchpoints.'],
+      ['Do you work alongside our internal IT team?','Yes, and we prefer it. Internal IT holds the environment knowledge that makes integrations succeed. MISNOX operates either as an extension of the internal team or delivers end-to-end with defined touchpoints.'],
     ]],
     ['Commercial',[
       ['How do you price work?','Discovery engagements are fixed price and fixed duration. Delivery is quoted fixed-scope against an agreed design document. Managed support is a monthly retainer scaled to integrations under management. Open-ended time-and-materials is avoided wherever scope allows.'],
+      ['What is in the complimentary systems assessment?','You send a summary of your current system landscape. We send back a concise written assessment of the integration gaps. There is no charge.'],
       ['Do you charge for the initial conversation?','No. The initial conversation and fit assessment carry no charge. Paid work begins at discovery, once scope is agreed.'],
       ['What happens if scope changes mid-project?','Variations are documented, priced, and approved before any work begins. No invoice is issued for scope not explicitly approved.'],
     ]],
     ['Technical',[
       ['What happens if an integration fails at 2am during month-end?','Failures raise an immediate alert to the nominated channel. Failed records are quarantined rather than partially written, so the ERP is never left inconsistent. Once resolved, quarantined records replay without manual re-entry. Managed-support clients hold defined response targets by severity.'],
       ['Where does our data live?','In client systems. MISNOX does not warehouse or retain transactional data. Integrations move data directly between client platforms, inside the client environment.'],
-      ['What if our platform is not on your list?','If it exposes an API, it can almost certainly be integrated. The published platform list reflects deepest first-hand configuration knowledge — not the limit of what can be connected.'],
-      ['Can you take over an integration someone else built?','Often, yes. Existing work is reviewed and a candid assessment provided — maintain or rebuild — with the reasoning either way.'],
+      ['What if our platform is not on your list?','If it exposes an API, it can almost certainly be integrated. The published platform list reflects our deepest first-hand configuration knowledge. It is not the limit of what can be connected.'],
+      ['Can you take over an integration someone else built?','Often, yes. We review the existing work and tell you candidly whether to maintain or rebuild it, and why.'],
     ]],
   ].map(([cat,items])=>`
   <div class="reveal" style="margin-bottom:48px">
@@ -1137,7 +1168,7 @@ ${ctaBand('Another Question?','Direct enquiries receive an answer within one bus
 
 // ══ PRIVACY ══
 register('privacy',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Legal</p><h1>Privacy Policy</h1><p>How MISNOX Solutions collects, uses, and protects personal information — in line with the Australian Privacy Principles under the Privacy Act 1988 (Cth).</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Legal</p><h1>Privacy Policy</h1><p>How MISNOX Solutions collects, uses, and protects personal information, in line with the Australian Privacy Principles under the Privacy Act 1988 (Cth).</p></div></div></section>
 <section class="section"><div class="container" style="max-width:800px">
   ${[
     ['Information collected','Enquiries submitted through this website provide: name, email address, and optionally company, phone number, service interest, and message. No tracking cookies are used for advertising purposes.'],
@@ -1153,11 +1184,11 @@ register('privacy',()=>`
 
 // ══ CONTACT ══
 register('contact',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Get in Touch</p><h1>Contact</h1><p>Enquiries receive a response within one business day.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Contact</p><h1>Talk to us</h1><p>Enquiries get a response within one business day. Or email contact@misnox.com.au directly.</p></div></div></section>
 <section class="section"><div class="container"><div class="split" style="align-items:flex-start;gap:44px">
   <div class="reveal">
-    <h2 style="font-size:1.5rem;font-weight:800;color:#f0f6ff;margin-bottom:8px;letter-spacing:-0.02em">Book a Discovery Call</h2>
-    <p style="color:var(--muted);margin-bottom:18px">Outline the project; a response follows within one business day.</p>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#f0f6ff;margin-bottom:8px;letter-spacing:-0.02em">Send an enquiry</h2>
+    <p style="color:var(--muted);margin-bottom:18px">Outline the project and we will reply within one business day.</p>
     <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:26px">
       ${['No obligation','Response within 1 business day','Australian delivery team'].map(t=>`<span style="display:flex;align-items:center;gap:7px;font-size:0.78rem;color:rgba(255,255,255,0.55)"><span style="color:var(--accent2);font-weight:700">✓</span>${t}</span>`).join('')}
     </div>
@@ -1180,7 +1211,7 @@ register('contact',()=>`
     <div style="margin-top:24px;padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
       <div>
         <p style="font-size:0.9rem;font-weight:600;color:#fff;margin-bottom:3px">Prefer to start with an assessment?</p>
-        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55)">Select the complimentary systems assessment in the form above.</p>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55)">Send a summary of your current systems and get a short written view of the integration gaps.</p>
       </div>
       <a class="btn btn-ghost" href="#contact" data-cta="contact-assessment" onclick="event.preventDefault();navigate('contact','Complimentary systems assessment')">Book a free systems assessment <span class="arrow">→</span></a>
     </div>
@@ -1194,6 +1225,7 @@ register('contact',()=>`
         <div class="expect-item">Initial call to understand your requirements</div>
         <div class="expect-item">No-obligation project discussion</div>
         <div class="expect-item">Practical guidance on approach and timeline</div>
+        <div class="expect-item">A fixed-scope quote if we go ahead</div>
       </div>
     </div>
   </div>

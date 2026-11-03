@@ -6,6 +6,8 @@
 <title>Security &amp; Data Handling | MISNOX Solutions</title>
 <meta name="description" content="Integrations run inside your environment. How we handle access, credentials and data."/>
 <meta name="theme-color" content="#121828"/>
+<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
 <link rel="canonical" href="https://misnox.com.au/security/"/>
 
 <!-- Open Graph -->
@@ -439,7 +441,9 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
         <div class="dropdown">
           <a href="/services/">All Services</a>
           <a href="/erp/">ERP Integration</a>
+          <a href="/examples/">Example Scenarios</a>
           <a href="/delivery/">How We Work</a>
+        <a href="/examples/">Example Scenarios</a>
         </div>
       </li>
       <li><a class="nav-link" href="/industries/">Who We Help</a></li>
@@ -464,6 +468,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
     <a href="/about/" onclick="toggleMobile()">About</a>
     <a href="/services/" onclick="toggleMobile()">Services</a>
     <a href="/erp/" onclick="toggleMobile()">ERP Integration</a>
+    <a href="/examples/" onclick="toggleMobile()">Example Scenarios</a>
     <a href="/delivery/" onclick="toggleMobile()">How We Work</a>
     <a href="/industries/" onclick="toggleMobile()">Who We Help</a>
     <a href="/security/" onclick="toggleMobile()">Security &amp; Data</a>
@@ -472,7 +477,32 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
   </div>
 </nav>
 
-<main id="app"></main>
+<main id="app">
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Security &amp; Data Handling</p><h1>Your Data Stays in Your Systems</h1><p>Our integrations run inside your environment. We don't host or keep your financial data. Here is how we handle access, credentials and data.</p></div></div></section>
+
+<section class="section"><div class="container">
+  <div class="sh reveal visible" style="transition-delay: 0s;"><p class="eyebrow">Operating Model</p><h2 class="st">We Work Inside Your Environment</h2><p class="sd">Integrations run in your environment, under your controls, with your logging.</p></div>
+  <div class="grid-2"><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"></line><line x1="6" y1="18" x2="6" y2="11"></line><line x1="10" y1="18" x2="10" y2="11"></line><line x1="14" y1="18" x2="14" y2="11"></line><line x1="18" y1="18" x2="18" y2="11"></line><polygon points="12 2 20 7 4 7"></polygon></svg></span></div><div><h3>Data Location</h3><p>Integrations are deployed in your environment and the region you choose. We don't copy your data to our own systems.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.07s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span></div><div><h3>No Data Retention</h3><p>We do not store your transactional or financial data. Integrations move data directly between your systems. Where possible we test with dummy data, and anything we do handle is deleted when the project ends.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.14s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span></div><div><h3>Credential Handling</h3><p>Credentials stay in your own secret store, such as Azure Key Vault or AWS Secrets Manager. We never keep them in our systems, email or documents. We use named accounts that you create and can revoke at any time.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.21s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span></div><div><h3>Least Privilege Access</h3><p>Each service account gets only the permissions the integration needs, and we document them so your security team can review them.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.28s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"></circle><circle cx="5" cy="19" r="2"></circle><circle cx="19" cy="19" r="2"></circle><line x1="12" y1="7" x2="5" y2="17"></line><line x1="12" y1="7" x2="19" y2="17"></line></svg></span></div><div><h3>Encryption</h3><p>All data in transit uses TLS 1.2 or higher, and every endpoint requires authentication. If an older system cannot meet this, we tell you before we build, not after.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.35s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></div><div><h3>Access Revocation</h3><p>When the project ends, you get a list of every account, key and permission we used, so you can confirm each one has been removed.</p></div></div></div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <div class="sh c reveal" style="transition-delay: 0s;"><p class="eyebrow">Running Integrations</p><h2 class="st">What Happens When Something Fails</h2><p class="sd">Every integration fails sometimes: networks drop, APIs change, upstream systems change. What matters is that failures are caught, contained and easy to recover from.</p></div>
+  <div class="grid-3"><div class="glass-card reveal" style="transition-delay: 0s;"><div style="color:var(--accent2);margin-bottom:14px"><span style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg></span></div><h3>Detection</h3><p>Every integration has logging and alerts from day one. Failures alert your chosen channel, instead of sitting silently in a log.</p></div><div class="glass-card reveal" style="transition-delay: 0.07s;"><div style="color:var(--accent2);margin-bottom:14px"><span style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="5" rx="1"></rect><rect x="16" y="3" width="5" height="5" rx="1"></rect><rect x="3" y="16" width="5" height="5" rx="1"></rect><path d="M8 5.5h4a2 2 0 0 1 2 2V9"></path><path d="M18.5 8v3.5a2 2 0 0 1-2 2H13"></path><line x1="5.5" y1="11" x2="5.5" y2="16"></line></svg></span></div><h3>Containment</h3><p>Failed records are set aside, not dropped or half-written, so your ERP is never left half-updated.</p></div><div class="glass-card reveal" style="transition-delay: 0.14s;"><div style="color:var(--accent2);margin-bottom:14px"><span style="width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span></div><h3>Recovery</h3><p>Once the cause is fixed, the set-aside records run through again, with no re-keying and no duplicates.</p></div></div>
+  <p style="text-align: center; margin-top: 36px; font-size: 0.9rem; color: var(--muted); transition-delay: 0.07s;" class="reveal">Support response times are agreed for each client as part of a managed support arrangement.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner reveal" style="transition-delay: 0s;">
+      <h2>Security Questions?</h2><p>We are happy to walk your IT or security team through how we would handle access in your environment.</p>
+      <div class="cta-btns">
+        <button class="btn btn-primary btn-lg" data-cta="cta-band" onclick="navigate('contact')">Talk to Us <span class="arrow">→</span></button>
+        <button class="btn btn-outline btn-lg" data-cta="cta-band-secondary" onclick="navigate('faq')">Read the FAQ</button>
+      </div>
+    </div>
+  </div>
+</section></main>
 
 <footer id="site-footer">
   <div class="container">
@@ -519,7 +549,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
     </div>
     <div class="footer-bottom">
       <span style="color:rgba(255,255,255,0.2)">© <span id="yr">2026</span> MISNOX Solutions. All rights reserved.</span>
-      <div class="footer-bottom-links"><a href="/privacy/">Privacy</a><a href="/faq/">FAQ</a></div>
+      <div class="footer-bottom-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/faq/">FAQ</a></div>
     </div>
   </div>
 </footer>
@@ -901,7 +931,7 @@ ${ctaBand('Get in Touch','Tell us what you are trying to connect.')}`);
 // ══ SERVICES ══
 register('services',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Our Services</p><h1>Integration Services</h1><p>Five services, one goal: systems that share data reliably and enforce your controls.</p></div></div></section>
-<section class="section"><div class="container"><div class="grid-3">${SERVICES.map(([title,icon,desc,page])=>`<div class="card reveal"><div class="card-icon">${ic(icon,22)}</div><h3>${title}</h3><p>${desc}</p>${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div>`).join('')}</div></div></section>
+<section class="section"><div class="container"><h2 class="sr-only">Our services</h2><div class="grid-3">${SERVICES.map(([title,icon,desc,page])=>`<div class="card reveal"><div class="card-icon">${ic(icon,22)}</div><h3>${title}</h3><p>${desc}</p>${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div>`).join('')}</div></div></section>
 <!-- PLATFORM DEPTH — tiered -->
 <section class="section section-alt">
   <div class="container">
@@ -940,7 +970,7 @@ register('services',()=>`
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">Not on the list? If it has an API, we can usually connect it.</p>
+    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">Not on the list? If it has an API, we can usually connect it. <a href="/examples/" style="color:var(--accent)">See example scenarios →</a></p>
   </div>
 </section>
 <!-- ENGAGEMENT SHAPE -->
@@ -973,7 +1003,7 @@ register('erp',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">ERP Integration</p><h1>ERP Integration Projects</h1><p>Whether you're moving to a new ERP or getting more out of the one you have, we connect it to the rest of your business.</p></div></div></section>
 <section class="section"><div class="container"><div class="split">
   <div class="reveal"><p class="eyebrow">Where we fit</p><h2 class="st">The Connections Around Your ERP</h2><p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">Your ERP partner configures the ERP. We handle what connects to it: invoice capture, procurement, CRM, banking, reporting and data migration. We work alongside your ERP partner or internal team.</p></div>
-  <div class="reveal reveal-delay-1"><div class="steps">${PHASES.map(([n,t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div><h4>${t}</h4><p>${d}</p></div></div>`).join('')}</div></div>
+  <div class="reveal reveal-delay-1"><div class="steps">${PHASES.map(([n,t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div>
 </div></div></section>
 ${platformsGrid('section section-alt')}
 ${ctaBand('Planning an ERP Change?','A free call to talk through what needs to connect, before you commit to anything.','Book an Intro Call','View Services')}`);
@@ -981,7 +1011,7 @@ ${ctaBand('Planning an ERP Change?','A free call to talk through what needs to c
 // ══ INDUSTRIES ══
 register('industries',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Who We Help</p><h1>Who We Work With</h1><p>Organisations whose finance and procurement run across several systems.</p></div></div></section>
-<section class="section"><div class="container"><div class="grid-2">${[
+<section class="section"><div class="container"><h2 class="sr-only">Teams we work with</h2><div class="grid-2">${[
   ['Finance Teams','chart','Faster month-end, enforced approvals and fewer manual journals.',['AP and AR automation','Month-end reconciliation','Approval controls']],
   ['Procurement Teams','package','Purchase-to-pay that flows from request to ERP without re-keying.',['Purchase-to-pay automation','PO matching','Supplier data sync']],
   ['Multi-Entity Organisations','network','Several entities and systems that need to report as one.',['Intercompany transactions','Group reporting','Segregation of duties']],
@@ -1100,6 +1130,56 @@ register('faq',()=>`
   </div>`).join('')}
 </div></section>
 ${ctaBand('Another Question?','Ask us directly.','Get in Touch','Security & Data','security')}`);
+
+// ══ EXAMPLES ══
+register('examples',()=>`
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Example Scenarios</p><h1>What an Integration Looks Like</h1><p>Three common scenarios, showing how we approach the problem. These are illustrative examples, not client case studies.</p></div></div></section>
+<section class="section"><div class="container">
+  ${[
+    ['01','Bank feeds into Business Central','Finance','Dynamics 365 Business Central · bank feed / statement file',
+     'Each morning someone downloads statements, imports them, and matches hundreds of lines by hand. Anything unusual waits until month-end.',
+     ['Statements are pulled automatically every day through the bank feed or statement file','Lines are matched to open invoices and payments using amount, reference and date rules','Anything that does not match goes to an exceptions list with the reason shown','Lines still unmatched after a set number of days raise an alert'],
+     ['Reconciliation becomes a daily review of exceptions, not a manual matching job','Month-end starts with the bank already reconciled','Every match records who or what matched it, and why']],
+    ['02','CRM orders into finance','Sales to finance','Salesforce · NetSuite',
+     'Won deals are re-typed into the finance system to raise invoices. Customer details drift apart between the two systems, and invoices go out late or wrong.',
+     ['When a deal is marked won, the customer and order are created in NetSuite automatically','Customer records are kept in sync, with one system as the agreed source of truth','Pricing and tax codes are validated before anything is posted','Failed records are set aside and retried, so nothing is lost or duplicated'],
+     ['Invoices are raised from the same data the sales team agreed','No re-keying between sales and finance','A clear log of every order that moved, and when']],
+    ['03','Group reporting across entities','Multi-entity','Xero (subsidiaries) · Dynamics 365 Business Central (group)',
+     'Each subsidiary runs its own books. At month-end, someone exports trial balances to Excel, maps accounts by hand and nets off intercompany balances.',
+     ['Trial balances are pulled from each entity on a schedule','Accounts are mapped to the group chart of accounts using one agreed mapping table','Intercompany balances are flagged when they do not agree on both sides','Consolidated journals are posted into the group ledger for review'],
+     ['One mapping, maintained in one place','Intercompany differences surface early, not at the last minute','The group close starts from data, not from spreadsheets']],
+  ].map(([n,t,tag,sys,before,how,after],i)=>`
+  <div class="reveal" style="margin-bottom:${i<2?'56px':'0'};padding-bottom:${i<2?'56px':'0'};${i<2?'border-bottom:1px solid rgba(255,255,255,0.07)':''}">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px">
+      <div class="ps-num" style="margin-bottom:0">${n}</div>
+      <div><h2 style="font-size:1.5rem;font-weight:800;color:#f0f6ff;letter-spacing:-0.02em;margin:0">${t}</h2><p style="font-size:0.85rem;color:var(--muted);margin-top:4px">${tag} · ${sys}</p></div>
+    </div>
+    <div class="grid-3" style="gap:20px;margin-top:22px">
+      <div><h3 class="eyebrow" style="font-size:0.7rem">The problem</h3><p style="font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.7">${before}</p></div>
+      <div><h3 class="eyebrow" style="font-size:0.7rem">How we would approach it</h3><ul class="feature-list" style="gap:9px">${how.map(a=>`<li style="font-size:0.85rem">${a}</li>`).join('')}</ul></div>
+      <div><h3 class="eyebrow" style="font-size:0.7rem">What changes</h3><div style="display:flex;flex-direction:column;gap:8px">${after.map(d=>`<div style="padding:10px 14px;background:rgba(122,76,240,0.06);border:1px solid rgba(122,76,240,0.15);border-radius:9px;font-size:0.82rem;color:rgba(255,255,255,0.8)">${d}</div>`).join('')}</div></div>
+    </div>
+  </div>`).join('')}
+</div></section>
+${ctaBand('Got a Similar Problem?','Tell us what you are dealing with and we will tell you how we would approach it.')}`);
+
+// ══ TERMS ══
+register('terms',()=>`
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Legal</p><h1>Website Terms of Use</h1><p>The terms that apply when you use misnox.com.au.</p></div></div></section>
+<section class="section"><div class="container"><div style="max-width:760px">
+  ${[
+    ['Using this website','By using this website you agree to these terms. If you do not agree, please do not use it.'],
+    ['Information only','Content on this website is general information about our services. It is not professional advice for your situation, and examples on this site are illustrative. Any work we do for you is governed by a separate written agreement.'],
+    ['Accuracy','We try to keep this website accurate and up to date, but we do not guarantee that it is complete, current or free of errors.'],
+    ['Intellectual property','The content, design and branding on this website belong to MISNOX Solutions unless stated otherwise. Product names and trademarks of other companies, such as ERP and software platforms, belong to their owners and are used only to describe the systems we work with. Their use does not imply endorsement or partnership.'],
+    ['Links to other websites','Links to third-party websites are provided for convenience. We are not responsible for their content or privacy practices.'],
+    ['Liability','To the extent permitted by law, we are not liable for any loss arising from your use of this website or reliance on its content. Nothing in these terms excludes rights you have under the Australian Consumer Law that cannot be excluded.'],
+    ['Privacy','How we handle personal information is explained in our <a href="/privacy/" style="color:var(--accent)">Privacy Policy</a>.'],
+    ['Governing law','These terms are governed by the laws of New South Wales, Australia.'],
+    ['Changes','We may update these terms from time to time. The current version is always on this page.'],
+  ].map(([t,d])=>`<div class="reveal" style="margin-bottom:28px"><h2 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:8px">${t}</h2><p style="color:var(--muted);line-height:1.75">${d}</p></div>`).join('')}
+  <p style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Last updated: November 2026 · Questions: contact@misnox.com.au</p>
+</div></div></section>`);
 
 // ══ 404 ══
 register('404',()=>`

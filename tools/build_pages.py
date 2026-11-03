@@ -21,6 +21,10 @@ PAGES = {  # route: (title, description)
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
     'delivery': ('How We Work | MISNOX Solutions',
                  'Four clear phases: discover, design, build and go live, support.'),
+    'examples': ('Example Scenarios | MISNOX Solutions',
+                 'Illustrative integration scenarios: bank feed reconciliation, CRM orders into finance, and multi-entity group reporting.'),
+    'terms': ('Website Terms of Use | MISNOX Solutions',
+              'The terms that apply when you use the MISNOX Solutions website.'),
     'faq': ('FAQ | MISNOX Solutions',
             'Answers on ownership, pricing, process, support and data handling.'),
     'privacy': ('Privacy Policy | MISNOX Solutions',
@@ -69,3 +73,36 @@ sm += [f'  <url><loc>{url(r)}</loc><lastmod>{today}</lastmod></url>' for r in PA
 sm.append('</urlset>')
 open('sitemap.xml', 'w').write('\n'.join(sm) + '\n')
 print('built', len(PAGES), 'pages + sitemap.xml')
+
+# ── Pre-render: put each page's content into its HTML so search engines and
+#    link-preview bots see it without running JavaScript. Needs Playwright + Chrome;
+#    skipped (pages still work) if unavailable.
+def prerender():
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print('prerender skipped (no playwright)'); return
+    import threading, http.server, socketserver, functools
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *a): pass
+    handler = functools.partial(Quiet, directory='.')
+    srv = socketserver.TCPServer(('127.0.0.1', 0), handler); port = srv.server_address[1]
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    files = {r: ('index.html' if r == 'home' else f'{r}/index.html') for r in PAGES}
+    with sync_playwright() as p:
+        exe = '/usr/bin/google-chrome' if os.path.exists('/usr/bin/google-chrome') else None
+        b = p.chromium.launch(executable_path=exe) if exe else p.chromium.launch()
+        pg = b.new_page()
+        pg.route('**/fonts.googleapis.com/**', lambda r: r.abort())
+        for r, f in files.items():
+            pg.goto(f'http://127.0.0.1:{port}/' + ('' if r == 'home' else r + '/'))
+            pg.wait_for_selector('#app > *')
+            inner = pg.evaluate("document.getElementById('app').innerHTML")
+            h = open(f, encoding='utf-8').read()
+            h = re.sub(r'<main id="app">.*?</main>', lambda m: '<main id="app">' + inner + '</main>', h, count=1, flags=re.S)
+            open(f, 'w', encoding='utf-8').write(h)
+        b.close()
+    srv.shutdown()
+    print('prerendered', len(files), 'pages')
+
+prerender()

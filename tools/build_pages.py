@@ -8,7 +8,7 @@ import re, os, datetime
 SITE = 'https://misnox.com.au'
 PAGES = {  # route: (title, description)
     'home': ('MISNOX Solutions | ERP & Finance System Integration, Sydney',
-             'MISNOX Solutions connects ERP, finance and procurement systems for Australian organisations: integration, workflow automation, data migration and support.'),
+             'MISNOX Solutions connects ERP, finance and procurement systems for organisations: integration, workflow automation, data migration and support.'),
     'about': ('About | MISNOX Solutions',
               'A small, specialist integration practice based in Sydney, connecting the systems that run finance and procurement.'),
     'services': ('Integration Services | MISNOX Solutions',
@@ -16,7 +16,7 @@ PAGES = {  # route: (title, description)
     'erp': ('ERP Integration Projects | MISNOX Solutions',
             'Connect a new or existing ERP (Dynamics 365, NetSuite, SAP, TechnologyOne, Xero, MYOB) to the rest of your business.'),
     'industries': ('Who We Help | MISNOX Solutions',
-                   'Finance and procurement teams in mid-sized Australian organisations running across several systems.'),
+                   'Finance and procurement teams in organisations running across several systems.'),
     'security': ('Security & Data Handling | MISNOX Solutions',
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
     'delivery': ('How We Work | MISNOX Solutions',

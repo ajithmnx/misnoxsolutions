@@ -2,10 +2,13 @@
 
 Every change to the live site is committed straight to `main` and logged here (newest first), so any version can be restored.
 
-**To roll back:** tell Claude "revert the site to <commit>" — or run `git checkout <commit> -- index.html` and commit.
+**To roll back:** tell Claude "revert the site to <commit>" — or run `git checkout <commit> -- index.html`, then `python3 tools/build_pages.py`, and commit.
+
+**Editing:** `index.html` is the only page source. After editing it, run `python3 tools/build_pages.py` to regenerate the per-page copies and `sitemap.xml`.
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-03 | Site audit fixes: removed risky claims (Australian data residency, "implementation", supplier/bank-detail checks, SLAs/same-day response, implied track record); one free "Intro Call" + paid discovery; one timeline (7–13 weeks), one 5-service list, one platform list, one 4-phase process; Home cut ~35%; plain-English rewrite; Why MISNOX merged into About; Workato certification added; real page URLs (/services/ etc.) with own titles + sitemap.xml; old #links redirect; CHANGELOG and tools hidden from the live site | PENDING |
 | 2026-11-03 | Services page: removed "Also Integrate With"; one "Platforms We Integrate" list in 2 columns; Xero and MYOB split; added MYOB Acumatica, QuickBooks, Salesforce, Power BI with badges; removed Boomi, MuleSoft, Azure Integration Services | 0a2d870 |
 | 2026-11-03 | Site colours switched from indigo to the logo palette: cyan→violet gradient on headline highlights and main buttons; violet links/icons, cyan accents (all pass contrast) | e4ac3fa |
 | 2026-11-03 | Logo 46→50px, wordmark 1.5rem, brighter SOLUTIONS line, header 68→74px; phones: compact logo + hide header button so the menu button is visible again (was pushed off-screen) | 8c3ec7f |

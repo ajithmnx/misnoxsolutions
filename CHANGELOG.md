@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | "Book an Intro Call" buttons (header, home hero, closing bands) now open the Microsoft Bookings intro-call page in a new tab; Contact page gets a "Pick a Time" button; contact form kept for messages | PENDING |
 | 2026-11-04 | Removed the Example Scenarios page and every link to it (Services menu had it twice, mobile menu, Services page, Terms wording); /examples/ now shows the 404 page | 5762085 |
 | 2026-11-04 | Fewer "Book an Intro Call" buttons: removed the footer button (repeated the band just above it); header button hidden on the Contact page | 02b4901 |
 | 2026-11-04 | New pages: Example Scenarios (3 illustrative scenarios, clearly labelled) and Website Terms of Use; heading order fixed on Services/ERP/Who We Help; phone home-screen icon + web manifest; every page now pre-rendered into its HTML for search engines and link previews | 04ceceb |

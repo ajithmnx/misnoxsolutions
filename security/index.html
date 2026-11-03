@@ -441,9 +441,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
         <div class="dropdown">
           <a href="/services/">All Services</a>
           <a href="/erp/">ERP Integration</a>
-          <a href="/examples/">Example Scenarios</a>
           <a href="/delivery/">How We Work</a>
-        <a href="/examples/">Example Scenarios</a>
         </div>
       </li>
       <li><a class="nav-link" href="/industries/">Who We Help</a></li>
@@ -468,7 +466,6 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
     <a href="/about/" onclick="toggleMobile()">About</a>
     <a href="/services/" onclick="toggleMobile()">Services</a>
     <a href="/erp/" onclick="toggleMobile()">ERP Integration</a>
-    <a href="/examples/" onclick="toggleMobile()">Example Scenarios</a>
     <a href="/delivery/" onclick="toggleMobile()">How We Work</a>
     <a href="/industries/" onclick="toggleMobile()">Who We Help</a>
     <a href="/security/" onclick="toggleMobile()">Security &amp; Data</a>
@@ -970,7 +967,7 @@ register('services',()=>`
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">Not on the list? If it has an API, we can usually connect it. <a href="/examples/" style="color:var(--accent)">See example scenarios →</a></p>
+    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">Not on the list? If it has an API, we can usually connect it.</p>
   </div>
 </section>
 <!-- ENGAGEMENT SHAPE -->
@@ -1132,44 +1129,13 @@ register('faq',()=>`
 ${ctaBand('Another Question?','Ask us directly.','Get in Touch','Security & Data','security')}`);
 
 // ══ EXAMPLES ══
-register('examples',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Example Scenarios</p><h1>What an Integration Looks Like</h1><p>Three common scenarios, showing how we approach the problem. These are illustrative examples, not client case studies.</p></div></div></section>
-<section class="section"><div class="container">
-  ${[
-    ['01','Bank feeds into Business Central','Finance','Dynamics 365 Business Central · bank feed / statement file',
-     'Each morning someone downloads statements, imports them, and matches hundreds of lines by hand. Anything unusual waits until month-end.',
-     ['Statements are pulled automatically every day through the bank feed or statement file','Lines are matched to open invoices and payments using amount, reference and date rules','Anything that does not match goes to an exceptions list with the reason shown','Lines still unmatched after a set number of days raise an alert'],
-     ['Reconciliation becomes a daily review of exceptions, not a manual matching job','Month-end starts with the bank already reconciled','Every match records who or what matched it, and why']],
-    ['02','CRM orders into finance','Sales to finance','Salesforce · NetSuite',
-     'Won deals are re-typed into the finance system to raise invoices. Customer details drift apart between the two systems, and invoices go out late or wrong.',
-     ['When a deal is marked won, the customer and order are created in NetSuite automatically','Customer records are kept in sync, with one system as the agreed source of truth','Pricing and tax codes are validated before anything is posted','Failed records are set aside and retried, so nothing is lost or duplicated'],
-     ['Invoices are raised from the same data the sales team agreed','No re-keying between sales and finance','A clear log of every order that moved, and when']],
-    ['03','Group reporting across entities','Multi-entity','Xero (subsidiaries) · Dynamics 365 Business Central (group)',
-     'Each subsidiary runs its own books. At month-end, someone exports trial balances to Excel, maps accounts by hand and nets off intercompany balances.',
-     ['Trial balances are pulled from each entity on a schedule','Accounts are mapped to the group chart of accounts using one agreed mapping table','Intercompany balances are flagged when they do not agree on both sides','Consolidated journals are posted into the group ledger for review'],
-     ['One mapping, maintained in one place','Intercompany differences surface early, not at the last minute','The group close starts from data, not from spreadsheets']],
-  ].map(([n,t,tag,sys,before,how,after],i)=>`
-  <div class="reveal" style="margin-bottom:${i<2?'56px':'0'};padding-bottom:${i<2?'56px':'0'};${i<2?'border-bottom:1px solid rgba(255,255,255,0.07)':''}">
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px">
-      <div class="ps-num" style="margin-bottom:0">${n}</div>
-      <div><h2 style="font-size:1.5rem;font-weight:800;color:#f0f6ff;letter-spacing:-0.02em;margin:0">${t}</h2><p style="font-size:0.85rem;color:var(--muted);margin-top:4px">${tag} · ${sys}</p></div>
-    </div>
-    <div class="grid-3" style="gap:20px;margin-top:22px">
-      <div><h3 class="eyebrow" style="font-size:0.7rem">The problem</h3><p style="font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.7">${before}</p></div>
-      <div><h3 class="eyebrow" style="font-size:0.7rem">How we would approach it</h3><ul class="feature-list" style="gap:9px">${how.map(a=>`<li style="font-size:0.85rem">${a}</li>`).join('')}</ul></div>
-      <div><h3 class="eyebrow" style="font-size:0.7rem">What changes</h3><div style="display:flex;flex-direction:column;gap:8px">${after.map(d=>`<div style="padding:10px 14px;background:rgba(122,76,240,0.06);border:1px solid rgba(122,76,240,0.15);border-radius:9px;font-size:0.82rem;color:rgba(255,255,255,0.8)">${d}</div>`).join('')}</div></div>
-    </div>
-  </div>`).join('')}
-</div></section>
-${ctaBand('Got a Similar Problem?','Tell us what you are dealing with and we will tell you how we would approach it.')}`);
-
 // ══ TERMS ══
 register('terms',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Legal</p><h1>Website Terms of Use</h1><p>The terms that apply when you use misnox.com.au.</p></div></div></section>
 <section class="section"><div class="container"><div style="max-width:760px">
   ${[
     ['Using this website','By using this website you agree to these terms. If you do not agree, please do not use it.'],
-    ['Information only','Content on this website is general information about our services. It is not professional advice for your situation, and examples on this site are illustrative. Any work we do for you is governed by a separate written agreement.'],
+    ['Information only','Content on this website is general information about our services. It is not professional advice for your situation. Any work we do for you is governed by a separate written agreement.'],
     ['Accuracy','We try to keep this website accurate and up to date, but we do not guarantee that it is complete, current or free of errors.'],
     ['Intellectual property','The content, design and branding on this website belong to MISNOX Solutions unless stated otherwise. Product names and trademarks of other companies, such as ERP and software platforms, belong to their owners and are used only to describe the systems we work with. Their use does not imply endorsement or partnership.'],
     ['Links to other websites','Links to third-party websites are provided for convenience. We are not responsible for their content or privacy practices.'],

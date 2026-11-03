@@ -21,8 +21,6 @@ PAGES = {  # route: (title, description)
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
     'delivery': ('How We Work | MISNOX Solutions',
                  'Four clear phases: discover, design, build and go live, support.'),
-    'examples': ('Example Scenarios | MISNOX Solutions',
-                 'Illustrative integration scenarios: bank feed reconciliation, CRM orders into finance, and multi-entity group reporting.'),
     'terms': ('Website Terms of Use | MISNOX Solutions',
               'The terms that apply when you use the MISNOX Solutions website.'),
     'faq': ('FAQ | MISNOX Solutions',

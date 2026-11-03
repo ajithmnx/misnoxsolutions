@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-03 | "How we work" band changed from light grey-blue to a lifted navy band with a soft cyan glow and violet edge lines | PENDING |
 | 2026-11-03 | "How we work" light band toned down from near-white to a soft grey-blue (#C9D0DE); cards dimmed; text contrast kept above 5:1 | a8f598f |
 | 2026-11-03 | Look & feel: Sora font for headings; platform card grid replaced by an animated "one layer between your systems" hub diagram (Home + ERP); "Sound familiar?" as a clean numbered list (red borders removed); "How we work" on a light background; commitments as a quiet row instead of cards | 23369ac |
 | 2026-11-03 | Location Canberra → Sydney; removed all "fixed price/fixed-scope" wording and every timeline (process, services, delivery, FAQ); hero chip "Fixed-scope pricing" removed; flow "Supplier invoices → 3-way match" → "Bank feeds → automated reconciliation"; "Four Steps, Fixed Price" → "Four Clear Steps"; commitment "Fixed price" → "Clear quotes" | bf44933 |

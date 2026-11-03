@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-03 | Location Canberra → Sydney; removed all "fixed price/fixed-scope" wording and every timeline (process, services, delivery, FAQ); hero chip "Fixed-scope pricing" removed; flow "Supplier invoices → 3-way match" → "Bank feeds → automated reconciliation"; "Four Steps, Fixed Price" → "Four Clear Steps"; commitment "Fixed price" → "Clear quotes" | PENDING |
 | 2026-11-03 | Site audit fixes: removed risky claims (Australian data residency, "implementation", supplier/bank-detail checks, SLAs/same-day response, implied track record); one free "Intro Call" + paid discovery; one timeline (7–13 weeks), one 5-service list, one platform list, one 4-phase process; Home cut ~35%; plain-English rewrite; Why MISNOX merged into About; Workato certification added; real page URLs (/services/ etc.) with own titles + sitemap.xml; old #links redirect; CHANGELOG and tools hidden from the live site | 5ce5312 |
 | 2026-11-03 | Services page: removed "Also Integrate With"; one "Platforms We Integrate" list in 2 columns; Xero and MYOB split; added MYOB Acumatica, QuickBooks, Salesforce, Power BI with badges; removed Boomi, MuleSoft, Azure Integration Services | 0a2d870 |
 | 2026-11-03 | Site colours switched from indigo to the logo palette: cyan→violet gradient on headline highlights and main buttons; violet links/icons, cyan accents (all pass contrast) | e4ac3fa |

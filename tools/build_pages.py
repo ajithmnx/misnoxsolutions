@@ -7,10 +7,10 @@ import re, os, datetime
 
 SITE = 'https://misnox.com.au'
 PAGES = {  # route: (title, description)
-    'home': ('MISNOX Solutions | ERP & Finance System Integration, Canberra',
+    'home': ('MISNOX Solutions | ERP & Finance System Integration, Sydney',
              'MISNOX Solutions connects ERP, finance and procurement systems for Australian organisations: integration, workflow automation, data migration and support.'),
     'about': ('About | MISNOX Solutions',
-              'A small, specialist integration practice based in Canberra, connecting the systems that run finance and procurement.'),
+              'A small, specialist integration practice based in Sydney, connecting the systems that run finance and procurement.'),
     'services': ('Integration Services | MISNOX Solutions',
                  'System integration, workflow automation, data migration and sync, ERP integration projects and managed support.'),
     'erp': ('ERP Integration Projects | MISNOX Solutions',
@@ -20,13 +20,13 @@ PAGES = {  # route: (title, description)
     'security': ('Security & Data Handling | MISNOX Solutions',
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
     'delivery': ('How We Work | MISNOX Solutions',
-                 'Four phases, fixed price: discover, design, build and go live, support.'),
+                 'Four clear phases: discover, design, build and go live, support.'),
     'faq': ('FAQ | MISNOX Solutions',
-            'Answers on ownership, pricing, timelines, support and data handling.'),
+            'Answers on ownership, pricing, process, support and data handling.'),
     'privacy': ('Privacy Policy | MISNOX Solutions',
                 'How MISNOX Solutions handles personal information under the Australian Privacy Principles.'),
     'contact': ('Contact | MISNOX Solutions',
-                'Book a free intro call with MISNOX Solutions, Canberra.'),
+                'Book a free intro call with MISNOX Solutions, Sydney.'),
 }
 
 def url(r): return SITE + ('/' if r == 'home' else f'/{r}/')

@@ -455,7 +455,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
       <li><a class="nav-link" href="/contact/">Contact</a></li>
     </ul>
     <div class="nav-cta" style="margin-left:12px">
-      <button class="btn btn-primary" data-cta="nav" onclick="navigate('contact')">Book an Intro Call <span class="arrow">→</span></button>
+      <button class="btn btn-primary" data-cta="nav" onclick="bookCall()">Book an Intro Call <span class="arrow">→</span></button>
     </div>
     <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
       <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg>
@@ -486,7 +486,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
         <h1 class="ha1">Your systems, <span class="hl">connected</span>.<br>Your controls, <span class="hl">enforced</span>.<span class="sr-only"> — ERP and finance system integration</span></h1>
         <p class="hero-sub ha2">We connect your ERP, finance and procurement systems so data moves on its own and your approval rules are enforced, not just written down.</p>
         <div class="hero-actions ha3">
-          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="navigate('contact')">Book an Intro Call <span class="arrow">→</span></button>
+          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="bookCall()">Book an Intro Call <span class="arrow">→</span></button>
           <button class="btn btn-ghost btn-lg" data-cta="hero-secondary" onclick="navigate('services')">See Our Services</button>
         </div>
         <div class="hero-promises ha4">
@@ -714,7 +714,7 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
     <div class="cta-inner reveal" style="transition-delay: 0s;">
       <h2>Let's Talk</h2><p>A free 30-minute call to understand your systems and whether we can help.</p>
       <div class="cta-btns">
-        <button class="btn btn-primary btn-lg" data-cta="cta-band" onclick="navigate('contact')">Book an Intro Call <span class="arrow">→</span></button>
+        <button class="btn btn-primary btn-lg" data-cta="cta-band" onclick="bookCall()">Book an Intro Call <span class="arrow">→</span></button>
         <button class="btn btn-outline btn-lg" data-cta="cta-band-secondary" onclick="navigate('services')">View Services</button>
       </div>
     </div>
@@ -828,6 +828,8 @@ const PHASES=[
 const routes={};
 function register(n,f){routes[n]=f}
 function pageUrl(p){return p==='home'?'/':'/'+p+'/'}
+const BOOK_URL='https://bookings.cloud.microsoft/owa/calendar/MISNOXSolutions@misnox.com.au/bookings/';
+function bookCall(){track('book_click',{page:location.pathname});window.open(BOOK_URL,'_blank','noopener')}
 function navigate(p,prefill){
   location.href=pageUrl(p)+(prefill?'?service='+encodeURIComponent(prefill):'');
 }
@@ -948,7 +950,7 @@ const ctaBand=(title,desc,b1='Book an Intro Call',b2='View Services',p2='service
     <div class="cta-inner reveal">
       <h2>${title}</h2><p>${desc}</p>
       <div class="cta-btns">
-        <button class="btn btn-primary btn-lg" data-cta="cta-band" onclick="navigate('contact')">${b1} <span class="arrow">→</span></button>
+        <button class="btn btn-primary btn-lg" data-cta="cta-band" onclick="${b1.includes('Book')?'bookCall()':"navigate('contact')"}">${b1} <span class="arrow">→</span></button>
         <button class="btn btn-outline btn-lg" data-cta="cta-band-secondary" onclick="navigate('${p2}')">${b2}</button>
       </div>
     </div>
@@ -970,7 +972,7 @@ register('home',()=>`
         <h1 class="ha1">Your systems, <span class="hl">connected</span>.<br>Your controls, <span class="hl">enforced</span>.<span class="sr-only"> — ERP and finance system integration</span></h1>
         <p class="hero-sub ha2">We connect your ERP, finance and procurement systems so data moves on its own and your approval rules are enforced, not just written down.</p>
         <div class="hero-actions ha3">
-          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="navigate('contact')">Book an Intro Call <span class="arrow">→</span></button>
+          <button class="btn btn-primary btn-lg" data-cta="hero-primary" onclick="bookCall()">Book an Intro Call <span class="arrow">→</span></button>
           <button class="btn btn-ghost btn-lg" data-cta="hero-secondary" onclick="navigate('services')">See Our Services</button>
         </div>
         <div class="hero-promises ha4">
@@ -1394,7 +1396,8 @@ register('contact',()=>`
 <section class="section"><div class="container"><div class="split" style="align-items:flex-start;gap:44px">
   <div class="reveal">
     <h2 style="font-size:1.5rem;font-weight:800;color:#f0f6ff;margin-bottom:8px;letter-spacing:-0.02em">Book an Intro Call</h2>
-    <p style="color:var(--muted);margin-bottom:18px">A free 30-minute call. Tell us a little about your systems and we will suggest a time.</p>
+    <p style="color:var(--muted);margin-bottom:18px">A free 30-minute call on Microsoft Teams. Pick a time that suits you, or send us a message below and we will get back to you.</p>
+    <div style="margin-bottom:26px"><button class="btn btn-primary btn-lg" data-cta="contact-book" onclick="bookCall()">Pick a Time <span class="arrow">→</span></button></div>
     <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:26px">
       ${['Free, no obligation','Sydney-based'].map(t=>`<span style="display:flex;align-items:center;gap:7px;font-size:0.78rem;color:rgba(255,255,255,0.55)"><span style="color:var(--accent2);font-weight:700">✓</span>${t}</span>`).join('')}
     </div>
@@ -1429,7 +1432,7 @@ register('contact',()=>`
       <div class="contact-item"><div class="contact-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div class="contact-item-text"><p>Email</p><a href="mailto:contact@misnox.com.au">contact@misnox.com.au</a></div></div>
       <div class="contact-item"><div class="contact-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div class="contact-item-text"><p>Location</p><p>Sydney, Australia</p></div></div>
       <div class="expect-list"><h4>What to Expect</h4>
-        <div class="expect-item">A free 30-minute call about your systems</div>
+        <div class="expect-item">A free 30-minute Teams call about your systems</div>
         <div class="expect-item">An honest view on whether we can help</div>
         <div class="expect-item">If so, a written discovery proposal</div>
       </div>

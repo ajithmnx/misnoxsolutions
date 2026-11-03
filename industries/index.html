@@ -25,7 +25,7 @@
 
 <!-- Favicon (inline SVG — no external file needed) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round"%3E%3Cdefs%3E%3ClinearGradient id="a" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"%3E%3Cstop offset="0" stop-color="%2333CCE0"/%3E%3Cstop offset="1" stop-color="%237A4CF0"/%3E%3C/linearGradient%3E%3ClinearGradient id="b" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse"%3E%3Cstop offset="0" stop-color="%2333CCE0"/%3E%3Cstop offset="1" stop-color="%237A4CF0"/%3E%3C/linearGradient%3E%3Cmask id="k" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"%3E%3Crect width="100" height="100" fill="%23fff"/%3E%3Cpath d="M12 80C52 80 48 20 88 20" stroke="%23000" stroke-width="24"/%3E%3C/mask%3E%3C/defs%3E%3Cpath d="M12 20C52 20 48 80 88 80" stroke="url%28%23a%29" stroke-width="12" mask="url%28%23k%29"/%3E%3Cpath d="M12 80C52 80 48 20 88 20" stroke="url%28%23b%29" stroke-width="12"/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&amp;text=MISNOXSOLUTI&amp;display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&amp;text=MISNOXSOLUTI&amp;display=swap">
 
 <!-- Local business structured data -->
 <script type="application/ld+json">
@@ -375,6 +375,52 @@ footer{background:#0d1220;color:rgba(255,255,255,0.6);padding:60px 0 28px}
   .fs-card{padding:15px 17px}
 }
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.hero h1{font-size:2rem}.container{padding:0 16px}.btn-lg{padding:14px 24px;font-size:0.9rem}.card,.bcard,.why-card{padding:22px}}
+
+/* ── Look & feel refresh (Nov 2026) ── */
+h1,h2,h3,h4,.st{font-family:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif}
+h1,.st,.page-hero h1{letter-spacing:-0.022em}
+/* light band to break the dark */
+.section-light{background:#F4F5FA;color:#1A2340}
+.section-light .st{color:#0B0F1A}
+.section-light .sd{color:#4A5468}
+.section-light .eyebrow{color:#0B7F96}
+.section-light .sh.c::before{background:linear-gradient(90deg,#0E8FA8,#6A3BE4)}
+.section-light .why-card{background:#fff;border:1px solid #E3E6EF;box-shadow:0 1px 3px rgba(16,24,40,0.05)}
+.section-light .why-card:hover{border-color:#C9CEE0;box-shadow:0 6px 20px rgba(16,24,40,0.08)}
+.section-light .why-card h3{color:#0B0F1A}
+.section-light .why-card p{color:#4A5468}
+.section-light .ps-num{color:#6A3BE4;font-weight:600}
+.section-light .card-link{color:#5B30D6}
+/* integration hub diagram */
+.hub{display:grid;grid-template-columns:1fr 70px minmax(220px,260px) 70px 1fr;align-items:center;gap:0;margin-top:8px}
+.hub-col{display:flex;flex-direction:column;gap:10px}
+.hub-label{font-size:0.7rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px}
+.hub-node{display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.08);border-radius:12px;font-size:0.86rem;color:rgba(255,255,255,0.85);font-weight:600}
+.hub-node .ic{color:var(--accent2);display:inline-flex}
+.hub-wire{height:2px;background:linear-gradient(90deg,rgba(51,204,224,0.15),rgba(122,76,240,0.55),rgba(51,204,224,0.15));position:relative;overflow:hidden}
+.hub-wire::after{content:'';position:absolute;top:-2px;left:-20%;width:20%;height:6px;border-radius:3px;background:#33CCE0;box-shadow:0 0 10px #33CCE0;animation:wire 2.6s linear infinite}
+.hub-wire.rev::after{animation-direction:reverse}
+@keyframes wire{to{left:110%}}
+.hub-core{text-align:center;padding:30px 22px;border-radius:22px;background:radial-gradient(circle at 50% 30%,rgba(122,76,240,0.22),rgba(51,204,224,0.06) 70%);border:1px solid rgba(122,76,240,0.4);box-shadow:0 0 60px rgba(122,76,240,0.18)}
+.hub-core svg{width:64px;height:64px;display:block;margin:0 auto 14px}
+.hub-core strong{display:block;font-family:'Sora',sans-serif;font-size:1rem;color:#fff;margin-bottom:6px}
+.hub-core small{display:block;font-size:0.76rem;color:rgba(255,255,255,0.55);line-height:1.6}
+@media(max-width:900px){.hub{grid-template-columns:1fr;gap:14px}.hub-wire{height:28px;width:2px;margin:0 auto;background:linear-gradient(180deg,rgba(51,204,224,0.15),rgba(122,76,240,0.55),rgba(51,204,224,0.15))}.hub-wire::after{display:none}}
+@media(prefers-reduced-motion:reduce){.hub-wire::after{animation:none;display:none}}
+/* plain list instead of card grid */
+.plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;max-width:980px;margin:0 auto}
+.plist-item{display:flex;gap:18px;padding:24px 0;border-top:1px solid rgba(255,255,255,0.08)}
+.plist-num{font-family:'Sora',sans-serif;font-size:0.85rem;font-weight:700;color:var(--accent2);min-width:26px;padding-top:2px}
+.plist-item h3{font-size:1.05rem;color:#f0f6ff;margin-bottom:6px}
+.plist-item p{font-size:0.9rem;color:var(--muted);line-height:1.65}
+@media(max-width:768px){.plist{grid-template-columns:1fr}}
+/* commitments as a quiet row */
+.qrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.qrow-item .card-icon{margin-bottom:16px}
+.qrow-item h3{font-size:1rem;color:#f0f6ff;margin-bottom:8px}
+.qrow-item p{font-size:0.875rem;color:var(--muted);line-height:1.65}
+@media(max-width:900px){.qrow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.qrow{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -626,19 +672,28 @@ const platformsGrid=(cls='section')=>`
 <section class="${cls}">
   <div class="container">
     <div class="sh c reveal">
-      <p class="eyebrow">Platforms</p>
-      <h2 class="st">Platforms We Integrate</h2>
-      <p class="sd">ERP and finance platforms we connect through their documented APIs.</p>
+      <p class="eyebrow">How it fits together</p>
+      <h2 class="st">One Layer Between Your Systems</h2>
+      <p class="sd">Your other systems talk to your ERP through one controlled, monitored layer, instead of a tangle of manual steps.</p>
     </div>
-    <div class="grid-3">${[
-      [PF.ms,'Microsoft Dynamics 365','Business Central and Finance &amp; Operations.'],
-      [PF.oracle,'Oracle NetSuite &amp; Fusion','AP, supplier and GL integration.'],
-      [PF.sap,'SAP','Vendor and payables integration for multi-entity environments.'],
-      [PF.t1,'TechnologyOne','Government, education and council finance.'],
-      [PF.xero,'Xero','Often the counterpart to a larger ERP.'],
-      [PF.myob,'MYOB','Australian SME accounting and payroll.'],
-    ].map(([b,t,d])=>`<div class="card reveal"><div class="pf-head">${b}<h3>${t}</h3></div><p>${d}</p></div>`).join('')}</div>
-    <p style="text-align:center;margin-top:24px" class="reveal"><a class="card-link" href="/services/">Full platform list <span class="arrow">→</span></a></p>
+    <div class="hub reveal reveal-delay-1" role="img" aria-label="Diagram: business systems connect through the MISNOX integration layer to ERP platforms">
+      <div class="hub-col">
+        <p class="hub-label">Your systems</p>
+        ${[['globe','Bank feeds'],['package','Procurement'],['users','CRM'],['briefcase','Payroll &amp; HR'],['chart','Reporting']].map(([i,t])=>`<div class="hub-node"><span class="ic">${ic(i,18)}</span>${t}</div>`).join('')}
+      </div>
+      <div class="hub-wire" aria-hidden="true"></div>
+      <div class="hub-core">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#mx-mark"/></svg>
+        <strong>MISNOX integration layer</strong>
+        <small>APIs · validation · approval rules<br>monitoring · audit trail</small>
+      </div>
+      <div class="hub-wire rev" aria-hidden="true"></div>
+      <div class="hub-col">
+        <p class="hub-label">Your ERP</p>
+        ${[[PF.ms,'Dynamics 365'],[PF.oracle,'NetSuite / Fusion'],[PF.sap,'SAP'],[PF.t1,'TechnologyOne'],[PF.xero,'Xero / MYOB']].map(([b,t])=>`<div class="hub-node">${b.replaceAll('pf-badge"','pf-badge pf-badge-sm"')}${t}</div>`).join('')}
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:28px" class="reveal"><a class="card-link" href="/services/">Full platform list <span class="arrow">→</span></a></p>
   </div>
 </section>`;
 
@@ -739,17 +794,14 @@ ${platformsGrid('section section-alt')}
       <p class="eyebrow">Common starting points</p>
       <h2 class="st">Sound Familiar?</h2>
     </div>
-    <div class="grid-2 reveal reveal-delay-1">
+    <div class="plist reveal reveal-delay-1">
       ${[
         ['Month-end takes days','Manual journals and spreadsheet reconciliations, because the systems that should be connected aren\'t.'],
         ['The same data is typed in twice','Invoices keyed into one system, then again into the ERP. Slow, and a common source of errors.'],
         ['Approval limits live on paper','Policy says $50k needs two sign-offs, but nothing in the system stops it.'],
         ['Failures are found by accident','A sync stops quietly and nobody notices until the numbers look wrong.'],
-      ].map(([t,d])=>`
-      <div class="card" style="border-left:3px solid rgba(239,68,68,0.4)">
-        <h3 style="margin-bottom:10px">${t}</h3>
-        <p>${d}</p>
-      </div>`).join('')}
+      ].map(([t,d],i)=>`
+      <div class="plist-item"><span class="plist-num">0${i+1}</span><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}
     </div>
   </div>
 </section>
@@ -786,7 +838,7 @@ ${platformsGrid('section section-alt')}
 </section>
 
 <!-- HOW WE WORK -->
-<section class="section">
+<section class="section section-light">
   <div class="container">
     <div class="sh c reveal">
       <p class="eyebrow">How we work</p>
@@ -812,16 +864,16 @@ ${platformsGrid('section section-alt')}
       <p class="eyebrow">What you can count on</p>
       <h2 class="st">Our Commitments</h2>
     </div>
-    <div class="grid-2">
+    <div class="qrow">
       ${[
         ['lock','You own it','All code, configuration and documentation is yours. Another team could run it from our handover notes.'],
         ['shield','Controls built in','Approval limits, segregation of duties and audit trails are part of the design, not added later.'],
         ['database','Your data stays put','Integrations run inside your environment. We don\'t host, copy or keep your financial data.'],
         ['target','Clear quotes','You get a written quote before work starts, and any change is agreed before we do it.'],
       ].map(([icon,t,d])=>`
-      <div class="why-card reveal">
+      <div class="qrow-item reveal">
         <div class="card-icon">${ic(icon,22)}</div>
-        <h3 style="margin-top:0">${t}</h3>
+        <h3>${t}</h3>
         <p>${d}</p>
       </div>`).join('')}
     </div>

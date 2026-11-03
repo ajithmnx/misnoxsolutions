@@ -6,6 +6,6 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-03 | New Crossflow logo (from Claude Design) in nav, footer and integration graphic; Unbounded wordmark; new browser-tab icon | PENDING |
+| 2026-11-03 | New Crossflow logo (from Claude Design) in nav, footer and integration graphic; Unbounded wordmark; new browser-tab icon | eb0e8a1 |
 | 2026-11-03 | Added this changelog (site itself unchanged) | 2a77393 |
 | 2026-11-03 | **Baseline** — site as uploaded manually ("Add files via upload") | 1fa2acf |

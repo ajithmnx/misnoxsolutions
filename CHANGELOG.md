@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Fewer "Book an Intro Call" buttons: removed the footer button (repeated the band just above it); header button hidden on the Contact page | PENDING |
 | 2026-11-04 | New pages: Example Scenarios (3 illustrative scenarios, clearly labelled) and Website Terms of Use; heading order fixed on Services/ERP/Who We Help; phone home-screen icon + web manifest; every page now pre-rendered into its HTML for search engines and link previews | 04ceceb |
 | 2026-11-03 | Removed business-size wording (50–500 staff, mid-sized, mid-market, SME) and "Australian organisations" everywhere; Who We Help intro now "Organisations whose finance and procurement run across several systems"; removed Australia-only service area from search data. Kept: Sydney address and Australian Privacy Act references (legal) | 492dcb0 |
 | 2026-11-03 | Review round 2: link-preview image (og-image.png) + per-page share text; branded 404 page (wrangler.jsonc not_found_handling); badge letters hidden from screen readers; hero point → "No vendor lock-in"; removed duplicate FAQs (data location, initial-call charge); scope-change message no longer repeated; hero "Matched to purchase order"; Security/How We Work/FAQ rewritten in we/you voice; "Multi-Entity Organisations"; Who We Help tags trimmed to 3 concrete each; "We Work Inside Your Environment" | 06889a1 |

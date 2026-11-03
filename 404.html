@@ -765,7 +765,6 @@ h1,.st,.page-hero h1{letter-spacing:-0.022em}
         <h4>Contact</h4>
         <div class="footer-contact-item"><a href="mailto:contact@misnox.com.au">contact@misnox.com.au</a></div>
         <div class="footer-contact-item">Sydney, Australia</div>
-        <button class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center" data-cta="footer" onclick="navigate('contact')">Book an Intro Call</button>
       </div>
     </div>
     <div class="footer-bottom">
@@ -839,6 +838,7 @@ function navigate(p,prefill){
 function render(p){document.getElementById('app').innerHTML=(routes[p]||routes['home'])();initReveal();
   const here=pageUrl(p);
   document.querySelectorAll('.nav-link').forEach(l=>{const li=l.closest('li');l.classList.toggle('active',!!(li&&li.querySelector('a[href="'+here+'"]')))});
+  const nc=document.querySelector('.nav-cta');if(nc)nc.style.visibility=p==='contact'?'hidden':'';
   if(p==='contact'){const v=new URLSearchParams(location.search).get('service');const sel=document.getElementById('f-service');if(v&&sel){sel.value=v;sel.style.borderColor='rgba(122,76,240,0.5)'}}
 }
 window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>24),{passive:true});

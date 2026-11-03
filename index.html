@@ -220,6 +220,8 @@ h2.st{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;color:#f0f6ff;letter-
 .pf-badge svg{display:block}
 .pf-badge-txt{font-weight:800;color:#fff;letter-spacing:0.02em;line-height:1}
 .pf-badge-sm{width:28px;height:28px;border-radius:8px}
+.pf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:768px){.pf-grid{grid-template-columns:1fr}}
 .pf-pair{display:inline-flex;gap:6px;flex-shrink:0}
 .pf-head{display:flex;align-items:center;gap:13px;margin-bottom:12px}
 .pf-head h3{margin-bottom:0!important}
@@ -516,6 +518,9 @@ const PF={
   myob:`<span class="pf-badge" title="MYOB" style="background:#8241aa;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.72rem">M</span></span>`,
   t1:`<span class="pf-badge" title="TechnologyOne" style="background:#1e3a6e;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.6rem">T1</span></span>`,
   xero:`<span class="pf-badge" title="Xero" style="background:#13b5ea;border-color:transparent;border-radius:50%"><span class="pf-badge-txt" style="font-size:0.7rem">X</span></span>`,
+  acu:`<span class="pf-badge" title="MYOB Acumatica" style="background:#5b2d86;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.56rem">MA</span></span>`,
+  sf:`<span class="pf-badge" title="Salesforce" style="background:#00a1e0;border-color:transparent;border-radius:50%"><span class="pf-badge-txt" style="font-size:0.58rem">sf</span></span>`,
+  pbi:`<span class="pf-badge" title="Power BI" style="background:#f2c811;border-color:transparent"><span class="pf-badge-txt" style="font-size:0.56rem;color:#1a1a1a">BI</span></span>`,
   qb:`<span class="pf-badge" title="QuickBooks" style="background:#2ca01c;border-color:transparent;border-radius:50%"><span class="pf-badge-txt" style="font-size:0.58rem">qb</span></span>`,
 };
 
@@ -915,21 +920,26 @@ register('services',()=>`
       <h2 class="st">Depth Where It Counts</h2>
       <p class="sd">Depth is concentrated deliberately on fewer platforms. Where first-hand depth does not exist, integration proceeds through documented APIs — stated plainly, never implied.</p>
     </div>
-    <div class="grid-2 reveal reveal-delay-1">
+    <div class="reveal reveal-delay-1">
       <div style="background:linear-gradient(135deg,rgba(122,76,240,0.08),rgba(122,76,240,0.03));border:1px solid rgba(122,76,240,0.22);border-radius:var(--r);padding:32px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
           <span style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></span>
-          <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0">Core Expertise</h3>
+          <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0">Platforms We Integrate</h3>
         </div>
-        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Platforms in daily practice — data models, APIs, configuration frameworks, and known constraints.</p>
-        <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">ERP, finance, CRM and reporting platforms — connected through their documented APIs, data models and configuration frameworks.</p>
+        <div class="pf-grid">
           ${[
             [PF.ms,'Dynamics 365 Business Central','Mid-market ERP — distributors, project businesses, Microsoft 365 estates'],
             [PF.ms,'Dynamics 365 Finance & Operations','Enterprise scale — complex finance, multi-entity operations'],
             [PF.oracle,'Oracle NetSuite & Oracle Fusion','Cloud ERP — AP, supplier master, and GL integration'],
             [PF.sap,'SAP','Multi-entity enterprise environments — vendor and payables integration'],
             [PF.t1,'TechnologyOne','Government, education, and local council finance'],
-            [`<span class="pf-pair">${PF.xero}${PF.myob}</span>`,'Xero & MYOB','SME finance platforms — often the integration counterpart to a larger ERP'],
+            [PF.xero,'Xero','SME accounting — often the integration counterpart to a larger ERP'],
+            [PF.myob,'MYOB','Australian SME accounting and payroll'],
+            [PF.acu,'MYOB Acumatica','Cloud ERP for growing mid-sized businesses'],
+            [PF.qb,'QuickBooks','Small-business accounting — invoice and payment sync'],
+            [PF.sf,'Salesforce','CRM — customer, quote and order data flowing into finance'],
+            [PF.pbi,'Power BI','Reporting — finance and operational data delivered to dashboards'],
           ].map(([b,t,d])=>`
           <div style="display:flex;gap:13px;align-items:flex-start;padding:12px 16px;background:rgba(122,76,240,0.05);border:1px solid rgba(122,76,240,0.15);border-radius:10px">
             <span style="margin-top:2px">${b.replaceAll('pf-badge"','pf-badge pf-badge-sm"').replaceAll("pf-badge' ","pf-badge pf-badge-sm' ")}</span>
@@ -940,18 +950,8 @@ register('services',()=>`
           </div>`).join('')}
         </div>
       </div>
-      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);padding:32px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-          <span style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3)"></span>
-          <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin:0">Also Integrate With</h3>
-        </div>
-        <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:20px">Connected via documented APIs and middleware — typically as the counterpart system in an integration.</p>
-        <div class="chips" style="margin-top:0">
-          ${['MYOB Acumatica','QuickBooks','Salesforce','Power BI','Azure Integration Services','Boomi','MuleSoft'].map(c=>`<span class="chip">${c}</span>`).join('')}
-        </div>
-      </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">If a platform exposes an API, it can usually be integrated — the lists above reflect depth, not limits.</p>
+    <p style="text-align:center;margin-top:28px;font-size:0.875rem;color:rgba(255,255,255,0.45)" class="reveal">If a platform exposes an API, it can usually be integrated — the list above reflects depth, not limits.</p>
   </div>
 </section>
 <!-- ENGAGEMENT SHAPE -->

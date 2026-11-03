@@ -42,6 +42,9 @@ def page_html(r):
     h = re.sub(r'<meta name="description" content="[^"]*"\s*/?>', f'<meta name="description" content="{esc(desc)}"/>', h, count=1)
     h = re.sub(r'<meta property="og:title" content="[^"]*"\s*/?>', f'<meta property="og:title" content="{esc(title)}"/>', h, count=1)
     h = re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', f'<meta property="og:url" content="{url(r)}"/>', h, count=1)
+    h = re.sub(r'<meta name="twitter:title" content="[^"]*"\s*/?>', f'<meta name="twitter:title" content="{esc(title)}"/>', h, count=1)
+    h = re.sub(r'<meta property="og:description" content="[^"]*"\s*/?>', f'<meta property="og:description" content="{esc(desc)}"/>', h, count=1)
+    h = re.sub(r'<meta name="twitter:description" content="[^"]*"\s*/?>', f'<meta name="twitter:description" content="{esc(desc)}"/>', h, count=1)
     if '<link rel="canonical"' in h:
         h = re.sub(r'<link rel="canonical" href="[^"]*"\s*/?>', f'<link rel="canonical" href="{url(r)}"/>', h, count=1)
     else:
@@ -54,6 +57,11 @@ for r in PAGES:
     if r == 'home': continue
     os.makedirs(r, exist_ok=True)
     open(f'{r}/index.html', 'w', encoding='utf-8').write(page_html(r))
+
+# 404 page: served by Cloudflare for any unknown address (wrangler.jsonc not_found_handling)
+h404 = page_html('home').replace('<title>', '<meta name="robots" content="noindex"/>\n<title>', 1)
+h404 = re.sub(r'<title>.*?</title>', '<title>Page Not Found | MISNOX Solutions</title>', h404, count=1, flags=re.S)
+open('404.html', 'w', encoding='utf-8').write(h404)
 
 today = datetime.date.today().isoformat()
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

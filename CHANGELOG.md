@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-03 | Review round 2: link-preview image (og-image.png) + per-page share text; branded 404 page (wrangler.jsonc not_found_handling); badge letters hidden from screen readers; hero point → "No vendor lock-in"; removed duplicate FAQs (data location, initial-call charge); scope-change message no longer repeated; hero "Matched to purchase order"; Security/How We Work/FAQ rewritten in we/you voice; "Multi-Entity Organisations"; Who We Help tags trimmed to 3 concrete each; "We Work Inside Your Environment" | PENDING |
 | 2026-11-03 | "How we work" band changed from light grey-blue to a lifted navy band with a soft cyan glow and violet edge lines | 0e9f0d1 |
 | 2026-11-03 | "How we work" light band toned down from near-white to a soft grey-blue (#C9D0DE); cards dimmed; text contrast kept above 5:1 | a8f598f |
 | 2026-11-03 | Look & feel: Sora font for headings; platform card grid replaced by an animated "one layer between your systems" hub diagram (Home + ERP); "Sound familiar?" as a clean numbered list (red borders removed); "How we work" on a light background; commitments as a quiet row instead of cards | 23369ac |

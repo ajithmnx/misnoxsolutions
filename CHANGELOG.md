@@ -6,6 +6,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-03 | Logo enlarged in nav and footer (mark 34→46px, wordmark 1.05→1.4rem; smaller on phones) | PENDING |
 | 2026-11-03 | Added brand/ logo images for email signatures and Microsoft sign-in page (site pages unchanged) | 8ee7012 |
 | 2026-11-03 | New Crossflow logo (from Claude Design) in nav, footer and integration graphic; Unbounded wordmark; new browser-tab icon | eb0e8a1 |
 | 2026-11-03 | Added this changelog (site itself unchanged) | 2a77393 |

@@ -800,7 +800,7 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 .acc-body p{color:#C9CCE0;margin:0 0 10px}.acc-body .card-link{color:#8FE3EE}
 .acc-item:not(.open) .acc-body .card-link{display:none}
 .why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--navy);color:#fff}
-.why-photo{min-height:520px;background:linear-gradient(rgba(106,59,228,.18),rgba(106,59,228,.18)),url("https://images.unsplash.com/photo-1644079446600-219068676743?w=1400&q=65&auto=format&fit=crop") center/cover no-repeat}
+.why-photo{min-height:520px;background:linear-gradient(rgba(106,59,228,.18),rgba(106,59,228,.18)),url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=70&auto=format&fit=crop") 40% center/cover no-repeat}
 .why-body{padding:88px max(24px,calc((100vw - 80rem)/2 + 24px)) 88px 64px}
 .why .st{color:#fff}.why .eyebrow{color:#8FE3EE}.why .eyebrow::before{background:#8FE3EE}
 .why-list{list-style:none;margin-top:28px;display:grid}
@@ -1369,7 +1369,7 @@ register('home',()=>`
   </div>
 </section>
 <section class="why">
-  <div class="why-photo" role="img" aria-label="Warehouse aisles with stocked shelves"></div>
+  <div class="why-photo" role="img" aria-label="Laptop showing a business reporting dashboard"></div>
   <div class="why-body"><p class="eyebrow">Why organisations choose us</p><h2 class="st">Built to keep working long after go-live</h2>
     <ol class="why-list">${[['No lock-in','Built on each platform\'s own APIs and standard tools, with nothing proprietary of ours in the middle.'],['Controls built in','Approval limits, segregation of duties and audit trails are part of the design, not added later.'],['You own it','Code, configuration and documentation are handed over in full. Another team could run it tomorrow.'],['One accountable team','The people who design your solution stay with it through build, go-live and support.']].map(([t,d],i)=>`<li><span class="why-n">0${i+1}</span><div><h3>${t}</h3><p>${d}</p></div></li>`).join('')}</ol>
   </div>

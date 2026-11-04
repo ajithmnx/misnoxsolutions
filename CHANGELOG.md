@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Replaced Shopify (retail/ecommerce signal) with ADP payroll everywhere: integration map source (PAY records), event log line (pay run → GL journal), moving logo strip, NetSuite tile logos and flows | PENDING |
+| 2026-11-04 | Replaced Shopify (retail/ecommerce signal) with ADP payroll everywhere: integration map source (PAY records), event log line (pay run → GL journal), moving logo strip, NetSuite tile logos and flows | 567d6b8 |
 | 2026-11-04 | Home invoice example is now an interactive pipeline: plays when scrolled into view (document scan, fields typed in, record travels along the arrows, rules tick one by one, Business Central API call returns 201), progress bar with Replay, cards lift on hover, rule details on hover, dark inspector showing the JSON payload / rule results / API call for the hovered step, slight tilt with scroll; static final state for reduced-motion users | 6c4d0d3 |
 | 2026-11-04 | Typography pass: body and UI font IBM Plex Sans → Plus Jakarta Sans (pairs with Sora headings); buttons and form fields now use the site font instead of the browser default (Arial); section labels unified as small uppercase (mono kept only inside technical graphics); slightly wider word spacing and darker paragraph grey for readability | 2b99d79 |
 | 2026-11-04 | Hero: "connected" now the button violet (#6A3BE4) | 3c6e5b4 |

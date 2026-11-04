@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Hero: removed the decorative X logo mark floating over the background photo (elements + CSS) | 9ebad9c |
 | 2026-11-04 | Type audit (12 pages × desktop/phone, real fonts): all headings now one weight (700; 13 were 800); headings with loose 1.7 line-height tightened to 1.15–1.2 (CTA "Let's Talk", contact, delivery, privacy); Delivery step numbers moved from mono to Sora; inner-page eyebrows 18px → 12px to match the rest; graphic labels 10px → 11px; phone wordmark sub 8px → 9px; removed duplicate "Sydney, Australia" in footer brand column | e4ed9f5 |
 | 2026-11-04 | Boxes stand out site-wide: all cards/tiles get a firmer lavender-grey border (#D6D0E8) and a soft navy drop shadow; hover lifts 2px with a violet border | 8f0827b |
 | 2026-11-04 | Home: removed the "Why organisations choose us / Built to keep working long after go-live" section (photo + 4 points) | f9eb7f8 |

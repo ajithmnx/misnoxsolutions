@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Hero: one logo mark only, placed between the two people in the background (hidden on phones); new integration map graphic (ERP, CRM, Bank, AP, HR, BI around the MISNOX hub, brand/integration-map.svg) beside the health check and faintly in the corner of pale sections | PENDING |
+| 2026-11-04 | Hero: one logo mark only, placed between the two people in the background (hidden on phones); new integration map graphic (ERP, CRM, Bank, AP, HR, BI around the MISNOX hub, brand/integration-map.svg) beside the health check and faintly in the corner of pale sections | 0ea84f3 |
 | 2026-11-04 | Hero logo mark moved off the photo's people to the lower right; quiet backgrounds on white sections site-wide (faint logo curves alternating left/right, soft cyan/violet corner washes, dot texture behind the health check) | 09f9850 |
 | 2026-11-04 | Home hero now a full-width photo (Unsplash, team at laptops) with navy fade, logo marks and slanted bottom edge; Integration Health Check moved to its own section below; moving strip of real platform logos (open-source Simple Icons / Iconify sets); warm photos: desk photo beside "Sound Familiar?", Sydney Harbour behind the closing band, boardroom on About header | 14f0de5 |
 | 2026-11-04 | Fix visual layer: logo-curve images now render (quoting bug), thinner curve lines; "Built inside your environment" photo band now appears on the home page | 349d4f5 |

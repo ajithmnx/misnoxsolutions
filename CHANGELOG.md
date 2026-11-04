@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Adaptive sizing: content width 1360 px → 80rem (1,232 px of content at normal size, about 64% of a 1920 px monitor); above 1920 px everything (text, spacing, content width) scales up together, up to 18 px base at 2560 px, instead of stretching | PENDING |
+| 2026-11-04 | Adaptive sizing: content width 1360 px → 80rem (1,232 px of content at normal size, about 64% of a 1920 px monitor); above 1920 px everything (text, spacing, content width) scales up together, up to 18 px base at 2560 px, instead of stretching | 688ca9f |
 | 2026-11-04 | Home v4 (learned from Shinetech): stat bar under the hero (15+ platforms · 6 ERP families · 4 steps · 1 accountable team); "What we do" expandable list over a full-width photo; "Why organisations choose us" numbered list beside a photo (replaces the warehouse band); "Your data, protected from day one" trust panel with 0 / Never / 100% / Written stat cards (replaces "What You Can Count On"); every home section opens with a small label and accent line; content width 1280 → 1360 px; larger footer site-wide (Services, Systems, Company, Get in touch with booking button) | 1a66f62 |
 | 2026-11-04 | Wider content: container 1160 → 1280 px (content 1,232 px) for header, sections, footer and logo strip; intro paragraphs capped at a readable width; phones and tablets unchanged | 6982964 |
 | 2026-11-04 | Less empty space under the invoice pipeline (section bottom padding 96 → 40 px); How We Work chip "findings.pdf · yours to keep" → "findings report" | ecfdd4e |

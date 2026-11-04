@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Hero: "connected" now the logo's cyan (#33CCE0) instead of pale lavender | PENDING |
 | 2026-11-04 | About page: removed the certifications line and the "What Working With Us Is Like" section | 56352bd |
 | 2026-11-04 | About page reworded to stay open-ended: heading "Systems That Work as One", no "we do one thing" or "small, specialist practice"; "Built Around Your Systems" section; "One accountable team" (About) and "One Team Accountable" (How We Work) replace one-person wording; new About search description | 428b500 |
 | 2026-11-04 | Link preview: image renamed to og-share.png (forces apps to fetch the new light image); home title "MISNOX Solutions \| Your systems, connected"; home description "What happens when your systems finally work as one? See how MISNOX keeps your data moving and your controls in place." | 29240b7 |

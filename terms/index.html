@@ -864,6 +864,14 @@ body[data-page=404]{--side-l:url("https://images.unsplash.com/photo-163395758736
 .card,.tile,.glass-card,.why-card,.bcard,.num-card,.outcome-card,.contact-info-card,.lead-box{border:1px solid #D6D0E8!important;box-shadow:0 1px 2px rgba(20,24,51,.06),0 10px 28px -14px rgba(20,24,51,.28)!important;transition:border-color .2s,box-shadow .2s,transform .2s}
 .card:hover,.tile:hover,.glass-card:hover,.outcome-card:hover{border-color:#B9A9EE!important;box-shadow:0 2px 4px rgba(20,24,51,.06),0 16px 36px -14px rgba(60,40,140,.34)!important;transform:translateY(-2px)}
 @media(prefers-reduced-motion:reduce){.card:hover,.tile:hover,.glass-card:hover,.outcome-card:hover{transform:none}}
+/* ── Type audit fixes (Nov 2026): one heading weight, tight heading leading, mono only in graphics, no text under 11px ── */
+h1,h2,h3{line-height:1.2;text-wrap:balance}
+.page-hero h1,.cta-inner h2,h1,h2{font-weight:700}
+.cta-inner h2{line-height:1.15}
+.ps-num{font-family:'Sora',sans-serif!important;font-weight:700!important;letter-spacing:-.02em}
+.imap-log-h{font-size:11px}
+@media(max-width:600px){.wordmark-sub{font-size:.5625rem!important}}
+.page-hero .eyebrow{font-size:var(--fs-xs)!important;letter-spacing:.12em!important;margin-bottom:14px}
 </style>
 </head>
 <body>
@@ -935,7 +943,6 @@ body[data-page=404]{--side-l:url("https://images.unsplash.com/photo-163395758736
           <span class="wordmark">MISNOX<span class="wordmark-sub">Solutions</span></span>
         </div>
         <p>ERP and finance system integration.</p>
-        <p style="margin-top:14px;font-size:var(--fs-sm);color:var(--muted)">Sydney, Australia</p>
         <div style="display:flex;gap:10px;margin-top:16px">
           <a href="https://linkedin.com/company/misnox-solutions" target="_blank" rel="noopener" aria-label="MISNOX Solutions on LinkedIn" style="width:34px;height:34px;border-radius:9px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all 0.3s" onmouseover="this.style.color='#38bdf8';this.style.borderColor='rgba(122,76,240,0.4)'" onmouseout="this.style.color='rgba(20,24,51,0.08)';this.style.borderColor='rgba(20,24,51,0.08)'">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -1206,7 +1213,7 @@ function submitForm(e){
     headers:{'Accept':'application/json'}
   }).then(res=>{
     if(res.ok){
-      document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:var(--surface);border-radius:var(--r);border:1px solid var(--line)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:var(--fs-xl);font-weight:800;color:var(--ink);margin-bottom:8px">Thank you — enquiry received</h3><p style="color:var(--muted)">A response follows within one business day.</p></div>`;
+      document.getElementById('form-wrap').innerHTML=`<div style="text-align:center;padding:48px 24px;background:var(--surface);border-radius:var(--r);border:1px solid var(--line)"><div style="margin-bottom:16px;color:var(--accent)">${ic('check',48)}</div><h3 style="font-size:var(--fs-xl);font-weight:700;color:var(--ink);margin-bottom:8px">Thank you — enquiry received</h3><p style="color:var(--muted)">A response follows within one business day.</p></div>`;
     }else{
       btn.disabled=false;
       btn.innerHTML=originalBtnHtml;
@@ -1529,7 +1536,7 @@ register('delivery',()=>`
   <div class="reveal" style="margin-bottom:${i<3?'56px':'0'};padding-bottom:${i<3?'56px':'0'};${i<3?'border-bottom:1px solid var(--line)':''}">
     <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
       <div class="ps-num" style="margin-bottom:0">${n}</div>
-      <div><h2 style="font-size:1.5rem;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin:0">${t}</h2><p style="font-size:var(--fs-sm);color:var(--muted);margin-top:3px">${intro}</p></div>
+      <div><h2 style="font-size:1.5rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin:0">${t}</h2><p style="font-size:var(--fs-sm);color:var(--muted);margin-top:3px">${intro}</p></div>
     </div>
     <div class="grid-3" style="gap:20px">
       <div><p class="eyebrow" style="font-size:var(--fs-xs)">What Happens</p><ul class="feature-list" style="gap:9px">${activities.map(a=>`<li style="font-size:var(--fs-sm)">${a}</li>`).join('')}</ul></div>
@@ -1629,7 +1636,7 @@ register('contact',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Get in Touch</p><h1>Contact</h1><p>Tell us what you need and we'll get back to you.</p></div></div></section>
 <section class="section"><div class="container"><div class="split" style="align-items:flex-start;gap:44px">
   <div class="reveal">
-    <h2 style="font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em">Book an Intro Call</h2>
+    <h2 style="font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em">Book an Intro Call</h2>
     <p style="color:var(--muted);margin-bottom:18px">A free 30-minute call on Microsoft Teams. Pick a time that suits you, or send us a message below and we will get back to you.</p>
     <div style="margin-bottom:26px"><button class="btn btn-primary btn-lg" data-cta="contact-book" onclick="bookCall()">Pick a Time <span class="arrow">→</span></button></div>
     <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:26px">

@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Typography pass: body and UI font IBM Plex Sans → Plus Jakarta Sans (pairs with Sora headings); buttons and form fields now use the site font instead of the browser default (Arial); section labels unified as small uppercase (mono kept only inside technical graphics); slightly wider word spacing and darker paragraph grey for readability | PENDING |
 | 2026-11-04 | Hero: "connected" now the button violet (#6A3BE4) | 3c6e5b4 |
 | 2026-11-04 | Hero: "connected" now the logo's cyan (#33CCE0) instead of pale lavender | e916a43 |
 | 2026-11-04 | About page: removed the certifications line and the "What Working With Us Is Like" section | 56352bd |

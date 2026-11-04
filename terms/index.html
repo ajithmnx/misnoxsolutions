@@ -708,7 +708,7 @@ h1,h2,h3,h4,.btn,.mono,.kv,.imap,.mflow,.ptl-chip,.tile .fl{word-spacing:normal}
 .fx.live .fx-run::before{background:var(--green);animation:imapPulse 1.2s infinite}
 .fx-prog{flex:1;height:3px;background:var(--line);border-radius:2px;overflow:hidden}.fx-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#33CCE0,#6A3BE4);transition:width .7s ease}
 .fx-replay{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font:500 12px 'IBM Plex Mono',monospace;color:var(--ink2);cursor:pointer}.fx-replay:hover{border-color:var(--accent);color:var(--accent)}
-.fx-row{grid-template-columns:1fr 64px 1.25fr 64px 1fr;transform:perspective(1400px) rotateX(calc(var(--tilt,0)*4deg));transition:transform .2s linear}
+.fx-row{grid-template-columns:1fr 64px 1.25fr 64px 1fr;}
 .fx-node{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;cursor:default;outline:none}
 .fx-node:hover,.fx-node:focus-visible,.fx-node.insp{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(20,24,51,.35);border-color:#B9A9EE}
 .fx-node.act{border-color:var(--accent);box-shadow:0 0 0 4px rgba(106,59,228,.10),0 18px 36px -20px rgba(106,59,228,.45)}
@@ -1006,13 +1006,12 @@ function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
     [...fx.querySelectorAll('.fx-checks span')].forEach((c,k)=>at(3000+k*450,()=>c.classList.add('ok')));
     at(4900,()=>{finish(nodes[1]);nodes[1].classList.remove('act');prog.style.width='66%';wires[1].classList.add('go')});
     at(5700,()=>{nodes[2].classList.add('act');if(!hover)show(2);fx.querySelector('.fx-status').textContent='Posting…'});
-    at(6600,()=>{finish(nodes[2]);nodes[2].classList.remove('act');fx.querySelector('.fx-status').textContent='Approved, posted';prog.style.width='100%';run.textContent='completed · 7.1 s'});}
+    at(6600,()=>{finish(nodes[2]);nodes[2].classList.remove('act');fx.querySelector('.fx-status').textContent='Approved, posted';prog.style.width='100%';run.textContent='completed · 7.1 s'});
+    at(9800,()=>{if(document.body.contains(fx))play()});}
   nodes.forEach((n,i)=>{const on=()=>{hover=true;show(i)},off=()=>{hover=false};n.addEventListener('mouseenter',on);n.addEventListener('focus',on);n.addEventListener('mouseleave',off);n.addEventListener('blur',off)});
   fx.querySelectorAll('.fx-checks span').forEach(c=>{c.addEventListener('mouseenter',()=>tip.textContent=c.dataset.tip);c.addEventListener('mouseleave',()=>tip.textContent='Hover a check to see the rule.')});
-  document.getElementById('fx-replay').onclick=play;
   reset();
-  if('IntersectionObserver' in window){let seen=false;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!seen){seen=true;play()}else if(!e.isIntersecting&&e.boundingClientRect.top>0){seen=false}}),{threshold:.45}).observe(fx)}else play();
-  const row=fx.querySelector('.fx-row');window.addEventListener('scroll',()=>{const r=fx.getBoundingClientRect(),v=Math.max(-1,Math.min(1,(r.top+r.height/2-innerHeight/2)/innerHeight));row.style.setProperty('--tilt',v)},{passive:true});
+  play();
 }
 
 const HOME_TILES={
@@ -1213,7 +1212,7 @@ register('home',()=>`
   <div class="container">
     <div class="sh l"><h2 class="st">One Supplier Invoice, Start to Finish</h2><p class="sd">This is the kind of thing we build. The invoice arrives, your rules are checked automatically, and it lands in the ERP with an audit trail. Nobody re-keys it.</p></div>
     <div class="fx" id="fx">
-      <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span><button class="fx-replay" type="button" id="fx-replay" aria-label="Replay the example">↻ Replay</button></div>
+      <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span></div>
       <div class="iflow fx-row">
         <div class="inode fx-node" data-s="0" tabindex="0">
           <span class="mono">1 · CAPTURE</span><h3>Supplier invoice</h3>

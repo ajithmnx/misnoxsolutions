@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Hero: "connected" now the button violet (#6A3BE4) | PENDING |
 | 2026-11-04 | Hero: "connected" now the logo's cyan (#33CCE0) instead of pale lavender | e916a43 |
 | 2026-11-04 | About page: removed the certifications line and the "What Working With Us Is Like" section | 56352bd |
 | 2026-11-04 | About page reworded to stay open-ended: heading "Systems That Work as One", no "we do one thing" or "small, specialist practice"; "Built Around Your Systems" section; "One accountable team" (About) and "One Team Accountable" (How We Work) replace one-person wording; new About search description | 428b500 |

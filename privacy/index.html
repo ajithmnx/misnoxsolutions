@@ -584,7 +584,6 @@ body[data-page=about] .page-hero::after,body[data-page=industries] .page-hero::a
 .hero-photo .btn-outline{color:#fff;border-color:rgba(255,255,255,.55)}
 .hero-photo .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 .hero-photo .hp-item{color:#D5D8EA}.hero-photo .hp-item::before{color:#7FE0B4}
-.hero-mark{position:absolute;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 fill=%22none%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M12 20C52 20 48 80 88 80%22 stroke=%22%2333CCE0%22 stroke-width=%2210%22/%3E%3Cpath d=%22M12 80C52 80 48 20 88 20%22 stroke=%22%237A4CF0%22 stroke-width=%2210%22/%3E%3C/svg%3E") no-repeat center/contain;opacity:.9}
 .hm1{width:110px;height:110px;right:9%;top:22%}
 .hm2{width:64px;height:64px;right:38%;bottom:18%;opacity:.7}
 .logo-strip{display:flex;align-items:center;gap:28px;padding:26px 0 26px max(24px,calc((100vw - 80rem)/2 + 24px));background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
@@ -606,7 +605,7 @@ body[data-page=about] .page-hero::after,body[data-page=industries] .page-hero::a
 .sf-list{grid-template-columns:1fr!important}
 .cta-band{background:linear-gradient(rgba(14,17,38,.86),rgba(14,17,38,.90)),url("https://images.unsplash.com/photo-1512477525059-e0b091e0a9ba?w=1800&q=65&auto=format&fit=crop") center 60%/cover no-repeat}
 body[data-page=about] .page-hero{background:linear-gradient(90deg,var(--bg2) 0%,var(--bg2) 42%,rgba(243,240,251,.80) 62%,rgba(243,240,251,.25) 100%),url("https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=1600&q=65&auto=format&fit=crop") right center/cover no-repeat}
-@media(max-width:960px){.hc-split,.sf-split{grid-template-columns:1fr;gap:32px}.sf-photo{min-height:240px}.hero.hero-photo{background:linear-gradient(rgba(14,17,38,.82),rgba(14,17,38,.88)),url("https://images.unsplash.com/photo-1690378820474-b468b8ee64d3?w=1100&q=65&auto=format&fit=crop") center/cover no-repeat}.hero-mark{display:none}.hero-copy{padding:72px 0 110px}.logo-strip{flex-direction:column;align-items:flex-start;gap:12px;padding-left:20px}.ls-viewport{width:100%}}
+@media(max-width:960px){.hc-split,.sf-split{grid-template-columns:1fr;gap:32px}.sf-photo{min-height:240px}.hero.hero-photo{background:linear-gradient(rgba(14,17,38,.82),rgba(14,17,38,.88)),url("https://images.unsplash.com/photo-1690378820474-b468b8ee64d3?w=1100&q=65&auto=format&fit=crop") center/cover no-repeat}.hero-copy{padding:72px 0 110px}.logo-strip{flex-direction:column;align-items:flex-start;gap:12px;padding-left:20px}.ls-viewport{width:100%}}
 @media(max-width:768px){body[data-page=about] .page-hero{background:linear-gradient(rgba(243,240,251,.86),rgba(243,240,251,.86)),url("https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=900&q=65&auto=format&fit=crop") center/cover no-repeat}}
 
 /* ── Quiet backgrounds for white sections (Nov 2026) ── */
@@ -1290,7 +1289,7 @@ register('home',()=>`
       <div class="hero-promises">${['You own everything we build','No vendor lock-in'].map(t=>`<span class="hp-item">${t}</span>`).join('')}</div>
     </div>
   </div>
-  <span class="hero-mark hm1" aria-hidden="true"></span><span class="hero-mark hm2" aria-hidden="true"></span>
+  
 </section>
 <div class="statbar"><div class="container statbar-in">${[['15+','platforms we connect'],['6','major ERP families covered'],['4','clear steps, every project'],['1','accountable team, start to finish']].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('')}</div></div>
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>

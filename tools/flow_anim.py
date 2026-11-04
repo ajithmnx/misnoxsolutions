@@ -31,7 +31,6 @@ NEW=r'''<div class="fx" id="fx">
           <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 188 ms"></span></div>
         </div>
       </div>
-      <div class="fx-insp" aria-live="polite"><div class="fx-insp-h"><span class="mono" id="fx-insp-t">PAYLOAD · CAPTURE</span><span class="mono fx-hint">hover a step to inspect</span></div><pre id="fx-json"></pre></div>
     </div>
     '''
 s=s[:a]+NEW+s[b:]

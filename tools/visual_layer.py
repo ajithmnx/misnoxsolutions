@@ -3,7 +3,7 @@ mini flow diagrams on Services cards, faint grid on tinted bands. Run once, then
 import re, urllib.parse
 p='index.html'; s=open(p,encoding='utf-8').read()
 
-def curve_svg(op, w=14):
+def curve_svg(op, w=5):
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round">'
          f'<defs><linearGradient id="a" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33CCE0"/><stop offset="1" stop-color="#7A4CF0"/></linearGradient>'
          f'<linearGradient id="b" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33CCE0"/><stop offset="1" stop-color="#7A4CF0"/></linearGradient></defs>'

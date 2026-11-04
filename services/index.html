@@ -82,7 +82,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 a{text-decoration:none;color:inherit}
 
 /* ── UTIL ── */
-.container{max-width:1360px;margin:0 auto;padding:0 24px}
+.container{max-width:80rem;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:var(--fs-xs);font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
 .section{padding:96px 0}.section-sm{padding:60px 0}
 
@@ -107,7 +107,7 @@ a{text-decoration:none;color:inherit}
 /* ── NAV ── */
 #main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background var(--tr)}
 #main-nav.scrolled{background:rgba(18,24,40,0.92);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(20,24,51,0.08)}
-.nav-inner{max-width:1360px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between}
+.nav-inner{max-width:80rem;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:var(--fs-lg)}
 .logo-mark{width:50px;height:50px;flex-shrink:0;display:block}
 @media(max-width:640px){.nav-cta{display:none}.nav-logo{gap:9px}.logo-mark{width:34px;height:34px}.wordmark{font-size:1rem!important}.wordmark-sub{font-size:0.5rem!important;margin-top:4px!important}}
@@ -587,7 +587,7 @@ body[data-page=about] .page-hero::after,body[data-page=industries] .page-hero::a
 .hero-mark{position:absolute;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 fill=%22none%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M12 20C52 20 48 80 88 80%22 stroke=%22%2333CCE0%22 stroke-width=%2210%22/%3E%3Cpath d=%22M12 80C52 80 48 20 88 20%22 stroke=%22%237A4CF0%22 stroke-width=%2210%22/%3E%3C/svg%3E") no-repeat center/contain;opacity:.9}
 .hm1{width:110px;height:110px;right:9%;top:22%}
 .hm2{width:64px;height:64px;right:38%;bottom:18%;opacity:.7}
-.logo-strip{display:flex;align-items:center;gap:28px;padding:26px 0 26px max(24px,calc((100vw - 1360px)/2 + 24px));background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
+.logo-strip{display:flex;align-items:center;gap:28px;padding:26px 0 26px max(24px,calc((100vw - 80rem)/2 + 24px));background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
 .ls-label{flex:none}
 .ls-viewport{overflow:hidden;flex:1;min-width:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .ls-track{display:flex;gap:56px;list-style:none;width:max-content;animation:lsScroll 45s linear infinite}
@@ -801,7 +801,7 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 .acc-item:not(.open) .acc-body .card-link{display:none}
 .why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--navy);color:#fff}
 .why-photo{min-height:520px;background:linear-gradient(rgba(106,59,228,.18),rgba(106,59,228,.18)),url("https://images.unsplash.com/photo-1644079446600-219068676743?w=1400&q=65&auto=format&fit=crop") center/cover no-repeat}
-.why-body{padding:88px max(24px,calc((100vw - 1360px)/2 + 24px)) 88px 64px}
+.why-body{padding:88px max(24px,calc((100vw - 80rem)/2 + 24px)) 88px 64px}
 .why .st{color:#fff}.why .eyebrow{color:#8FE3EE}.why .eyebrow::before{background:#8FE3EE}
 .why-list{list-style:none;margin-top:28px;display:grid}
 .why-list li{display:flex;gap:22px;padding:20px 0;border-top:1px solid #2E345C}
@@ -818,6 +818,10 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 @media(max-width:1024px){.fg5{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
 @media(max-width:960px){.statbar{margin-top:0}.statbar-in{grid-template-columns:1fr 1fr;gap:18px 0}.stat:nth-child(3){border-left:0;padding-left:0}.wwd-in,.why,.trust{grid-template-columns:1fr}.why-photo{min-height:260px}.why-body{padding:56px 20px}.trust-stats{border-left:0;border-top:1px solid var(--line)}.trust-main{padding:28px}}
 @media(max-width:560px){.fg5{grid-template-columns:1fr}.tstat{padding:22px 18px}.tstat b{font-size:1.75rem}.acc-body{padding-left:22px}}
+
+/* ── Adaptive sizing (Nov 2026): content 80rem; on screens wider than 1920px everything scales up together ── */
+html{font-size:16px}
+@media(min-width:1921px){html{font-size:clamp(16px,calc(16px + (100vw - 1920px) / 320),18px)}}
 </style>
 </head>
 <body>

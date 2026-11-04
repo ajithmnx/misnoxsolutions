@@ -844,6 +844,22 @@ html{font-size:16px}
 .section:not(.section-alt):nth-of-type(even)::before{background:linear-gradient(rgba(106,59,228,.28),rgba(20,24,51,.30)),url("https://images.unsplash.com/photo-1654105727849-1b9d39357f16?w=900&q=55&auto=format&fit=crop&sat=-100") center/cover no-repeat!important}
 .section:not(.section-alt):nth-of-type(even)::after{background:linear-gradient(rgba(106,59,228,.28),rgba(20,24,51,.30)),url("https://images.unsplash.com/photo-1785624110987-7a4ea1ac4642?w=900&q=55&auto=format&fit=crop&sat=-100") center/cover no-repeat!important}
 @media(max-width:1500px){.section:not(.section-alt)::before,.section:not(.section-alt)::after,.hc-section::after{display:none!important}}
+
+/* ── Side backdrop: one unique photo pair per page, fixed to the screen so it never repeats (Nov 2026) ── */
+body[data-page=home]{--side-l:url("https://images.unsplash.com/photo-1725913496276-47d7147da99f?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1644251787786-7900294784af?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=about]{--side-l:url("https://images.unsplash.com/photo-1617742054516-6ec5df85ad88?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1684687942381-02511f0d3773?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=services]{--side-l:url("https://images.unsplash.com/photo-1619504623861-0f6117da1fd4?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1752429241949-d6db20580221?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=erp]{--side-l:url("https://images.unsplash.com/photo-1778050368320-5d522c42f14c?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1760331697031-7705e58b59ef?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=industries]{--side-l:url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1619218070141-bcfeb8b93074?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=security]{--side-l:url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1525367922492-f15fe7b709cb?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=delivery]{--side-l:url("https://images.unsplash.com/photo-1518005108369-12a8b1c429a0?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1560419450-a53fe3b90211?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=faq]{--side-l:url("https://images.unsplash.com/photo-1635403868664-179c789560a7?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1635506232643-6c526f97e519?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=privacy]{--side-l:url("https://images.unsplash.com/photo-1654105727849-1b9d39357f16?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1692624654117-9df7f0d9a4c1?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=terms]{--side-l:url("https://images.unsplash.com/photo-1690944926899-cc0a52be0730?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1780768416870-9a996e0d74c5?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=contact]{--side-l:url("https://images.unsplash.com/photo-1785624110987-7a4ea1ac4642?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1610741804272-059e1d3c5dba?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+body[data-page=404]{--side-l:url("https://images.unsplash.com/photo-1633957587366-12a7a1daf7b6?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1567201864585-6baec9110dac?w=1600&q=50&auto=format&fit=crop&sat=-100")}
+.section:not(.section-alt)::before,.section:not(.section-alt):nth-of-type(odd)::before,.section:not(.section-alt):nth-of-type(even)::before{background:linear-gradient(rgba(106,59,228,.30),rgba(20,24,51,.32)) fixed,var(--side-l,none) center/cover no-repeat fixed!important;opacity:.12!important}
+.section:not(.section-alt)::after,.section:not(.section-alt):nth-of-type(even)::after,.hc-section::after{background:linear-gradient(rgba(106,59,228,.30),rgba(20,24,51,.32)) fixed,var(--side-r,none) center/cover no-repeat fixed!important;opacity:.12!important}
 </style>
 </head>
 <body>

@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Boxes stand out site-wide: all cards/tiles get a firmer lavender-grey border (#D6D0E8) and a soft navy drop shadow; hover lifts 2px with a violet border | 8f0827b |
 | 2026-11-04 | Home: removed the "Why organisations choose us / Built to keep working long after go-live" section (photo + 4 points) | f9eb7f8 |
 | 2026-11-04 | Home: removed the "Your data, protected from day one" security stats panel (0 / Never / 100% / Written); the Security page is unchanged | 50b6341 |
 | 2026-11-04 | "Why organisations choose us" photo: warehouse aisle replaced with a laptop showing a business reporting dashboard (Unsplash), relevant to finance/ERP systems | bad9d5a |

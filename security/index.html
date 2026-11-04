@@ -914,9 +914,9 @@ function homeTiles(k){return HOME_TILES[k].map(([t,d,f,lg])=>`<div class="tile">
 const HC_Q=[
  {q:'Does anyone re-key data from one system into your ERP each week?',why:'Invoices, orders or journals typed in by hand.',risk:{Yes:1,No:0,'Not sure':.5}},
  {q:'Are approval limits enforced by the system, or by policy and trust?',why:'For example, two sign-offs above $50k.',opts:['Enforced by the system','By policy and trust','Not sure'],risk:{'Enforced by the system':0,'By policy and trust':1,'Not sure':.5}},
- {q:'If an integration stopped tonight, would someone be alerted by morning?',why:'Or would you find out when the numbers look wrong?',risk:{Yes:0,No:1,'Not sure':.5}},
- {q:'Could another team support your integrations from the documentation alone?',why:'If the person who built them left tomorrow.',risk:{Yes:0,No:1,'Not sure':.5}}];
-const HC_FIX=['Automate the re-keyed flows first; they cost time every week and cause most errors.','Move approval limits into the workflow so the system enforces them.','Add monitoring and alerts so a stopped sync is caught the same day.','Document each integration so any competent team can support it.'];
+ {q:'If data stopped flowing between two systems tonight, would someone be alerted by morning?',why:'Or would you find out when the numbers look wrong?',risk:{Yes:0,No:1,'Not sure':.5}},
+ {q:'Could another team support your setup from the documentation alone?',why:'If the person who set it up left tomorrow.',risk:{Yes:0,No:1,'Not sure':.5}}];
+const HC_FIX=['Automate the re-keyed flows first; they cost time every week and cause most errors.','Move approval limits into the workflow so the system enforces them.','Add monitoring and alerts so a stopped data flow is caught the same day.','Document how each system connects so any competent team can support it.'];
 function initHome(){
   const body=document.getElementById('hc-body');if(!body)return;
   const cnt=document.getElementById('hc-count'),steps=[...document.querySelectorAll('#hc-steps i')];let i=0,ans=[];
@@ -925,7 +925,7 @@ function initHome(){
       body.innerHTML=`<div class="hc-body"><h3>${x.q}</h3><p class="hc-why">${x.why}</p><div class="hc-opts">${opts.map(o=>`<button class="hc-opt" type="button">${o}</button>`).join('')}</div></div>`+(i<HC_Q.length-1?`<div class="hc-next">${HC_Q.slice(i+1).map((n,k)=>`<p><span>0${i+k+2}</span>${n.q}</p>`).join('')}</div>`:'');
       body.querySelectorAll('.hc-opt').forEach(b=>b.onclick=()=>{ans[i]=x.risk[b.textContent];if(i===0)track('healthcheck_start',{});i++;draw()});
     }else{const sc=ans.reduce((a,b)=>a+b,0),gaps=ans.map((v,k)=>v>0?HC_FIX[k]:null).filter(Boolean);
-      const lv=sc<=.5?['Your integrations look healthy','A review would mostly confirm what works. Worth a call if you are planning an ERP change.']:sc<=2?['A few gaps worth fixing','These are the areas we would look at first:']:['Your integrations carry real risk','These are the areas we would look at first:'];
+      const lv=sc<=.5?['Your systems look in good shape','A review would mostly confirm what works. Worth a call if you are planning an ERP change.']:sc<=2?['A few gaps worth fixing','These are the areas we would look at first:']:['Your setup carries real risk','These are the areas we would look at first:'];
       cnt.textContent='YOUR RESULT';track('healthcheck_done',{score:sc});
       body.innerHTML=`<div class="hc-body"><h3>${lv[0]}</h3><div class="hc-meter" aria-label="${sc} of 4 risk points">${[0,1,2,3].map(k=>`<i class="${k<Math.ceil(sc)?'on':''}"></i>`).join('')}</div><p class="hc-why">${lv[1]}</p>${gaps.length?`<ul>${gaps.map(g=>`<li>${g}</li>`).join('')}</ul>`:''}<div class="hc-row"><button class="btn btn-primary" type="button" data-cta="healthcheck" onclick="bookCall()">Talk it through →</button><button class="hc-link" type="button" id="hc-again">Start again</button></div></div>`;
       document.getElementById('hc-again').onclick=()=>{i=0;ans=[];draw()};}};
@@ -1081,9 +1081,9 @@ register('home',()=>`
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
 <section class="section hc-section">
   <div class="container hc-split">
-    <div><span class="mono">INTEGRATION HEALTH CHECK</span><h2 class="st">How healthy are your integrations?</h2><p class="sd">Four quick questions about how your systems connect today. You get a short read-out of what we would look at first.</p>${IMAP}</div>
+    <div><span class="mono">SYSTEMS HEALTH CHECK</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Four quick questions about how your systems and processes run today. You get a short read-out of what we would look at first.</p>${IMAP}</div>
     <div class="hc" aria-live="polite">
-      <div class="hc-head"><b>Integration Health Check</b><span class="mono" id="hc-count">QUESTION 1 OF 4</span></div>
+      <div class="hc-head"><b>Systems Health Check</b><span class="mono" id="hc-count">QUESTION 1 OF 4</span></div>
       <div class="hc-steps" id="hc-steps"><i class="on"></i><i></i><i></i><i></i></div>
       <div id="hc-body"></div>
     </div>

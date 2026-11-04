@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Home "How We Work": animated timeline — a step icon for each phase (review, spec, build, monitor), a cyan-to-violet line that fills as you scroll to it, steps lighting up in turn, a dot travelling along the line, and a small output chip per step (findings, signed-off spec, tests passed, monitoring on); static for reduced-motion users | PENDING |
 | 2026-11-04 | Real logos everywhere: one shared logo set (open-source Iconify / Simple Icons) now used by the integration map, the Services platform list, the ERP page hub and the home "By system" tiles; Business Central logo on the invoice-flow example. TechnologyOne keeps a text badge (no public logo file) | 7bfba8e |
 | 2026-11-04 | Replaced the static integration map beside the health check with an animated diagram: real logos (Salesforce, Shopify, HubSpot, bank feed → MISNOX hub → Business Central, SAP, Xero, Power BI), records moving along the wires (ORDER, DEAL, TXN, INV, PO, JNL), spinning validate/map/route ring and a live-style event log; motion off for reduced-motion users | 05bf976, HubSpot icon fix in next commit |
 | 2026-11-04 | Hero: one logo mark only, placed between the two people in the background (hidden on phones); new integration map graphic (ERP, CRM, Bank, AP, HR, BI around the MISNOX hub, brand/integration-map.svg) beside the health check and faintly in the corner of pale sections | 0ea84f3 |

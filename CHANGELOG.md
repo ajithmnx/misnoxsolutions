@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Visual layer: logo-curve motif behind hero, page headers and closing band; soft cyan/violet wash behind home hero; faint grid on tinted bands; duotone stock photos (Unsplash licence, loaded from Unsplash) on About, Who We Help and Security headers and a new home band "Built inside your environment"; mini flow diagrams on Services cards | PENDING |
+| 2026-11-04 | Visual layer: logo-curve motif behind hero, page headers and closing band; soft cyan/violet wash behind home hero; faint grid on tinted bands; duotone stock photos (Unsplash licence, loaded from Unsplash) on About, Who We Help and Security headers and a new home band "Built inside your environment"; mini flow diagrams on Services cards | 5ce0503 |
 | 2026-11-04 | **Light redesign** (Staxd/Made Tech direction): light background, navy text, logo violet only for main buttons; removed glow, gradient text, animations and fade-ins; IBM Plex Sans body. Home rebuilt: Integration Health Check (4 questions) in the hero, systems strip, invoice flow on light with sample details, tabbed explorer (by system / problem / service), plain lists for problems, steps and commitments. All other pages restyled. Previous dark design = 142b09a | cb03adb |
 | 2026-11-04 | "Book an Intro Call" buttons (header, home hero, closing bands) now open the Microsoft Bookings intro-call page in a new tab; Contact page gets a "Pick a Time" button; contact form kept for messages | 6f2b245 |
 | 2026-11-04 | Removed the Example Scenarios page and every link to it (Services menu had it twice, mobile menu, Services page, Terms wording); /examples/ now shows the 404 page | 5762085 |

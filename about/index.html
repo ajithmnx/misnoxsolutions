@@ -739,12 +739,7 @@ body[data-page=about] .page-hero{background:linear-gradient(90deg,var(--bg2) 0%,
 <section class="section"><div class="container"><div style="max-width: 720px; transition-delay: 0s;" class="reveal visible">
   <p class="eyebrow">What we do</p><h2 class="st">Built Around Your Systems</h2>
   <p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">MISNOX Solutions works across the ERP, finance and operational platforms organisations already rely on. We connect them, automate the work that moves between them, and stay on hand once everything is live. Every engagement is shaped around your environment, your controls and the way your teams actually work.</p>
-  <p style="color:var(--muted);line-height:1.75;font-size:1.0625rem;margin-top:16px">Our team holds platform certifications, including Workato Automation Pro.</p>
 </div></div></section>
-<section class="section section-alt"><div class="container">
-  <div class="sh c reveal" style="transition-delay: 0s;"><p class="eyebrow">How we work</p><h2 class="st">What Working With Us Is Like</h2></div>
-  <div class="grid-2"><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span></div><div><h3>Honest advice</h3><p>We recommend what suits your environment, not what earns us the most. If you don't need us, we'll say so.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.07s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></div><div><h3>Built to last</h3><p>We measure success by what runs reliably in production, not by documents.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.14s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></span></div><div><h3>One accountable team</h3><p>The people who design your solution stay with it through build and go-live.</p></div></div><div class="card reveal" style="display: flex; gap: 16px; align-items: flex-start; transition-delay: 0.21s;"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)"><span style="width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span></div><div><h3>Clear updates</h3><p>You always know what's done, what's next and what has changed.</p></div></div></div>
-</div></section>
 
 <section class="cta-band">
   <div class="container">
@@ -1155,17 +1150,7 @@ register('about',()=>`
 <section class="section"><div class="container"><div style="max-width:720px" class="reveal">
   <p class="eyebrow">What we do</p><h2 class="st">Built Around Your Systems</h2>
   <p style="color:var(--muted);line-height:1.75;font-size:1.0625rem">MISNOX Solutions works across the ERP, finance and operational platforms organisations already rely on. We connect them, automate the work that moves between them, and stay on hand once everything is live. Every engagement is shaped around your environment, your controls and the way your teams actually work.</p>
-  <p style="color:var(--muted);line-height:1.75;font-size:1.0625rem;margin-top:16px">Our team holds platform certifications, including Workato Automation Pro.</p>
 </div></div></section>
-<section class="section section-alt"><div class="container">
-  <div class="sh c reveal"><p class="eyebrow">How we work</p><h2 class="st">What Working With Us Is Like</h2></div>
-  <div class="grid-2">${[
-    ['target','Honest advice','We recommend what suits your environment, not what earns us the most. If you don\'t need us, we\'ll say so.'],
-    ['check','Built to last','We measure success by what runs reliably in production, not by documents.'],
-    ['layers','One accountable team','The people who design your solution stay with it through build and go-live.'],
-    ['users','Clear updates','You always know what\'s done, what\'s next and what has changed.'],
-  ].map(([icon,t,d])=>`<div class="card reveal" style="display:flex;gap:16px;align-items:flex-start"><div style="flex-shrink:0;margin-top:2px;color:var(--accent)">${ic(icon,22)}</div><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div>
-</div></section>
 ${ctaBand('Get in Touch','Tell us what you are trying to connect.')}`);
 
 // ══ SERVICES ══

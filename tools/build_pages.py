@@ -10,7 +10,7 @@ PAGES = {  # route: (title, description)
     'home': ('MISNOX Solutions | Your systems, connected',
              'What happens when your systems finally work as one? See how MISNOX keeps your data moving and your controls in place.'),
     'about': ('About | MISNOX Solutions',
-              'A small, specialist integration practice based in Sydney, connecting the systems that run finance and procurement.'),
+              'How MISNOX Solutions helps organisations get their finance, procurement and operational systems working as one.'),
     'services': ('Integration Services | MISNOX Solutions',
                  'System integration, workflow automation, data migration and sync, ERP integration projects and managed support.'),
     'erp': ('ERP Integration Projects | MISNOX Solutions',

@@ -21,8 +21,6 @@ PAGES = {  # route: (title, description)
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
     'delivery': ('How We Work | MISNOX Solutions',
                  'Four clear phases: discover, design, build and go live, support.'),
-    'terms': ('Website Terms of Use | MISNOX Solutions',
-              'The terms that apply when you use the MISNOX Solutions website.'),
     'faq': ('FAQ | MISNOX Solutions',
             'Answers on ownership, pricing, process, support and data handling.'),
     'privacy': ('Privacy Policy | MISNOX Solutions',

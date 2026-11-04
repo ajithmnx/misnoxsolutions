@@ -854,7 +854,6 @@ body[data-page=security]{--side-l:url("https://images.unsplash.com/photo-1518005
 body[data-page=delivery]{--side-l:url("https://images.unsplash.com/photo-1518005108369-12a8b1c429a0?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1560419450-a53fe3b90211?w=1600&q=50&auto=format&fit=crop&sat=-100")}
 body[data-page=faq]{--side-l:url("https://images.unsplash.com/photo-1635403868664-179c789560a7?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1635506232643-6c526f97e519?w=1600&q=50&auto=format&fit=crop&sat=-100")}
 body[data-page=privacy]{--side-l:url("https://images.unsplash.com/photo-1654105727849-1b9d39357f16?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1692624654117-9df7f0d9a4c1?w=1600&q=50&auto=format&fit=crop&sat=-100")}
-body[data-page=terms]{--side-l:url("https://images.unsplash.com/photo-1690944926899-cc0a52be0730?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1780768416870-9a996e0d74c5?w=1600&q=50&auto=format&fit=crop&sat=-100")}
 body[data-page=contact]{--side-l:url("https://images.unsplash.com/photo-1785624110987-7a4ea1ac4642?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1610741804272-059e1d3c5dba?w=1600&q=50&auto=format&fit=crop&sat=-100")}
 body[data-page=404]{--side-l:url("https://images.unsplash.com/photo-1633957587366-12a7a1daf7b6?w=1600&q=50&auto=format&fit=crop&sat=-100");--side-r:url("https://images.unsplash.com/photo-1567201864585-6baec9110dac?w=1600&q=50&auto=format&fit=crop&sat=-100")}
 .section:not(.section-alt)::before,.section:not(.section-alt):nth-of-type(odd)::before,.section:not(.section-alt):nth-of-type(even)::before{background:linear-gradient(rgba(106,59,228,.30),rgba(20,24,51,.32)) fixed,var(--side-l,none) center/cover no-repeat fixed!important;opacity:.12!important}
@@ -998,7 +997,7 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
     </div>
     <div class="footer-bottom">
       <span style="color:var(--muted)">© <span id="yr">2026</span> MISNOX Solutions. All rights reserved.</span>
-      <div class="footer-bottom-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/faq/">FAQ</a></div>
+      <div class="footer-bottom-links"><a href="/privacy/">Privacy</a><a href="/faq/">FAQ</a></div>
     </div>
   </div>
 </footer>
@@ -1631,24 +1630,6 @@ register('faq',()=>`
 ${ctaBand('Another Question?','Ask us directly.','Get in Touch','Security & Data','security')}`);
 
 // ══ EXAMPLES ══
-// ══ TERMS ══
-register('terms',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Legal</p><h1>Website Terms of Use</h1><p>The terms that apply when you use misnox.com.au.</p></div></div></section>
-<section class="section"><div class="container"><div style="max-width:760px">
-  ${[
-    ['Using this website','By using this website you agree to these terms. If you do not agree, please do not use it.'],
-    ['Information only','Content on this website is general information about our services. It is not professional advice for your situation. Any work we do for you is governed by a separate written agreement.'],
-    ['Accuracy','We try to keep this website accurate and up to date, but we do not guarantee that it is complete, current or free of errors.'],
-    ['Intellectual property','The content, design and branding on this website belong to MISNOX Solutions unless stated otherwise. Product names and trademarks of other companies, such as ERP and software platforms, belong to their owners and are used only to describe the systems we work with. Their use does not imply endorsement or partnership.'],
-    ['Links to other websites','Links to third-party websites are provided for convenience. We are not responsible for their content or privacy practices.'],
-    ['Liability','To the extent permitted by law, we are not liable for any loss arising from your use of this website or reliance on its content. Nothing in these terms excludes rights you have under the Australian Consumer Law that cannot be excluded.'],
-    ['Privacy','How we handle personal information is explained in our <a href="/privacy/" style="color:var(--accent)">Privacy Policy</a>.'],
-    ['Governing law','These terms are governed by the laws of New South Wales, Australia.'],
-    ['Changes','We may update these terms from time to time. The current version is always on this page.'],
-  ].map(([t,d])=>`<div class="reveal" style="margin-bottom:28px"><h2 style="font-size:var(--fs-lg);font-weight:700;color:var(--ink);margin-bottom:8px">${t}</h2><p style="color:var(--muted);line-height:1.75">${d}</p></div>`).join('')}
-  <p style="font-size:var(--fs-sm);color:var(--muted)">Last updated: November 2026 · Questions: contact@misnox.com.au</p>
-</div></div></section>`);
-
 // ══ 404 ══
 register('404',()=>`
 <section class="page-hero" style="min-height:60vh;display:flex;align-items:center"><div class="container"><div class="page-hero-content"><p class="eyebrow">Error 404</p><h1>Page Not Found</h1><p>That page doesn't exist, or it has moved.</p>

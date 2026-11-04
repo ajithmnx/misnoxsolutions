@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Home "By system" tiles restructured to one vendor per card with only that vendor's logo: Microsoft Dynamics 365 (Business Central · Finance & Operations), Oracle (NetSuite · Fusion), SAP (S/4HANA · Business One), TechnologyOne, Xero, MYOB (Business · Acumatica); Xero and MYOB split; flow lines spelled out (no BC/B1/T1) | PENDING |
 | 2026-11-04 | Invoice pipeline now runs on its own: starts on page load, completes, pauses about 3 s and restarts in a loop; scroll trigger, scroll tilt and Replay button removed | 4dbca14 |
 | 2026-11-04 | One type scale site-wide: body text snaps to 12 / 14 / 16 / 18 px (labels / secondary / body / lead), headings to fixed sizes (card titles 18 px, section headings, page and hero headings); removed the dark data panel under the invoice pipeline (cards and rule hovers kept) | 3684f15 |
 | 2026-11-04 | Replaced Shopify (retail/ecommerce signal) with ADP payroll everywhere: integration map source (PAY records), event log line (pay run → GL journal), moving logo strip, NetSuite tile logos and flows | 567d6b8 |

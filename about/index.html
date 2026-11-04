@@ -759,6 +759,14 @@ h2.st,.photo-band h2,.cta-inner h2{font-size:var(--fs-h2)}
 .footer-brand p,.footer-contact-item{font-size:var(--fs-sm)}
 .tabs button{font-size:var(--fs-base)}
 h4,.expect-list h4{font-size:var(--fs-xs)}
+
+/* ── By-system tiles: one vendor per card (Nov 2026) ── */
+.tile-logos{height:30px}
+.tile-logos svg.lg-ms,.tile-logos svg.lg-xero{width:28px;height:28px}.tile-logos svg.lg-myob{width:64px;height:30px}
+.tile-logos svg.lg-oracle{width:96px;height:15px}
+.tile-logos svg.lg-sap{width:52px;height:26px}
+.t1-mark{font:700 14px 'Sora',sans-serif;color:#1E3A6E;letter-spacing:-.01em;border:1.5px solid #1E3A6E;border-radius:6px;padding:3px 8px}
+.tile-prod{font-size:var(--fs-sm);font-weight:600;color:var(--accent);margin-top:-4px}
 </style>
 </head>
 <body>
@@ -1027,12 +1035,12 @@ function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
 }
 
 const HOME_TILES={
- sys:[['Dynamics 365 and Business Central','Purchase invoices, vendors and journals from AP tools, bank feeds and CRM.','BC ⇄ Salesforce · AP inbox → BC · bank feed → BC',['lg-ms','lg-sf']],
-  ['NetSuite','Orders, customers and payments in and out, plus multi-entity consolidation.','Salesforce → NetSuite · NetSuite ⇄ HubSpot · ADP payroll → GL',['lg-oracle','lg-adp','lg-hs']],
-  ['SAP and SAP Business One','Master data and transactions between SAP and the systems around it.','B1 ⇄ CRM · supplier portal → SAP · SAP → Power BI',['lg-sap','lg-pbi']],
-  ['TechnologyOne','Finance and supply chain data between TechnologyOne and connected systems.','T1 ⇄ procurement · T1 → reporting · HR → T1',[]],
-  ['Xero and MYOB','Growing beyond one ledger: entities, approvals and connected tools.','Xero ⇄ CRM · MYOB → ERP migration · bills → approvals',['lg-xero','lg-myob']],
-  ['Oracle','Integration with the systems that feed and read your Oracle finance data.','Oracle ⇄ procurement · Oracle → data warehouse',['lg-oracle']]],
+ sys:[['Microsoft Dynamics 365','Purchase invoices, vendors, journals and sales orders in and out of Dynamics 365.','Salesforce ⇄ Dynamics 365 · AP inbox → Dynamics 365 · bank feeds → reconciliation',['lg-ms'],'Business Central · Finance & Operations'],
+  ['Oracle','Orders, customers, payments and multi-entity consolidation across Oracle ERPs.','Salesforce → NetSuite · ADP payroll → general ledger · Fusion ⇄ procurement',['lg-oracle'],'NetSuite · Fusion Cloud ERP'],
+  ['SAP','Master data and transactions between SAP and the systems around it.','CRM ⇄ SAP · supplier portal → SAP · SAP → Power BI',['lg-sap'],'S/4HANA · Business One'],
+  ['TechnologyOne','Finance and supply chain data between TechnologyOne and connected systems.','procurement ⇄ TechnologyOne · HR → TechnologyOne · TechnologyOne → reporting',['t1'],'Financials · Supply Chain'],
+  ['Xero','Bills, invoices and bank data, connected to approvals, CRM and reporting.','CRM ⇄ Xero · bills → approvals → Xero · Xero → Power BI',['lg-xero'],'Xero accounting'],
+  ['MYOB','Ledgers, payroll and inventory, including moves between MYOB and other ERPs.','MYOB → Acumatica migration · payroll → general ledger · Acumatica ⇄ CRM',['lg-myob'],'MYOB Business · MYOB Acumatica']],
  prob:[['Re-keying invoices','Supplier invoices captured once and posted to the ERP with checks applied.','AP inbox → ERP'],
   ['Slow month-end','Bank feeds, intercompany entries and reconciliations that run themselves.','bank → reconciliation · entity → group'],
   ['Approvals on paper','Limits and segregation of duties enforced in the workflow, with a trail.','threshold → second approver'],
@@ -1041,7 +1049,7 @@ const HOME_TILES={
   ['Reports from five places','Finance data pulled into one reporting model.','ERP + CRM → Power BI']],
  svc:SERVICES.map(([t,,d])=>[t,d,''])
 };
-function homeTiles(k){return HOME_TILES[k].map(([t,d,f,lg])=>`<div class="tile">${lg&&lg.length?`<div class="tile-logos" aria-hidden="true">${lg.map(id=>`<svg class="${id}"><use href="#${id}"/></svg>`).join('')}</div>`:''}<h3>${t}</h3><p>${d}</p>${f?`<span class="fl">${f}</span>`:''}</div>`).join('')}
+function homeTiles(k){return HOME_TILES[k].map(([t,d,f,lg,prod])=>`<div class="tile">${lg&&lg.length?`<div class="tile-logos" aria-hidden="true">${lg.map(id=>id==='t1'?`<span class="t1-mark">TechnologyOne</span>`:`<svg class="${id}"><use href="#${id}"/></svg>`).join('')}</div>`:''}<h3>${t}</h3>${prod?`<span class="tile-prod">${prod}</span>`:''}<p>${d}</p>${f?`<span class="fl">${f}</span>`:''}</div>`).join('')}
 const HC_Q=[
  {q:'Does anyone re-key data from one system into your ERP each week?',why:'Invoices, orders or journals typed in by hand.',risk:{Yes:1,No:0,'Not sure':.5}},
  {q:'Are approval limits enforced by the system, or by policy and trust?',why:'For example, two sign-offs above $50k.',opts:['Enforced by the system','By policy and trust','Not sure'],risk:{'Enforced by the system':0,'By policy and trust':1,'Not sure':.5}},

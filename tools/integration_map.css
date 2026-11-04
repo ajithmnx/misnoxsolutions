@@ -1,0 +1,7 @@
+
+/* ── One hero mark; integration map graphic in pale areas (Nov 2026) ── */
+.hm2{display:none}
+.hm1{left:71%;right:auto;top:20%;bottom:auto;width:84px;height:84px}
+.section:not(.section-alt):nth-of-type(odd)::before{background:url("/brand/integration-map.svg") no-repeat center/contain;opacity:.16;width:520px;height:416px;top:-30px;right:-140px}
+.hc-intro-map{display:block;width:100%;max-width:420px;margin-top:28px;opacity:.9}
+@media(max-width:960px){.hm1{display:none}.hc-intro-map{max-width:320px}}

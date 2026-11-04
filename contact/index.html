@@ -616,6 +616,13 @@ body[data-page=about] .page-hero{background:linear-gradient(90deg,var(--bg2) 0%,
 .section:not(.section-alt)::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 45% 55% at 100% 0%,rgba(51,204,224,.06),transparent 70%),radial-gradient(ellipse 40% 50% at 0% 100%,rgba(122,76,240,.05),transparent 70%)}
 .hc-section::after{background:radial-gradient(ellipse 50% 70% at 0% 50%,rgba(122,76,240,.07),transparent 70%),radial-gradient(circle,rgba(106,59,228,.10) 1px,transparent 1.2px) 0 0/22px 22px!important;-webkit-mask-image:linear-gradient(90deg,#000,transparent 55%);mask-image:linear-gradient(90deg,#000,transparent 55%)}
 @media(max-width:768px){.section:not(.section-alt)::before{width:320px;height:320px;right:-140px}}
+
+/* ── One hero mark; integration map graphic in pale areas (Nov 2026) ── */
+.hm2{display:none}
+.hm1{left:71%;right:auto;top:20%;bottom:auto;width:84px;height:84px}
+.section:not(.section-alt):nth-of-type(odd)::before{background:url("/brand/integration-map.svg") no-repeat center/contain;opacity:.16;width:520px;height:416px;top:-30px;right:-140px}
+.hc-intro-map{display:block;width:100%;max-width:420px;margin-top:28px;opacity:.9}
+@media(max-width:960px){.hm1{display:none}.hc-intro-map{max-width:320px}}
 </style>
 </head>
 <body>
@@ -1020,7 +1027,7 @@ register('home',()=>`
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
 <section class="section hc-section">
   <div class="container hc-split">
-    <div><span class="mono">INTEGRATION HEALTH CHECK</span><h2 class="st">How healthy are your integrations?</h2><p class="sd">Four quick questions about how your systems connect today. You get a short read-out of what we would look at first.</p></div>
+    <div><span class="mono">INTEGRATION HEALTH CHECK</span><h2 class="st">How healthy are your integrations?</h2><p class="sd">Four quick questions about how your systems connect today. You get a short read-out of what we would look at first.</p><img class="hc-intro-map" src="/brand/integration-map.svg" alt="" aria-hidden="true" width="600" height="480"></div>
     <div class="hc" aria-live="polite">
       <div class="hc-head"><b>Integration Health Check</b><span class="mono" id="hc-count">QUESTION 1 OF 4</span></div>
       <div class="hc-steps" id="hc-steps"><i class="on"></i><i></i><i></i><i></i></div>

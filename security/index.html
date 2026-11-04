@@ -16,7 +16,7 @@
 <meta property="og:title" content="Security &amp; Data Handling | MISNOX Solutions"/>
 <meta property="og:description" content="Integrations run inside your environment. How we handle access, credentials and data."/>
 <meta property="og:url" content="https://misnox.com.au/security/"/>
-<meta property="og:image" content="https://misnox.com.au/og-image.png"/>
+<meta property="og:image" content="https://misnox.com.au/og-image.png?v=2"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="MISNOX Solutions — Your systems, connected. Your controls, enforced."/>
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Security &amp; Data Handling | MISNOX Solutions"/>
 <meta name="twitter:description" content="Integrations run inside your environment. How we handle access, credentials and data."/>
-<meta name="twitter:image" content="https://misnox.com.au/og-image.png"/>
+<meta name="twitter:image" content="https://misnox.com.au/og-image.png?v=2"/>
 
 <!-- Favicon (inline SVG — no external file needed) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round"%3E%3Cdefs%3E%3ClinearGradient id="a" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"%3E%3Cstop offset="0" stop-color="%2333CCE0"/%3E%3Cstop offset="1" stop-color="%237A4CF0"/%3E%3C/linearGradient%3E%3ClinearGradient id="b" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse"%3E%3Cstop offset="0" stop-color="%2333CCE0"/%3E%3Cstop offset="1" stop-color="%237A4CF0"/%3E%3C/linearGradient%3E%3Cmask id="k" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"%3E%3Crect width="100" height="100" fill="%23fff"/%3E%3Cpath d="M12 80C52 80 48 20 88 20" stroke="%23000" stroke-width="24"/%3E%3C/mask%3E%3C/defs%3E%3Cpath d="M12 20C52 20 48 80 88 80" stroke="url%28%23a%29" stroke-width="12" mask="url%28%23k%29"/%3E%3Cpath d="M12 80C52 80 48 20 88 20" stroke="url%28%23b%29" stroke-width="12"/%3E%3C/svg%3E">
@@ -676,6 +676,9 @@ body[data-page=about] .page-hero{background:linear-gradient(90deg,var(--bg2) 0%,
 .ptl-chip{display:inline-flex;align-self:start;justify-self:start;margin-top:4px;font:500 11.5px 'IBM Plex Mono',monospace;color:var(--accent2);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
 @media(max-width:960px){.ptl-track{display:none}}
 @media(prefers-reduced-motion:reduce){.ptl-fill,.ptl-node,.ptl .phase>*{transition:none}.ptl-dot{display:none}}
+
+/* ── Phone tidy-up (Nov 2026): quiz first, no ghost diagrams behind text ── */
+@media(max-width:768px){.imap{display:none}.section:not(.section-alt)::before{display:none}}
 </style>
 </head>
 <body>
@@ -1188,15 +1191,15 @@ register('services',()=>`
         <p style="font-size:0.875rem;color:var(--muted);line-height:1.65;margin-bottom:20px">Connected through each platform's documented APIs.</p>
         <div class="pf-grid">
           ${[
-            [PF.ms,'Dynamics 365 Business Central','Cloud ERP — distributors, project businesses, Microsoft 365 estates'],
-            [PF.ms,'Dynamics 365 Finance & Operations','Enterprise scale — complex finance, multi-entity operations'],
+            [PF.ms,'Dynamics 365 Business Central','Cloud ERP — finance, sales, purchasing and inventory'],
+            [PF.ms,'Dynamics 365 Finance & Operations','Finance, supply chain and multi-entity operations'],
             [PF.oracle,'Oracle NetSuite & Oracle Fusion','Cloud ERP — AP, supplier master, and GL integration'],
-            [PF.sap,'SAP','Multi-entity enterprise environments — vendor and payables integration'],
+            [PF.sap,'SAP','Vendor, payables and master data across entities'],
             [PF.t1,'TechnologyOne','Government, education, and local council finance'],
             [PF.xero,'Xero','Cloud accounting — often the integration counterpart to a larger ERP'],
-            [PF.myob,'MYOB','Accounting and payroll for small and medium businesses'],
-            [PF.acu,'MYOB Acumatica','Cloud ERP for growing businesses'],
-            [PF.qb,'QuickBooks','Small-business accounting — invoice and payment sync'],
+            [PF.myob,'MYOB','Accounting and payroll'],
+            [PF.acu,'MYOB Acumatica','Cloud ERP — financials, inventory and projects'],
+            [PF.qb,'QuickBooks','Accounting — invoice and payment sync'],
             [PF.sf,'Salesforce','CRM — customer, quote and order data flowing into finance'],
             [PF.pbi,'Power BI','Reporting — finance and operational data delivered to dashboards'],
           ].map(([b,t,d])=>`
@@ -1413,7 +1416,7 @@ register('privacy',()=>`
 
 // ══ CONTACT ══
 register('contact',()=>`
-<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Get in Touch</p><h1>Contact</h1><p>We reply to every enquiry within one business day.</p></div></div></section>
+<section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Get in Touch</p><h1>Contact</h1><p>Tell us what you need and we'll get back to you.</p></div></div></section>
 <section class="section"><div class="container"><div class="split" style="align-items:flex-start;gap:44px">
   <div class="reveal">
     <h2 style="font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em">Book an Intro Call</h2>

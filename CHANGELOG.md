@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Invoice pipeline now runs on its own: starts on page load, completes, pauses about 3 s and restarts in a loop; scroll trigger, scroll tilt and Replay button removed | PENDING |
+| 2026-11-04 | Invoice pipeline now runs on its own: starts on page load, completes, pauses about 3 s and restarts in a loop; scroll trigger, scroll tilt and Replay button removed | 4dbca14 |
 | 2026-11-04 | One type scale site-wide: body text snaps to 12 / 14 / 16 / 18 px (labels / secondary / body / lead), headings to fixed sizes (card titles 18 px, section headings, page and hero headings); removed the dark data panel under the invoice pipeline (cards and rule hovers kept) | 3684f15 |
 | 2026-11-04 | Replaced Shopify (retail/ecommerce signal) with ADP payroll everywhere: integration map source (PAY records), event log line (pay run → GL journal), moving logo strip, NetSuite tile logos and flows | 567d6b8 |
 | 2026-11-04 | Home invoice example is now an interactive pipeline: plays when scrolled into view (document scan, fields typed in, record travels along the arrows, rules tick one by one, Business Central API call returns 201), progress bar with Replay, cards lift on hover, rule details on hover, dark inspector showing the JSON payload / rule results / API call for the hovered step, slight tilt with scroll; static final state for reduced-motion users | 6c4d0d3 |

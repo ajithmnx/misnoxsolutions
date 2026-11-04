@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Wider content: container 1160 → 1280 px (content 1,232 px) for header, sections, footer and logo strip; intro paragraphs capped at a readable width; phones and tablets unchanged | PENDING |
+| 2026-11-04 | Wider content: container 1160 → 1280 px (content 1,232 px) for header, sections, footer and logo strip; intro paragraphs capped at a readable width; phones and tablets unchanged | 6982964 |
 | 2026-11-04 | Less empty space under the invoice pipeline (section bottom padding 96 → 40 px); How We Work chip "findings.pdf · yours to keep" → "findings report" | ecfdd4e |
 | 2026-11-04 | Home "By system" tiles restructured to one vendor per card with only that vendor's logo: Microsoft Dynamics 365 (Business Central · Finance & Operations), Oracle (NetSuite · Fusion), SAP (S/4HANA · Business One), TechnologyOne, Xero, MYOB (Business · Acumatica); Xero and MYOB split; flow lines spelled out (no BC/B1/T1) | a2179a5 |
 | 2026-11-04 | Invoice pipeline now runs on its own: starts on page load, completes, pauses about 3 s and restarts in a loop; scroll trigger, scroll tilt and Replay button removed | 4dbca14 |

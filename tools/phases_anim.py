@@ -10,7 +10,7 @@ const PH_ICON=[
  '<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
  '<svg viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M13.5 5l-3 14"/></svg>',
  '<svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>'];
-const PH_CHIP=['findings.pdf · yours to keep','design spec · signed off ✓','tests passed · rollback ready','monitoring on · alerts → your team'];
+const PH_CHIP=['findings report','design spec · signed off ✓','tests passed · rollback ready','monitoring on · alerts → your team'];
 function initPhases(){const el=document.getElementById('ptl');if(!el)return;
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){el.classList.add('run','done');return}
   const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){el.classList.add('run');setTimeout(()=>el.classList.add('done'),2600);o.disconnect()}})},{threshold:.35});o.observe(el)}

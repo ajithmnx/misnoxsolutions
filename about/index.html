@@ -767,6 +767,9 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 .tile-logos svg.lg-sap{width:52px;height:26px}
 .t1-mark{font:700 14px 'Sora',sans-serif;color:#1E3A6E;letter-spacing:-.01em;border:1.5px solid #1E3A6E;border-radius:6px;padding:3px 8px}
 .tile-prod{font-size:var(--fs-sm);font-weight:600;color:var(--accent);margin-top:-4px}
+
+.section:has(#fx){padding-bottom:40px}
+.section:has(#fx) .inote{margin-top:12px}
 </style>
 </head>
 <body>
@@ -973,7 +976,7 @@ const PH_ICON=[
  '<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
  '<svg viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M13.5 5l-3 14"/></svg>',
  '<svg viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>'];
-const PH_CHIP=['findings.pdf · yours to keep','design spec · signed off ✓','tests passed · rollback ready','monitoring on · alerts → your team'];
+const PH_CHIP=['findings report','design spec · signed off ✓','tests passed · rollback ready','monitoring on · alerts → your team'];
 function initPhases(){const el=document.getElementById('ptl');if(!el)return;
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){el.classList.add('run','done');return}
   const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){el.classList.add('run');setTimeout(()=>el.classList.add('done'),2600);o.disconnect()}})},{threshold:.35});o.observe(el)}

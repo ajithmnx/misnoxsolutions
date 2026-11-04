@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-04 | Home: removed the "Your data, protected from day one" security stats panel (0 / Never / 100% / Written); the Security page is unchanged | 50b6341 |
 | 2026-11-04 | "Why organisations choose us" photo: warehouse aisle replaced with a laptop showing a business reporting dashboard (Unsplash), relevant to finance/ERP systems | bad9d5a |
 | 2026-11-04 | Side backdrop: no more repeated images — each page has its own unique pair of architectural photos (24 across 12 pages), fixed to the screen edges so one continuous image shows through all white sections; fainter (12%) with stronger navy/violet tint | 4f1fe9e |
 | 2026-11-04 | White-section margins reworked: removed the mock UI cards (text was distracting); edges now softly shaded navy toward the outside, with heavily faded greyscale architectural photos (Unsplash: curved ribs, tower, glass facades) tinted violet/navy and fading into the content; alternate images per section; shown on 1500 px+ screens | f613968 |

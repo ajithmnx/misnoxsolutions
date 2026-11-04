@@ -1,0 +1,26 @@
+
+/* ── Animated integration map (Nov 2026) ── */
+.imap{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 0;box-shadow:0 18px 40px -28px rgba(20,24,51,.3);max-width:540px}
+.imap-svg{width:100%;height:auto;display:block;font-family:'IBM Plex Mono',ui-monospace,monospace}
+.imap-wire{fill:none;stroke:#CFC6EE;stroke-width:1.5;stroke-dasharray:4 5;animation:imapDash 1.2s linear infinite}
+@keyframes imapDash{to{stroke-dashoffset:-18}}
+.imap-node circle{fill:#fff;stroke:var(--line);stroke-width:1.5}
+.imap-lbl{font-size:10px;fill:var(--muted);font-weight:500}
+.imap-col{font-size:9.5px;fill:#9A9DB2;letter-spacing:.08em}
+.imap-hub>circle:nth-of-type(2){fill:#fff;stroke:var(--accent);stroke-width:2}
+.imap-ring{fill:none;stroke:#33CCE0;stroke-width:1.5;stroke-dasharray:3 7;transform-origin:280px 170px;animation:imapSpin 14s linear infinite}
+@keyframes imapSpin{to{transform:rotate(360deg)}}
+.imap-hubt{font-size:9.5px;fill:var(--accent);letter-spacing:.06em;font-weight:500}
+.imap-pk text{font-size:7.5px;fill:#fff;font-weight:600;letter-spacing:.04em}
+.imap-log{border-top:1px solid var(--line);margin:14px -18px 0;padding:10px 16px 12px;background:var(--bg);border-radius:0 0 12px 12px;font:500 11px/1.5 'IBM Plex Mono',ui-monospace,monospace}
+.imap-log-h{display:flex;justify-content:space-between;color:#9A9DB2;letter-spacing:.08em;font-size:10px;margin-bottom:6px}
+.imap-live{display:flex;align-items:center;gap:6px;color:var(--green)}
+.imap-live i{width:7px;height:7px;border-radius:50%;background:var(--green);animation:imapPulse 1.6s ease-in-out infinite}
+@keyframes imapPulse{50%{opacity:.25}}
+#imap-rows{display:grid;gap:3px;min-height:57px}
+.imap-row{display:grid;grid-template-columns:58px minmax(0,1.3fr) minmax(0,1.4fr) 66px;gap:8px;color:var(--ink2);animation:imapIn .4s ease-out}
+.imap-row .t{color:#9A9DB2}.imap-row .r,.imap-row .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.imap-row .m{color:var(--muted)}
+.imap-row .s.ok{color:var(--green)}.imap-row .s.warn{color:#A8551B}
+@keyframes imapIn{from{opacity:0;transform:translateY(-4px)}}
+@media(max-width:560px){.imap-row{grid-template-columns:52px minmax(0,1fr) 60px}.imap-row .m{display:none}}
+@media(prefers-reduced-motion:reduce){.imap-wire,.imap-ring,.imap-live i{animation:none}.imap-pk{display:none}}

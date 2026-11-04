@@ -8,7 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
-| 2026-11-04 | Side backdrop: no more repeated images — each page has its own unique pair of architectural photos (24 across 12 pages), fixed to the screen edges so one continuous image shows through all white sections; fainter (12%) with stronger navy/violet tint | PENDING |
+| 2026-11-04 | Side backdrop: no more repeated images — each page has its own unique pair of architectural photos (24 across 12 pages), fixed to the screen edges so one continuous image shows through all white sections; fainter (12%) with stronger navy/violet tint | 4f1fe9e |
 | 2026-11-04 | White-section margins reworked: removed the mock UI cards (text was distracting); edges now softly shaded navy toward the outside, with heavily faded greyscale architectural photos (Unsplash: curved ribs, tower, glass facades) tinted violet/navy and fading into the content; alternate images per section; shown on 1500 px+ screens | f613968 |
 | 2026-11-04 | Side graphics on white sections replaced: route lines → faint product-style cards in the margins (GL journal, bank feed reconciled, month-end chart, two-step approval on the left; invoice, API 201 response, sync status, PO matched on the right), fading toward content; shown on screens 1500 px and wider | 3a70c27 |
 | 2026-11-04 | Faint "data route" pattern (circuit-style lines with connection nodes, violet and cyan) fills the side margins of every white section site-wide, fading toward the content (hidden below 1180 px); replaces the scattered logo curves and ghost diagrams there. FAQ "How long does a typical integration take?" → "How is the work planned?" (no timelines rule) | 7f5af40 |

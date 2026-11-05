@@ -800,6 +800,7 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 .acc-body>*{overflow:hidden}
 .acc-item.open .acc-body{grid-template-rows:1fr;padding-bottom:18px}
 .acc-body{grid-template-columns:1fr}
+.aflow{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px 6px;margin:4px 0 14px;padding:0}.aflow li{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.75rem;line-height:1.3;color:#DDE0EE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:6px;padding:6px 9px}.aflow li.ar{background:none;border:0;padding:0 2px;color:#7CB8FF}.aflow li:first-child{border-color:rgba(55,148,253,.7);color:#fff}.aflow li:last-child{border-color:rgba(181,82,251,.75);color:#fff;background:rgba(181,82,251,.12)}.acc-item.open .aflow li:not(.ar){animation:afIn .45s both;animation-delay:calc(var(--d)*90ms)}@keyframes afIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.acc-item.open .aflow li{animation:none}}.acc-body .atech{font-size:var(--fs-sm);color:#AEB3CC;line-height:1.65;margin:0 0 10px}
 .acc-body p{color:#C9CCE0;margin:0 0 10px}.acc-body .card-link{color:#8FE3EE}
 .acc-item:not(.open) .acc-body .card-link{display:none}
 .why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--navy);color:#fff}
@@ -1026,12 +1027,13 @@ const PF={
 
 // Single source of truth for services and process
 const SERVICES=[
-  ['System Integration','gitmerge','Connect finance, procurement, CRM and operational systems through their own APIs.',null,'For example: a new supplier set up in your procurement tool appears in the ERP, already checked.'],
-  ['Workflow Automation','zap','Invoice processing, approval routing and month-end tasks, automated with controls built in.',null,'For example: an invoice over your approval limit goes to the right approver before it can be paid.'],
-  ['Data Migration & Sync','database','Move data cleanly between platforms, and keep systems in sync afterwards.',null,'For example: supplier and ledger history moved to a new ERP, with both kept in step during the changeover.'],
-  ['ERP Integration Projects','cpu','Connect a new or existing ERP to the rest of your business.','erp','For example: changing ERPs without breaking the payroll, banking and CRM feeds that depend on it.'],
-  ['Managed Support','wrench','Monitoring, fixes and improvements for integrations once they are live.',null,'For example: a failed sync raises an alert with us, not a surprise at month-end.'],
+  ['System Integration','gitmerge','Connect finance, procurement, CRM and operational systems through their own APIs.',null,[['Supplier created in procurement', 'Webhook received', 'Required fields validated', 'Mapped to ERP vendor schema', 'Vendor live in ERP'], 'Event-driven where the platform supports it, scheduled where it doesn\'t, always through each system\'s documented REST or OData APIs. Duplicate events are ignored, so a retry never creates a second record.']],
+  ['Workflow Automation','zap','Invoice processing, approval routing and month-end tasks, automated with controls built in.',null,[['Invoice arrives', 'Matched to PO and receipt', 'Over limit? Second approver', 'Approved', 'Posted to ERP'], 'Your approval rules run inside the workflow, not in someone\'s inbox. Each decision is time-stamped with who approved it and why.']],
+  ['Data Migration & Sync','database','Move data cleanly between platforms, and keep systems in sync afterwards.',null,[['Legacy extract', 'Cleanse and de-duplicate', 'Reconcile counts and balances', 'Load to new ERP', 'Delta sync to cutover'], 'Every load is repeatable and ends with a reconciliation report, so trial runs can be compared side by side before the real one.']],
+  ['ERP Integration Projects','cpu','Connect a new or existing ERP to the rest of your business.','erp',[['Inventory current feeds', 'Rebuild on new ERP APIs', 'Parallel run', 'Results compared', 'Cutover'], 'Payroll, banking, CRM and reporting feeds are re-pointed together, so nothing is left talking to the old system after go-live.']],
+  ['Managed Support','wrench','Monitoring, fixes and improvements for integrations once they are live.',null,[['Alert raised', 'Diagnosed from run log', 'Fix applied', 'Held record replayed', 'Root cause shared'], 'Also covers small changes as your processes evolve, without starting a new project each time.']],
 ];
+function accFlow([s,t]){return `<ol class="aflow" aria-label="Example flow">${s.map((x,i)=>`<li style="--d:${i}">${x}</li>`).join('<li class="ar" aria-hidden="true">→</li>')}</ol><p class="atech">${t}</p>`}
 const ERP_PHASES=[
   ['01','Discover','We map every system that touches your ERP today, and what each one sends and receives.'],
   ['02','Design','Each connection to the new or upgraded ERP is specified and signed off before cutover planning starts.'],
@@ -1329,7 +1331,7 @@ register('home',()=>`
 <section class="wwd">
   <div class="container wwd-in">
     <div class="wwd-head"><p class="eyebrow">What we do</p><h2 class="st">Built around the systems you already run</h2><p class="sd">From a single connection to a full ERP programme, every engagement is shaped to your environment.</p><ul class="wwd-points"><li>Your data stays in your own systems</li><li>Built inside your environment, under your access controls</li><li>Works alongside your ERP partner, not instead of them</li></ul><div class="wwd-actions"><button class="btn btn-primary" data-cta="wwd-services" onclick="navigate('services')">See All Services <span class="arrow">→</span></button></div></div>
-    <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item${i===0?' open':''}"><button class="acc-btn" type="button" aria-expanded="${i===0}"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><p>${ex}</p>${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div>`).join('')}</div>
+    <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div>${accFlow(ex)}${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div></div>`).join('')}</div>
   </div>
 </section>
 <section class="section">

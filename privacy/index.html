@@ -600,6 +600,7 @@ body[data-page=about] .page-hero::after,body[data-page=industries] .page-hero::a
 @media(prefers-reduced-motion:reduce){.ls-track{animation:none;flex-wrap:wrap}}
 .hc-section{padding-top:72px}
 .hc-split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:56px;align-items:center}
+.hc-split{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)!important}.hc-stage .imap{margin-top:0;max-width:none}.hc-points{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}.hc-points li{display:flex;gap:14px;align-items:baseline;color:var(--ink2);font-size:var(--fs-base);line-height:1.55}.hc-points li>span{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:var(--fs-xs);font-weight:500;color:var(--accent);flex-shrink:0}.hc-points b{color:var(--ink);font-weight:700}@media(max-width:900px){.hc-split{grid-template-columns:1fr!important}}
 .hc-split .st{margin-top:10px}
 .sf-split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:stretch}.sf-photo{display:none!important}.sf-split{grid-template-columns:1fr!important}
 .sf-photo{border-radius:12px;min-height:420px;background:linear-gradient(rgba(106,59,228,.08),rgba(106,59,228,.08)),url("https://images.unsplash.com/photo-1551434678-e076c223a692?w=1000&q=65&auto=format&fit=crop") center/cover no-repeat}
@@ -680,7 +681,7 @@ body[data-page=about] .page-hero{background:linear-gradient(90deg,var(--bg2) 0%,
 @media(prefers-reduced-motion:reduce){.ptl-fill,.ptl-node,.ptl .phase>*{transition:none}.ptl-dot{display:none}}
 
 /* ── Phone tidy-up (Nov 2026): quiz first, no ghost diagrams behind text ── */
-@media(max-width:768px){.imap{display:none}.section:not(.section-alt)::before{display:none}}
+@media(max-width:560px){.imap{display:none}.section:not(.section-alt)::before{display:none}}
 
 /* ── Typography pass (Nov 2026) ── */
 body{font-family:'Plus Jakarta Sans',-apple-system,'Segoe UI',system-ui,sans-serif;font-size:var(--fs-base);line-height:1.7;letter-spacing:0;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -1137,7 +1138,7 @@ const HC_Q=[
  {q:'Could another team support your setup from the documentation alone?',why:'If the person who set it up left tomorrow.',risk:{Yes:0,No:1,'Not sure':.5}}];
 const HC_FIX=['Automate the re-keyed flows first; they cost time every week and cause most errors.','Move approval limits into the workflow so the system enforces them.','Add monitoring and alerts so a stopped data flow is caught the same day.','Document how each system connects so any competent team can support it.'];
 function initHome(){
-  const body=document.getElementById('hc-body');if(!body)return;
+  const body=document.getElementById('hc-body');if(body){
   const cnt=document.getElementById('hc-count'),steps=[...document.querySelectorAll('#hc-steps i')];let i=0,ans=[];
   const draw=()=>{steps.forEach((s,k)=>s.classList.toggle('on',k<=i));
     if(i<HC_Q.length){const x=HC_Q[i],opts=x.opts||['Yes','No','Not sure'];cnt.textContent='QUESTION '+(i+1)+' OF '+HC_Q.length;
@@ -1148,7 +1149,7 @@ function initHome(){
       cnt.textContent='YOUR RESULT';track('healthcheck_done',{score:sc});
       body.innerHTML=`<div class="hc-body"><h3>${lv[0]}</h3><div class="hc-meter" aria-label="${sc} of 4 risk points">${[0,1,2,3].map(k=>`<i class="${k<Math.ceil(sc)?'on':''}"></i>`).join('')}</div><p class="hc-why">${lv[1]}</p>${gaps.length?`<ul>${gaps.map(g=>`<li>${g}</li>`).join('')}</ul>`:''}<div class="hc-row"><button class="btn btn-primary" type="button" data-cta="healthcheck" onclick="bookCall()">Talk it through →</button><button class="hc-link" type="button" id="hc-again">Start again</button></div></div>`;
       document.getElementById('hc-again').onclick=()=>{i=0;ans=[];draw()};}};
-  draw();
+  draw();}
   const tabs=[...document.querySelectorAll('.tabs [role=tab]')],panel=document.getElementById('tpanel');
   tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.setAttribute('aria-selected',String(x===t)));panel.setAttribute('aria-labelledby',t.id);panel.innerHTML=homeTiles(t.dataset.k)});
 }
@@ -1301,12 +1302,8 @@ register('home',()=>`
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
 <section class="section hc-section">
   <div class="container hc-split">
-    <div><span class="mono">SYSTEMS HEALTH CHECK</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Four quick questions about how your systems and processes run today. You get a short read-out of what we would look at first.</p>${IMAP}</div>
-    <div class="hc" aria-live="polite">
-      <div class="hc-head"><b>Systems Health Check</b><span class="mono" id="hc-count">QUESTION 1 OF 4</span></div>
-      <div class="hc-steps" id="hc-steps"><i class="on"></i><i></i><i></i><i></i></div>
-      <div id="hc-body"></div>
-    </div>
+    <div><span class="mono">LIVE VIEW</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Every connection runs through one controlled layer between your systems. On the way through, each record is:</p><ul class="hc-points"><li><span>01</span><div><b>Checked</b> against your rules before it moves</div></li><li><span>02</span><div><b>Translated</b> into the format each system expects</div></li><li><span>03</span><div><b>Logged</b>, so a failure is seen straight away, not found weeks later</div></li></ul></div>
+    <div class="hc-stage">${IMAP}</div>
   </div>
 </section>
 <section class="wwd">

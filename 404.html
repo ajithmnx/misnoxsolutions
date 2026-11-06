@@ -704,6 +704,7 @@ h1,h2,h3,h4,.btn,.mono,.kv,.imap,.mflow,.ptl-chip,.tile .fl{word-spacing:normal}
 .sd,.hero-sub:not(.hero-photo *),.page-hero p,.card p,.tile p,.plist-item p,.phase p,.qrow-item p{color:#4F5470}
 
 /* ── Interactive invoice pipeline (Nov 2026) ── */
+.fx-stage{position:relative;border:1px solid var(--line);border-radius:16px;padding:22px;background:radial-gradient(circle at 1px 1px,rgba(106,59,228,.09) 1px,transparent 0) 0 0/18px 18px,linear-gradient(180deg,#FCFBFF,#F3F0FB)}.fx-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.fx-tab{display:inline-flex;align-items:center;gap:8px;font:600 13px 'Plus Jakarta Sans',sans-serif;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer;transition:background .25s,color .25s,border-color .25s}.fx-tab small{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted)}.fx-tab:hover{border-color:var(--accent)}.fx-tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}.fx-tab[aria-selected=true] small{color:#B9BDD6}.fx-sys{display:flex;align-items:center;gap:10px;min-width:0}.fx-sys i{flex-shrink:0;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:700 12px 'Sora',sans-serif;font-style:normal;color:#fff;background:var(--c);box-shadow:0 8px 16px -10px var(--c)}.fx-sys b{display:block;font:700 15px/1.25 'Sora',sans-serif;color:var(--ink)}.fx-sys small{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--accent)}.fx-json{margin:0;background:#141833;color:#D5D8EA;border-radius:8px;padding:10px 12px;font:500 12px/1.65 'IBM Plex Mono',monospace;min-height:9.6em;white-space:pre-wrap;overflow-wrap:anywhere}.fx-json .k{color:#C3AEFF}.fx-json .v{color:#8CCBFF}.fx-json .p{color:#6E7396}.fx-map{display:grid;gap:6px}.fx-map div{display:grid;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr);align-items:center;gap:6px;font:500 11.5px 'IBM Plex Mono',monospace;opacity:.25;transform:translateX(-4px);transition:opacity .4s,transform .4s}.fx-map div.on{opacity:1;transform:none}.fx-map code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:3px 6px;color:var(--ink2);overflow-wrap:anywhere}.fx-map i{font-style:normal;color:var(--accent);text-align:center}.fx-log{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted);opacity:0;transition:opacity .4s}.fx-node.done .fx-log{opacity:1}.fx-traits{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font:500 12px 'IBM Plex Mono',monospace;color:var(--ink2)}.fx-traits span::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#3794FD,#B552FB);margin-right:8px;vertical-align:2px}@media(max-width:640px){.fx-stage{padding:14px}.fx-tab small{display:none}.fx-map code{font-size:10.5px;overflow-wrap:normal;word-break:break-all}}
 .fx{position:relative}
 .fx-bar{display:flex;align-items:center;gap:14px;margin-bottom:14px;font:500 12px 'IBM Plex Mono',monospace;color:var(--muted)}
 .fx-run{color:var(--accent2)}.fx-run::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#B9B4CC;margin-right:7px;vertical-align:1px}
@@ -959,40 +960,42 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
     <div class="acc" id="acc"><div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></span></span><span class="acc-t">System Integration</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div><ol class="aflow" aria-label="Example flow"><li style="--d:0">Supplier created in procurement</li><li class="ar" aria-hidden="true">→</li><li style="--d:1">Webhook received</li><li class="ar" aria-hidden="true">→</li><li style="--d:2">Required fields validated</li><li class="ar" aria-hidden="true">→</li><li style="--d:3">Mapped to ERP vendor schema</li><li class="ar" aria-hidden="true">→</li><li style="--d:4">Vendor live in ERP</li></ol><p class="atech">Event-driven where the platform supports it, scheduled where it doesn't, always through each system's documented REST or OData APIs. Duplicate events are ignored, so a retry never creates a second record.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg></span></span><span class="acc-t">Workflow Automation</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div><ol class="aflow" aria-label="Example flow"><li style="--d:0">Invoice arrives</li><li class="ar" aria-hidden="true">→</li><li style="--d:1">Matched to PO and receipt</li><li class="ar" aria-hidden="true">→</li><li style="--d:2">Over limit? Second approver</li><li class="ar" aria-hidden="true">→</li><li style="--d:3">Approved</li><li class="ar" aria-hidden="true">→</li><li style="--d:4">Posted to ERP</li></ol><p class="atech">Your approval rules run inside the workflow, not in someone's inbox. Each decision is time-stamped with who approved it and why.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span></span><span class="acc-t">Data Migration &amp; Sync</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div><ol class="aflow" aria-label="Example flow"><li style="--d:0">Legacy extract</li><li class="ar" aria-hidden="true">→</li><li style="--d:1">Cleanse and de-duplicate</li><li class="ar" aria-hidden="true">→</li><li style="--d:2">Reconcile counts and balances</li><li class="ar" aria-hidden="true">→</li><li style="--d:3">Load to new ERP</li><li class="ar" aria-hidden="true">→</li><li style="--d:4">Delta sync to cutover</li></ol><p class="atech">Every load is repeatable and ends with a reconciliation report, so trial runs can be compared side by side before the real one.</p></div></div></div><div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span></span><span class="acc-t">ERP Integration Projects</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div><ol class="aflow" aria-label="Example flow"><li style="--d:0">Inventory current feeds</li><li class="ar" aria-hidden="true">→</li><li style="--d:1">Rebuild on new ERP APIs</li><li class="ar" aria-hidden="true">→</li><li style="--d:2">Parallel run</li><li class="ar" aria-hidden="true">→</li><li style="--d:3">Results compared</li><li class="ar" aria-hidden="true">→</li><li style="--d:4">Cutover</li></ol><p class="atech">Payroll, banking, CRM and reporting feeds are re-pointed together, so nothing is left talking to the old system after go-live.</p><a class="card-link" href="/erp/">Learn more <span class="arrow">→</span></a></div></div></div><div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic"><span style="width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></span></span><span class="acc-t">Managed Support</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div><ol class="aflow" aria-label="Example flow"><li style="--d:0">Alert raised</li><li class="ar" aria-hidden="true">→</li><li style="--d:1">Diagnosed from run log</li><li class="ar" aria-hidden="true">→</li><li style="--d:2">Fix applied</li><li class="ar" aria-hidden="true">→</li><li style="--d:3">Held record replayed</li><li class="ar" aria-hidden="true">→</li><li style="--d:4">Root cause shared</li></ol><p class="atech">Also covers small changes as your processes evolve, without starting a new project each time.</p></div></div></div></div>
   </div>
 </section>
-<section class="section">
+<section class="section fx-sec">
   <div class="container">
-    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Supplier Invoice, Start to Finish</h2><p class="sd">This is the kind of thing we build. The invoice arrives, your rules are checked automatically, and it lands in the ERP with an audit trail. Nobody re-keys it.</p></div>
-    <div class="fx live" id="fx">
-      <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">running</span><span class="fx-prog"><i id="fx-prog" style="width: 0px;"></i></span></div>
+    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Record. Every System.</h2><p class="sd">Any change in one system, an order, a customer or a journal, is checked, translated and delivered to the next, with a trail.</p></div>
+    <div class="fx-stage">
+    <div class="fx-tabs" id="fx-tabs" role="tablist" aria-label="Example records"><button class="fx-tab" role="tab" type="button" aria-selected="true">Sales order <small>Shopify → Business Central</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">New customer <small>Salesforce → NetSuite</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Payroll journal <small>Employment Hero → MYOB Acumatica</small></button></div>
+    <div class="fx" id="fx">
+      <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span></div>
       <div class="iflow fx-row">
-        <div class="inode fx-node insp act" data-s="0" tabindex="0">
-          <span class="mono">1 · CAPTURE</span><h3>Supplier invoice</h3>
-          <div class="fx-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span class="fx-scan"></span></div>
-          <div class="kv"><span>source</span><b>AP inbox (PDF)</b><span>supplier</span><b data-v="Northwind Freight (sample)">—</b><span>invoice</span><b data-v="INV-20418">—</b><span>amount</span><b data-v="$18,640.00">—</b></div>
-          <div class="fx-foot"><span class="itag" data-done="Extracted ✓">Incoming</span><span class="fx-ms" data-v="OCR · 312 ms"></span></div>
+        <div class="inode fx-node" data-s="0" tabindex="0">
+          <span class="mono">01 · EVENT RECEIVED</span>
+          <div class="fx-sys" id="fx-src"><i style="--c:#5E8E3E" aria-hidden="true">S</i><span><b>Shopify</b><small>order.created</small></span></div>
+          <pre class="fx-json" id="fx-json" aria-label="Event payload"></pre>
+          <div class="fx-foot"><span class="itag" data-done="Received ✓">Listening</span><span class="fx-ms" data-v="webhook · 12 ms"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"></path></svg><span class="fx-pkt">INV</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">SO</span></div>
         <div class="inode core fx-node" data-s="1" tabindex="0">
-          <span class="mono">2 · VALIDATE · MAP · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"></use></svg>Your rules, enforced</h3>
-          <div class="ichecks fx-checks">
-            <span data-tip="Invoice lines agree with purchase order PO-7713 within tolerance">Matched to PO-7713</span>
-            <span data-tip="GL 5120 Freight and cost centre FIN-02 exist and are open for posting">GL 5120 · cost centre FIN-02 valid</span>
-            <span data-tip="Amount above $10,000 threshold: routed to a second approver before posting">Over $10k: second approver asked</span>
-            <span data-tip="Every check, value and approver recorded against the invoice">Audit trail written</span>
-          </div>
+          <span class="mono">02 · VALIDATE · TRANSFORM · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"/></svg>The Misnox layer</h3>
+          <div class="ichecks fx-checks" id="fx-checks"></div>
+          <div class="fx-map" id="fx-map" aria-label="Field mapping"></div>
           <div class="fx-tip" id="fx-tip">Hover a check to see the rule.</div>
-          <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 41 ms"></span></div>
+          <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 38 ms"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"></path></svg><span class="fx-pkt">PI</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">SO</span></div>
         <div class="inode fx-node" data-s="2" tabindex="0">
-          <span class="mono">3 · POST</span><h3><svg width="16" height="16" aria-hidden="true"><use href="#lg-ms"></use></svg>Business Central</h3>
-          <div class="kv"><span>journal</span><b>Purchase invoice</b><span>doc no.</span><b data-v="PI-104382">—</b><span>status</span><b class="fx-status">Waiting</b></div>
-          <code class="fx-api">POST /purchaseInvoices → <em>201 Created</em></code>
-          <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 188 ms"></span></div>
+          <span class="mono">03 · DELIVERED</span>
+          <div class="fx-sys" id="fx-dst"><i style="--c:#0B7FC6" aria-hidden="true">BC</i><span><b>Business Central</b><small>REST API</small></span></div>
+          <div class="kv" id="fx-kv"></div>
+          <code class="fx-api" id="fx-api"></code>
+          <div class="fx-log" id="fx-log"></div>
+          <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 164 ms"></span></div>
         </div>
       </div>
     </div>
-    <p class="inote">Illustrative example. The same pattern works for NetSuite, SAP, TechnologyOne, Xero and others.</p>
+    <div class="fx-traits" aria-label="Built into every integration"><span>Retries automatic</span><span>Duplicates ignored</span><span>Failures alerted</span><span>Every run logged</span></div>
+    </div>
+    <p class="inote">Illustrative examples. The same pattern works for SAP, TechnologyOne, Xero and others.</p>
   </div>
 </section>
 <section class="section section-alt">
@@ -1189,29 +1192,61 @@ const FX_JSON=[
 }
 → 201 Created  { "number": "PI-104382", "status": "Open" }`];
 const FX_T=['PAYLOAD · CAPTURE','RULES · EVALUATION','API · BUSINESS CENTRAL'];
+const FX_SC=[
+ {k:'Sales order',src:['Shopify','#5E8E3E','S'],dst:['Business Central','#0B7FC6','BC'],ev:'order.created',pkt:'SO',
+  json:[['id','"#4821"'],['customer','"Harbour Cafe"'],['lines','3'],['total','1840.00']],
+  checks:[['Customer found in the ERP','Matched on email to customer C-1042'],['Items mapped to ERP codes','3 of 3 product SKUs mapped to item numbers'],['Duplicate check passed','Event not seen before, so it is processed exactly once'],['Credit limit respected','Order total is within the customer\'s credit limit']],
+  map:[['line_items[].sku','salesLine.itemNo'],['total_price','amountIncludingTax']],
+  kv:[['record','Sales order'],['number','SO-2291'],['lines','3']],api:'POST /salesOrders',done:'Created'},
+ {k:'New customer',src:['Salesforce','#00A1E0','SF'],dst:['NetSuite','#1E3A5F','NS'],ev:'account.updated',pkt:'CUST',
+  json:[['account','"Southbank Clinics"'],['abn','"12 345 678 901"'],['terms','"Net 30"'],['state','"VIC"']],
+  checks:[['ABN format checked','11 digits, stored in the ERP tax number field'],['No duplicate customer','Name and ABN not already in the ERP'],['Payment terms mapped','"Net 30" translated to the ERP terms code N30'],['Owner notified','Finance told a new customer was created']],
+  map:[['Account.Name','customer.companyName'],['Account.ABN__c','customer.taxNumber']],
+  kv:[['record','Customer'],['id','CUS-1187'],['terms','N30']],api:'POST /customer',done:'Created'},
+ {k:'Payroll journal',src:['Employment Hero','#7B3FE4','EH'],dst:['MYOB Acumatica','#6100A5','MA'],ev:'payrun.finalised',pkt:'JNL',
+  json:[['payrun','"PR-2026-22"'],['employees','48'],['gross','96410.00'],['period','"Fortnight 22"']],
+  checks:[['Debits equal credits','The journal balances to the cent'],['Cost centres valid','Every line posts to an open cost centre'],['Posting period open','The period is open in the ERP'],['Totals only','Summarised by account; no employee-level pay data is sent']],
+  map:[['pay_category','account'],['location','subaccount']],
+  kv:[['record','GL journal'],['batch','GL-008812'],['lines','14']],api:'PUT /JournalTransaction',done:'Posted'}
+];
 function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
-  const nodes=[...fx.querySelectorAll('.fx-node')],wires=[...fx.querySelectorAll('.fx-wire')],pre=document.getElementById('fx-json'),tt=document.getElementById('fx-insp-t'),run=document.getElementById('fx-run'),prog=document.getElementById('fx-prog'),tip=document.getElementById('fx-tip');
+  const $=id=>document.getElementById(id),nodes=[...fx.querySelectorAll('.fx-node')],wires=[...fx.querySelectorAll('.fx-wire')],run=$('fx-run'),prog=$('fx-prog'),tip=$('fx-tip'),tabs=[...document.querySelectorAll('#fx-tabs [role=tab]')];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let timers=[],hover=false;
-  const show=i=>{nodes.forEach((n,k)=>n.classList.toggle('insp',k===i))};
-  const at=(ms,f)=>timers.push(setTimeout(f,ms));
-  const finish=n=>{n.querySelectorAll('[data-v]').forEach(e=>e.textContent=e.dataset.v);const t=n.querySelector('.itag');if(t)t.textContent=t.dataset.done;n.classList.add('done')};
-  function reset(){timers.forEach(clearTimeout);timers=[];fx.classList.remove('live');nodes.forEach(n=>{n.classList.remove('done','act');n.querySelectorAll('b[data-v]').forEach(e=>e.textContent='—');n.querySelectorAll('.fx-ms').forEach(e=>e.textContent='');const t=n.querySelector('.itag');t.textContent=['Incoming','Waiting','Pending'][+n.dataset.s]});fx.querySelectorAll('.fx-checks span').forEach(c=>c.classList.remove('ok'));wires.forEach(w=>w.classList.remove('go'));fx.querySelector('.fx-status').textContent='Waiting';prog.style.width='0';run.textContent='idle';show(0)}
+  const at=(ms,f)=>timers.push(setTimeout(f,ms)),show=i=>nodes.forEach((n,k)=>n.classList.toggle('insp',k===i));
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+  const sys=(s,sub)=>`<i style="--c:${s[1]}" aria-hidden="true">${s[2]}</i><span><b>${esc(s[0])}</b><small>${esc(sub)}</small></span>`;
+  const lines=sc=>['<span class="p">{</span>',...sc.json.map(([k,v],i)=>`  <span class="k">"${k}"</span><span class="p">:</span> <span class="v">${esc(v)}</span>${i<sc.json.length-1?'<span class="p">,</span>':''}`),'<span class="p">}</span>'];
+  const TIP='Hover a check to see the rule.';
+  function load(i){const sc=FX_SC[i];tabs.forEach((t,k)=>t.setAttribute('aria-selected',String(k===i)));
+    $('fx-src').innerHTML=sys(sc.src,sc.ev);$('fx-dst').innerHTML=sys(sc.dst,'REST API');$('fx-json').innerHTML='<span class="p">// waiting for event…</span>';
+    $('fx-checks').innerHTML=sc.checks.map(([t,d])=>`<span data-tip="${esc(d)}">${esc(t)}</span>`).join('');
+    $('fx-map').innerHTML=sc.map.map(([a,b])=>`<div><code>${esc(a)}</code><i>→</i><code>${esc(b)}</code></div>`).join('');
+    $('fx-kv').innerHTML=sc.kv.map(([k,v])=>`<span>${k}</span><b data-v="${esc(v)}">—</b>`).join('')+'<span>status</span><b class="fx-status">Waiting</b>';
+    $('fx-api').innerHTML=`${esc(sc.api)} → <em>201 Created</em>`;$('fx-log').textContent=`audit · run #${4180+i*37} logged`;
+    nodes[1].querySelector('.itag').dataset.done=`${sc.checks.length}/${sc.checks.length} rules passed`;
+    wires.forEach(w=>w.querySelector('.fx-pkt').textContent=sc.pkt);tip.textContent=TIP;
+    fx.querySelectorAll('.fx-checks span').forEach(c=>{c.onmouseenter=()=>tip.textContent=c.dataset.tip;c.onmouseleave=()=>tip.textContent=TIP})}
+  const finish=n=>{n.querySelectorAll('[data-v]').forEach(e=>e.textContent=e.dataset.v);const t=n.querySelector('.itag');t.textContent=t.dataset.done;n.classList.add('done')};
   function type(el,ms){const v=el.dataset.v;let i=0;const t=setInterval(()=>{el.textContent=v.slice(0,++i);if(i>=v.length)clearInterval(t)},ms);timers.push(t)}
-  function play(){reset();fx.classList.add('live');run.textContent='running';
-    if(reduce){nodes.forEach(finish);fx.querySelectorAll('.fx-checks span').forEach(c=>c.classList.add('ok'));fx.querySelector('.fx-status').textContent='Approved, posted';prog.style.width='100%';run.textContent='completed';return}
+  function reset(){timers.forEach(t=>{clearTimeout(t);clearInterval(t)});timers=[];fx.classList.remove('live');nodes.forEach((n,k)=>{n.classList.remove('done','act');n.querySelectorAll('.fx-ms').forEach(e=>e.textContent='');n.querySelector('.itag').textContent=['Listening','Waiting','Pending'][k]});wires.forEach(w=>w.classList.remove('go'));prog.style.width='0';run.textContent='idle';show(0)}
+  function play(i){reset();load(i);const sc=FX_SC[i],ls=lines(sc),pre=$('fx-json'),status=()=>fx.querySelector('.fx-status');fx.classList.add('live');run.textContent='running · '+sc.k.toLowerCase();
+    if(reduce){pre.innerHTML=ls.join('\n');nodes.forEach(finish);fx.querySelectorAll('.fx-checks span').forEach(c=>c.classList.add('ok'));fx.querySelectorAll('.fx-map div').forEach(d=>d.classList.add('on'));status().textContent=sc.done;prog.style.width='100%';run.textContent='completed';return}
     nodes[0].classList.add('act');if(!hover)show(0);
-    nodes[0].querySelectorAll('b[data-v]').forEach((e,k)=>at(500+k*380,()=>type(e,22)));
-    at(1900,()=>{finish(nodes[0]);nodes[0].classList.remove('act');prog.style.width='33%';wires[0].classList.add('go')});
-    at(2700,()=>{nodes[1].classList.add('act');if(!hover)show(1)});
-    [...fx.querySelectorAll('.fx-checks span')].forEach((c,k)=>at(3000+k*450,()=>c.classList.add('ok')));
-    at(4900,()=>{finish(nodes[1]);nodes[1].classList.remove('act');prog.style.width='66%';wires[1].classList.add('go')});
-    at(5700,()=>{nodes[2].classList.add('act');if(!hover)show(2);fx.querySelector('.fx-status').textContent='Posting…'});
-    at(6600,()=>{finish(nodes[2]);nodes[2].classList.remove('act');fx.querySelector('.fx-status').textContent='Approved, posted';prog.style.width='100%';run.textContent='completed · 7.1 s'});
-    at(9800,()=>{if(document.body.contains(fx))play()});}
+    ls.forEach((l,k)=>at(300+k*220,()=>{pre.innerHTML=ls.slice(0,k+1).join('\n')}));
+    const t0=300+ls.length*220;
+    at(t0+200,()=>{finish(nodes[0]);nodes[0].classList.remove('act');prog.style.width='33%';wires[0].classList.add('go')});
+    at(t0+1000,()=>{nodes[1].classList.add('act');if(!hover)show(1)});
+    const cs=[...fx.querySelectorAll('.fx-checks span')],ms=[...fx.querySelectorAll('.fx-map div')];
+    cs.forEach((c,k)=>at(t0+1300+k*420,()=>c.classList.add('ok')));
+    const t1=t0+1300+cs.length*420;ms.forEach((d,k)=>at(t1+k*360,()=>d.classList.add('on')));
+    const t2=t1+ms.length*360+300;
+    at(t2,()=>{finish(nodes[1]);nodes[1].classList.remove('act');prog.style.width='66%';wires[1].classList.add('go')});
+    at(t2+800,()=>{nodes[2].classList.add('act');if(!hover)show(2);status().textContent='Sending…';nodes[2].querySelectorAll('b[data-v]').forEach((e,k)=>at(k*300,()=>type(e,26)))});
+    at(t2+2200,()=>{finish(nodes[2]);nodes[2].classList.remove('act');status().textContent=sc.done;prog.style.width='100%';run.textContent='completed · '+sc.k.toLowerCase()});
+    at(t2+5200,()=>{if(document.body.contains(fx))play((i+1)%FX_SC.length)})}
   nodes.forEach((n,i)=>{const on=()=>{hover=true;show(i)},off=()=>{hover=false};n.addEventListener('mouseenter',on);n.addEventListener('focus',on);n.addEventListener('mouseleave',off);n.addEventListener('blur',off)});
-  fx.querySelectorAll('.fx-checks span').forEach(c=>{c.addEventListener('mouseenter',()=>tip.textContent=c.dataset.tip);c.addEventListener('mouseleave',()=>tip.textContent='Hover a check to see the rule.')});
-  reset();
-  play();
+  tabs.forEach((t,k)=>t.onclick=()=>play(k));
+  play(0);
 }
 
 function initAcc(){const acc=document.getElementById('acc');if(!acc)return;acc.querySelectorAll('.acc-btn').forEach(b=>b.onclick=()=>{const it=b.parentElement,open=it.classList.contains('open');acc.querySelectorAll('.acc-item').forEach(x=>{x.classList.remove('open');x.querySelector('.acc-btn').setAttribute('aria-expanded','false')});if(!open){it.classList.add('open');b.setAttribute('aria-expanded','true')}})}
@@ -1412,40 +1447,42 @@ register('home',()=>`
     <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div>${accFlow(ex)}${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div></div>`).join('')}</div>
   </div>
 </section>
-<section class="section">
+<section class="section fx-sec">
   <div class="container">
-    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Supplier Invoice, Start to Finish</h2><p class="sd">This is the kind of thing we build. The invoice arrives, your rules are checked automatically, and it lands in the ERP with an audit trail. Nobody re-keys it.</p></div>
+    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Record. Every System.</h2><p class="sd">Any change in one system, an order, a customer or a journal, is checked, translated and delivered to the next, with a trail.</p></div>
+    <div class="fx-stage">
+    <div class="fx-tabs" id="fx-tabs" role="tablist" aria-label="Example records"><button class="fx-tab" role="tab" type="button" aria-selected="true">Sales order <small>Shopify → Business Central</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">New customer <small>Salesforce → NetSuite</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Payroll journal <small>Employment Hero → MYOB Acumatica</small></button></div>
     <div class="fx" id="fx">
       <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span></div>
       <div class="iflow fx-row">
         <div class="inode fx-node" data-s="0" tabindex="0">
-          <span class="mono">1 · CAPTURE</span><h3>Supplier invoice</h3>
-          <div class="fx-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span class="fx-scan"></span></div>
-          <div class="kv"><span>source</span><b>AP inbox (PDF)</b><span>supplier</span><b data-v="Northwind Freight (sample)">—</b><span>invoice</span><b data-v="INV-20418">—</b><span>amount</span><b data-v="$18,640.00">—</b></div>
-          <div class="fx-foot"><span class="itag" data-done="Extracted ✓">Incoming</span><span class="fx-ms" data-v="OCR · 312 ms"></span></div>
+          <span class="mono">01 · EVENT RECEIVED</span>
+          <div class="fx-sys" id="fx-src"><i style="--c:#5E8E3E" aria-hidden="true">S</i><span><b>Shopify</b><small>order.created</small></span></div>
+          <pre class="fx-json" id="fx-json" aria-label="Event payload"></pre>
+          <div class="fx-foot"><span class="itag" data-done="Received ✓">Listening</span><span class="fx-ms" data-v="webhook · 12 ms"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">INV</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">SO</span></div>
         <div class="inode core fx-node" data-s="1" tabindex="0">
-          <span class="mono">2 · VALIDATE · MAP · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"/></svg>Your rules, enforced</h3>
-          <div class="ichecks fx-checks">
-            <span data-tip="Invoice lines agree with purchase order PO-7713 within tolerance">Matched to PO-7713</span>
-            <span data-tip="GL 5120 Freight and cost centre FIN-02 exist and are open for posting">GL 5120 · cost centre FIN-02 valid</span>
-            <span data-tip="Amount above $10,000 threshold: routed to a second approver before posting">Over $10k: second approver asked</span>
-            <span data-tip="Every check, value and approver recorded against the invoice">Audit trail written</span>
-          </div>
+          <span class="mono">02 · VALIDATE · TRANSFORM · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"/></svg>The Misnox layer</h3>
+          <div class="ichecks fx-checks" id="fx-checks"></div>
+          <div class="fx-map" id="fx-map" aria-label="Field mapping"></div>
           <div class="fx-tip" id="fx-tip">Hover a check to see the rule.</div>
-          <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 41 ms"></span></div>
+          <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 38 ms"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">PI</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">SO</span></div>
         <div class="inode fx-node" data-s="2" tabindex="0">
-          <span class="mono">3 · POST</span><h3><svg width="16" height="16" aria-hidden="true"><use href="#lg-ms"/></svg>Business Central</h3>
-          <div class="kv"><span>journal</span><b>Purchase invoice</b><span>doc no.</span><b data-v="PI-104382">—</b><span>status</span><b class="fx-status">Waiting</b></div>
-          <code class="fx-api">POST /purchaseInvoices → <em>201 Created</em></code>
-          <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 188 ms"></span></div>
+          <span class="mono">03 · DELIVERED</span>
+          <div class="fx-sys" id="fx-dst"><i style="--c:#0B7FC6" aria-hidden="true">BC</i><span><b>Business Central</b><small>REST API</small></span></div>
+          <div class="kv" id="fx-kv"></div>
+          <code class="fx-api" id="fx-api"></code>
+          <div class="fx-log" id="fx-log"></div>
+          <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 164 ms"></span></div>
         </div>
       </div>
     </div>
-    <p class="inote">Illustrative example. The same pattern works for NetSuite, SAP, TechnologyOne, Xero and others.</p>
+    <div class="fx-traits" aria-label="Built into every integration"><span>Retries automatic</span><span>Duplicates ignored</span><span>Failures alerted</span><span>Every run logged</span></div>
+    </div>
+    <p class="inote">Illustrative examples. The same pattern works for SAP, TechnologyOne, Xero and others.</p>
   </div>
 </section>
 <section class="section section-alt">

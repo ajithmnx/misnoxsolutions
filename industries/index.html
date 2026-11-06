@@ -1311,19 +1311,6 @@ register('home',()=>`
 </section>
 <div class="statbar"><div class="container statbar-in">${[['15+','platforms we connect'],['6','major ERP families covered'],['4','clear steps, every project'],['1','accountable team, start to finish']].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('')}</div></div>
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
-<section class="section">
-  <div class="container">
-    <div class="sf-split"><div class="sf-photo" role="img" aria-label="Someone working at a desk with two screens"></div><div><div class="sh l"><p class="eyebrow">Common starting points</p><h2 class="st">Sound Familiar?</h2></div>
-    <div class="plist sf-list" style="margin:0">
-      ${[
-        ['Month-end takes days','Manual journals and spreadsheet reconciliations, because the systems that should be connected aren\'t.'],
-        ['The same data is typed in twice','Invoices keyed into one system, then again into the ERP. Slow, and a common source of errors.'],
-        ['Approval limits live on paper','Policy says $50k needs two sign-offs, but nothing in the system stops it.'],
-        ['Failures are found by accident','A sync stops quietly and nobody notices until the numbers look wrong.'],
-      ].map(([t,d])=>`<div class="plist-item"><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}
-    </div></div></div>
-  </div>
-</section>
 <section class="section hc-section">
   <div class="container hc-split">
     <div><span class="mono">LIVE VIEW</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Every connection runs through one controlled layer between your systems. On the way through, each record is:</p><ul class="hc-points"><li><span>01</span><div><b>Checked</b> against your rules before it moves</div></li><li><span>02</span><div><b>Translated</b> into the format each system expects</div></li><li><span>03</span><div><b>Logged</b>, so a failure is seen straight away, not found weeks later</div></li></ul></div>
@@ -1369,6 +1356,19 @@ register('home',()=>`
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="sf-split"><div class="sf-photo" role="img" aria-label="Someone working at a desk with two screens"></div><div><div class="sh l"><p class="eyebrow">Common starting points</p><h2 class="st">Sound Familiar?</h2></div>
+    <div class="plist sf-list" style="margin:0">
+      ${[
+        ['Month-end takes days','Manual journals and spreadsheet reconciliations, because the systems that should be connected aren\'t.'],
+        ['The same data is typed in twice','Invoices keyed into one system, then again into the ERP. Slow, and a common source of errors.'],
+        ['Approval limits live on paper','Policy says $50k needs two sign-offs, but nothing in the system stops it.'],
+        ['Failures are found by accident','A sync stops quietly and nobody notices until the numbers look wrong.'],
+      ].map(([t,d])=>`<div class="plist-item"><div><h3>${t}</h3><p>${d}</p></div></div>`).join('')}
+    </div></div></div>
+  </div>
+</section>
 <section class="section section-alt">
   <div class="container">
     <div class="sh l"><p class="eyebrow">The process</p><h2 class="st">How We Work</h2><p class="sd">Every project follows the same four steps, so you always know what comes next.</p></div>

@@ -1102,21 +1102,21 @@ const FX_JSON=[
 → 201 Created  { "number": "PI-104382", "status": "Open" }`];
 const FX_T=['PAYLOAD · CAPTURE','RULES · EVALUATION','API · BUSINESS CENTRAL'];
 const FX_SC=[
- {k:'Vendor migration',src:['Dynamics GP','#5C6B7A','GP'],dst:['Business Central','#0B7FC6','BC'],ev:'vendor master · PM00200',via:'SQL extract · 210 ms',pkt:'VND',
-  json:[['VENDORID','"NORTH001"'],['VENDNAME','"Northline Logistics"'],['PYMTRMID','"NET 30"'],['TXRGNNUM','"12 345 678 901"']],
-  checks:[['ABN carried across','Tax registration number copied to the Business Central vendor'],['Payment terms mapped','GP "NET 30" mapped to the Business Central terms code 30 DAYS'],['Duplicate vendor merged','Two GP vendor IDs with the same ABN merged into one vendor'],['Open balance reconciled','Outstanding payables match GP to the cent']],
-  map:[['VENDORID','vendor.number'],['TXRGNNUM','taxRegistrationNumber']],
-  kv:[['record','Vendor'],['number','V-2087'],['balance','Matches GP']],api:'POST /vendors',done:'Migrated'},
- {k:'New customer',src:['Salesforce','#00A1E0','SF'],dst:['NetSuite','#1E3A5F','NS'],ev:'account.updated',via:'webhook · 12 ms',pkt:'CUST',
-  json:[['account','"Southbank Clinics"'],['abn','"12 345 678 901"'],['terms','"Net 30"'],['state','"VIC"']],
-  checks:[['ABN format checked','11 digits, stored in the ERP tax number field'],['No duplicate customer','Name and ABN not already in the ERP'],['Payment terms mapped','"Net 30" translated to the ERP terms code N30'],['Owner notified','Finance told a new customer was created']],
-  map:[['Account.Name','customer.companyName'],['Account.ABN__c','customer.taxNumber']],
-  kv:[['record','Customer'],['id','CUS-1187'],['terms','N30']],api:'POST /customer',done:'Created'},
- {k:'Payroll journal',src:['Employment Hero','#7B3FE4','EH'],dst:['MYOB Acumatica','#6100A5','MA'],ev:'payrun.finalised',via:'webhook · 15 ms',pkt:'JNL',
-  json:[['payrun','"PR-2026-22"'],['employees','48'],['gross','96410.00'],['period','"Fortnight 22"']],
-  checks:[['Debits equal credits','The journal balances to the cent'],['Cost centres valid','Every line posts to an open cost centre'],['Posting period open','The period is open in the ERP'],['Totals only','Summarised by account; no employee-level pay data is sent']],
-  map:[['pay_category','account'],['location','subaccount']],
-  kv:[['record','GL journal'],['batch','GL-008812'],['lines','14']],api:'PUT /JournalTransaction',done:'Posted'}
+ {k:'Close the month',src:['Finance systems','#3794FD','Σ'],dst:['Your ERP','#0B7FC6','ERP'],ev:'period totals · 5 sources',via:'5 systems · 1.2 s',pkt:'CLOSE',
+  json:[['sales','1284300.00'],['payroll','412880.00'],['bank','871420.00'],['period','"October"']],
+  checks:[['Every source reported','5 of 5 systems sent their period totals'],['Totals reconciled','Sub-ledgers agree with the bank to the cent'],['Exceptions routed','2 unmatched items sent to the team, not ignored'],['Controls applied','Journals above the threshold wait for a second approver']],
+  map:[['sources.*.total','ledger.control'],['period','fiscalPeriod']],
+  kv:[['period','October'],['ledger','In balance'],['exceptions','Routed']],api:'POST /journals',res:'201 Created',dsub:'general ledger',done:'Ready to close'},
+ {k:'Recover a failure',src:['Connected system','#C2413A','!'],dst:['Your ERP','#0B7FC6','ERP'],ev:'sync stalled · 02:14',via:'detected · 4 s',pkt:'RETRY',
+  json:[['status','"timeout"'],['held','38'],['since','"02:14"'],['attempt','3']],
+  checks:[['Failure caught in seconds','Nobody waits for the numbers to look wrong'],['Records held, not lost','38 records queued safely while the link is down'],['Retried automatically','Retries with back-off until the target responds'],['Team alerted','Your channel told what failed and why']],
+  map:[['held_records','replay_queue'],['last_success','resume_from']],
+  kv:[['replayed','38 of 38'],['lost','0'],['re-keyed','0']],api:'POST /replay',res:'200 OK',dsub:'back online',done:'Recovered'},
+ {k:'Keep systems in agreement',src:['Three systems','#6A3BE4','3'],dst:['All systems','#2F8F5B','✓'],ev:'same figure, three answers',via:'compared · 90 ms',pkt:'SYNC',
+  json:[['crm','38200.00'],['erp','36950.00'],['reporting','41000.00'],['field','"customer balance"']],
+  checks:[['Conflict detected','The same figure differs across 3 systems'],['Source of truth applied','The ERP is the system of record for balances'],['Changes pushed out','The other systems updated to match'],['Trail recorded','Old and new values kept for audit']],
+  map:[['erp.balance','crm.balance'],['erp.balance','report.balance']],
+  kv:[['agree','3 of 3'],['value','36,950.00'],['drift','0']],api:'PATCH /balances',res:'200 OK',dsub:'synchronised',done:'In agreement'}
 ];
 function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
   const $=id=>document.getElementById(id),nodes=[...fx.querySelectorAll('.fx-node')],wires=[...fx.querySelectorAll('.fx-wire')],run=$('fx-run'),prog=$('fx-prog'),tip=$('fx-tip'),tabs=[...document.querySelectorAll('#fx-tabs [role=tab]')];
@@ -1127,11 +1127,11 @@ function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
   const lines=sc=>['<span class="p">{</span>',...sc.json.map(([k,v],i)=>`  <span class="k">"${k}"</span><span class="p">:</span> <span class="v">${esc(v)}</span>${i<sc.json.length-1?'<span class="p">,</span>':''}`),'<span class="p">}</span>'];
   const TIP='Hover a check to see the rule.';
   function load(i){const sc=FX_SC[i];tabs.forEach((t,k)=>t.setAttribute('aria-selected',String(k===i)));
-    $('fx-src').innerHTML=sys(sc.src,sc.ev);$('fx-dst').innerHTML=sys(sc.dst,'REST API');$('fx-json').innerHTML='<span class="p">// waiting for event…</span>';
+    $('fx-src').innerHTML=sys(sc.src,sc.ev);$('fx-dst').innerHTML=sys(sc.dst,sc.dsub);$('fx-json').innerHTML='<span class="p">// waiting for event…</span>';
     $('fx-checks').innerHTML=sc.checks.map(([t,d])=>`<span data-tip="${esc(d)}">${esc(t)}</span>`).join('');
     $('fx-map').innerHTML=sc.map.map(([a,b])=>`<div><code>${esc(a)}</code><i>→</i><code>${esc(b)}</code></div>`).join('');
     $('fx-kv').innerHTML=sc.kv.map(([k,v])=>`<span>${k}</span><b data-v="${esc(v)}">—</b>`).join('')+'<span>status</span><b class="fx-status">Waiting</b>';
-    $('fx-api').innerHTML=`${esc(sc.api)} → <em>201 Created</em>`;$('fx-log').textContent=`audit · run #${4180+i*37} logged`;
+    $('fx-api').innerHTML=`${esc(sc.api)} → <em>${esc(sc.res)}</em>`;$('fx-log').textContent=`audit · run #${4180+i*37} logged`;
     nodes[1].querySelector('.itag').dataset.done=`${sc.checks.length}/${sc.checks.length} rules passed`;
     wires.forEach(w=>w.querySelector('.fx-pkt').textContent=sc.pkt);nodes[0].querySelector('.fx-ms').dataset.v=sc.via;tip.textContent=TIP;
     fx.querySelectorAll('.fx-checks span').forEach(c=>{c.onmouseenter=()=>tip.textContent=c.dataset.tip;c.onmouseleave=()=>tip.textContent=TIP})}
@@ -1358,19 +1358,19 @@ register('home',()=>`
 </section>
 <section class="section fx-sec">
   <div class="container">
-    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Record. Every System.</h2><p class="sd">Any record, a vendor, a customer or a journal, is checked, translated and delivered to the next system, with a trail.</p></div>
+    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Record. Every System.</h2><p class="sd">Late month-ends, silent failures, numbers that don't match. This is what the layer between your systems fixes.</p></div>
     <div class="fx-stage">
-    <div class="fx-tabs" id="fx-tabs" role="tablist" aria-label="Example records"><button class="fx-tab" role="tab" type="button" aria-selected="true">Vendor migration <small>Dynamics GP → Business Central</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">New customer <small>Salesforce → NetSuite</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Payroll journal <small>Employment Hero → MYOB Acumatica</small></button></div>
+    <div class="fx-tabs" id="fx-tabs" role="tablist" aria-label="Example problems"><button class="fx-tab" role="tab" type="button" aria-selected="true">Close the month <small>5 sources → 1 ledger</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Recover a failure <small>held, retried, replayed</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Keep systems in agreement <small>one source of truth</small></button></div>
     <div class="fx" id="fx">
       <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span></div>
       <div class="iflow fx-row">
         <div class="inode fx-node" data-s="0" tabindex="0">
-          <span class="mono">01 · SOURCE RECORD</span>
-          <div class="fx-sys" id="fx-src"><i style="--c:#5C6B7A" aria-hidden="true">GP</i><span><b>Dynamics GP</b><small>vendor master · PM00200</small></span></div>
+          <span class="mono">01 · WHAT HAPPENS</span>
+          <div class="fx-sys" id="fx-src"><i style="--c:#3794FD" aria-hidden="true">Σ</i><span><b>Finance systems</b><small>period totals · 5 sources</small></span></div>
           <pre class="fx-json" id="fx-json" aria-label="Event payload"></pre>
-          <div class="fx-foot"><span class="itag" data-done="Received ✓">Listening</span><span class="fx-ms" data-v="SQL extract · 210 ms"></span></div>
+          <div class="fx-foot"><span class="itag" data-done="Captured ✓">Listening</span><span class="fx-ms" data-v="5 systems · 1.2 s"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">VND</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">CLOSE</span></div>
         <div class="inode core fx-node" data-s="1" tabindex="0">
           <span class="mono">02 · VALIDATE · TRANSFORM · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"/></svg>The Misnox layer</h3>
           <div class="ichecks fx-checks" id="fx-checks"></div>
@@ -1378,10 +1378,10 @@ register('home',()=>`
           <div class="fx-tip" id="fx-tip">Hover a check to see the rule.</div>
           <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 38 ms"></span></div>
         </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">VND</span></div>
+        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">CLOSE</span></div>
         <div class="inode fx-node" data-s="2" tabindex="0">
-          <span class="mono">03 · DELIVERED</span>
-          <div class="fx-sys" id="fx-dst"><i style="--c:#0B7FC6" aria-hidden="true">BC</i><span><b>Business Central</b><small>REST API</small></span></div>
+          <span class="mono">03 · OUTCOME</span>
+          <div class="fx-sys" id="fx-dst"><i style="--c:#0B7FC6" aria-hidden="true">ERP</i><span><b>Your ERP</b><small>general ledger</small></span></div>
           <div class="kv" id="fx-kv"></div>
           <code class="fx-api" id="fx-api"></code>
           <div class="fx-log" id="fx-log"></div>
@@ -1391,7 +1391,7 @@ register('home',()=>`
     </div>
     <div class="fx-traits" aria-label="Built into every integration"><span>Retries automatic</span><span>Duplicates ignored</span><span>Failures alerted</span><span>Every run logged</span></div>
     </div>
-    <p class="inote">Illustrative examples. The same pattern works for SAP, TechnologyOne, Xero and others.</p>
+    <p class="inote">Illustrative examples. The same layer works across Business Central, NetSuite, MYOB Acumatica, TechnologyOne, SAP and others.</p>
   </div>
 </section>
 <section class="section section-alt">

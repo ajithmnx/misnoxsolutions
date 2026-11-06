@@ -7,27 +7,25 @@ import re, os, datetime
 
 SITE = 'https://misnox.com.au'
 PAGES = {  # route: (title, description)
-    'home': ('MISNOX Solutions | Your systems, connected',
-             'What happens when your systems finally work as one? See how MISNOX keeps your data moving and your controls in place.'),
-    'about': ('About | MISNOX Solutions',
-              'How MISNOX Solutions helps organisations get their finance, procurement and operational systems working as one.'),
-    'services': ('Integration Services | MISNOX Solutions',
-                 'System integration, workflow automation, data migration and sync, ERP integration projects and managed support.'),
-    'erp': ('ERP Integration Projects | MISNOX Solutions',
-            'Connect a new or existing ERP (Dynamics 365, NetSuite, SAP, TechnologyOne, Xero, MYOB) to the rest of your business.'),
-    'industries': ('Who We Help | MISNOX Solutions',
-                   'Finance and procurement teams in organisations running across several systems.'),
-    'security': ('Security & Data Handling | MISNOX Solutions',
+    'home': ('Misnox Solutions | Your systems, connected',
+             'ERP and finance integration solutions.'),
+    'about': ('About | Misnox Solutions',
+              'Integration specialists for organisations whose finance and procurement run across several systems.'),
+    'services': ('Integration Services | Misnox Solutions',
+                 'System integration, workflow automation, data migration, ERP integration and managed support, and how we deliver them.'),
+    'erp': ('ERP Migrations | Misnox Solutions',
+            'Change your ERP without breaking the business: every connection mapped, data reconciled, and a cutover with a way back.'),
+    'security': ('Security & Data Handling | Misnox Solutions',
                  'Integrations run inside your environment. How we handle access, credentials and data.'),
-    'delivery': ('How We Work | MISNOX Solutions',
-                 'Four clear phases: discover, design, build and go live, support.'),
-    'faq': ('FAQ | MISNOX Solutions',
+    'faq': ('FAQ | Misnox Solutions',
             'Answers on ownership, pricing, process, support and data handling.'),
-    'privacy': ('Privacy Policy | MISNOX Solutions',
-                'How MISNOX Solutions handles personal information under the Australian Privacy Principles.'),
-    'contact': ('Contact | MISNOX Solutions',
-                'Book a free intro call with MISNOX Solutions, Sydney.'),
+    'privacy': ('Privacy Policy | Misnox Solutions',
+                'How Misnox Solutions handles personal information under the Australian Privacy Principles.'),
+    'contact': ('Contact | Misnox Solutions',
+                'Book a free intro call with Misnox Solutions, Sydney.'),
 }
+# Retired pages: kept as small redirect files so old links keep working.
+REDIRECTS = {'industries': '/about/#who', 'delivery': '/services/#how'}
 
 def url(r): return SITE + ('/' if r == 'home' else f'/{r}/')
 
@@ -60,7 +58,7 @@ for r in PAGES:
 
 # 404 page: served by Cloudflare for any unknown address (wrangler.jsonc not_found_handling)
 h404 = page_html('home').replace('<title>', '<meta name="robots" content="noindex"/>\n<title>', 1)
-h404 = re.sub(r'<title>.*?</title>', '<title>Page Not Found | MISNOX Solutions</title>', h404, count=1, flags=re.S)
+h404 = re.sub(r'<title>.*?</title>', '<title>Page Not Found | Misnox Solutions</title>', h404, count=1, flags=re.S)
 open('404.html', 'w', encoding='utf-8').write(h404)
 
 today = datetime.date.today().isoformat()
@@ -68,7 +66,10 @@ sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitem
 sm += [f'  <url><loc>{url(r)}</loc><lastmod>{today}</lastmod></url>' for r in PAGES]
 sm.append('</urlset>')
 open('sitemap.xml', 'w').write('\n'.join(sm) + '\n')
-print('built', len(PAGES), 'pages + sitemap.xml')
+for r, to in REDIRECTS.items():
+    os.makedirs(r, exist_ok=True)
+    open(f'{r}/index.html', 'w', encoding='utf-8').write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="{SITE}{to.split('#')[0]}"><meta http-equiv="refresh" content="0; url={to}"><title>Moved | Misnox Solutions</title><script>location.replace({to!r})</script></head><body><p>This page has moved: <a href="{to}">{to}</a></p></body></html>')
+print('built', len(PAGES), 'pages + sitemap.xml +', len(REDIRECTS), 'redirects')
 
 # ── Pre-render: put each page's content into its HTML so search engines and
 #    link-preview bots see it without running JavaScript. Needs Playwright + Chrome;

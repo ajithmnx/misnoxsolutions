@@ -704,6 +704,7 @@ h1,h2,h3,h4,.btn,.mono,.kv,.imap,.mflow,.ptl-chip,.tile .fl{word-spacing:normal}
 
 /* ── Interactive invoice pipeline (Nov 2026) ── */
 .fx-stage{position:relative;border:1px solid var(--line);border-radius:16px;padding:22px;background:radial-gradient(circle at 1px 1px,rgba(106,59,228,.09) 1px,transparent 0) 0 0/18px 18px,linear-gradient(180deg,#FCFBFF,#F3F0FB)}.fx-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.fx-tab{display:inline-flex;align-items:center;gap:8px;font:600 13px 'Plus Jakarta Sans',sans-serif;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer;transition:background .25s,color .25s,border-color .25s}.fx-tab small{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted)}.fx-tab:hover{border-color:var(--accent)}.fx-tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}.fx-tab[aria-selected=true] small{color:#B9BDD6}.fx-sys{display:flex;align-items:center;gap:10px;min-width:0}.fx-sys i{flex-shrink:0;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:700 12px 'Sora',sans-serif;font-style:normal;color:#fff;background:var(--c);box-shadow:0 8px 16px -10px var(--c)}.fx-sys b{display:block;font:700 15px/1.25 'Sora',sans-serif;color:var(--ink)}.fx-sys small{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--accent)}.fx-json{margin:0;background:#141833;color:#D5D8EA;border-radius:8px;padding:10px 12px;font:500 12px/1.65 'IBM Plex Mono',monospace;min-height:9.6em;white-space:pre-wrap;overflow-wrap:anywhere}.fx-json .k{color:#C3AEFF}.fx-json .v{color:#8CCBFF}.fx-json .p{color:#6E7396}.fx-map{display:grid;gap:6px}.fx-map div{display:grid;grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr);align-items:center;gap:6px;font:500 11.5px 'IBM Plex Mono',monospace;opacity:.25;transform:translateX(-4px);transition:opacity .4s,transform .4s}.fx-map div.on{opacity:1;transform:none}.fx-map code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:3px 6px;color:var(--ink2);overflow-wrap:anywhere}.fx-map i{font-style:normal;color:var(--accent);text-align:center}.fx-log{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted);opacity:0;transition:opacity .4s}.fx-node.done .fx-log{opacity:1}.fx-traits{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font:500 12px 'IBM Plex Mono',monospace;color:var(--ink2)}.fx-traits span::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#3794FD,#B552FB);margin-right:8px;vertical-align:2px}@media(max-width:640px){.fx-stage{padding:14px}.fx-tab small{display:none}.fx-map code{font-size:10.5px;overflow-wrap:normal;word-break:break-all}}
+.wd-split{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.75fr);gap:48px;align-items:center}.wd{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 30px 60px -36px rgba(20,24,51,.35),0 0 0 6px rgba(106,59,228,.04);overflow:hidden;font-size:13px}.wd-top{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#FCFBFF,#F6F4FC)}.wd-top b{font:700 13.5px 'Sora',sans-serif;color:var(--ink)}.wd-dots{display:flex;gap:5px}.wd-dots i{width:9px;height:9px;border-radius:50%;background:#DDD8EC}.wd-live{margin-left:auto;font:500 11.5px 'IBM Plex Mono',monospace;color:var(--muted);display:flex;align-items:center;gap:7px}.wd-live i{width:7px;height:7px;border-radius:50%;background:var(--green);animation:imapPulse 1.4s infinite}.wd-kpis{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.wd-kpis div{padding:14px 16px;display:grid;gap:3px}.wd-kpis div+div{border-left:1px solid var(--line)}.wd-kpis span{font:500 11px 'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}.wd-kpis b{font:700 20px 'Sora',sans-serif;color:var(--ink);font-variant-numeric:tabular-nums}.wd-kpis b.g{color:var(--green)}.wd-kpis b.a{color:#B7791F}.wd-head,.wd-row{display:grid;grid-template-columns:1.5fr 1.05fr .8fr .9fr 70px;align-items:center;gap:10px;padding:0 16px}.wd-head{padding-top:10px;padding-bottom:8px;font:500 10.5px 'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--line)}.wd-row{height:44px;border-bottom:1px solid var(--line);transition:background .4s}.wd-row:last-child{border-bottom:0}.wd-row.warn{background:#FFF8EB}.wd-row.fixed{background:#EEF8F2}.wd-name{font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.wd-name i{font-style:normal;color:var(--accent);margin:0 3px}.wd-st{display:inline-flex;align-items:center;gap:7px;justify-self:start;font:500 11.5px 'IBM Plex Mono',monospace;padding:3px 9px;border-radius:999px;background:#E9F6EF;color:#1F7A4D;white-space:nowrap}.wd-st em{font-style:normal}.wd-st b{width:6px;height:6px;border-radius:50%;background:currentColor}.wd-st.warn{background:#FDF1DC;color:#9A5B0B}.wd-st.warn b{animation:imapPulse .9s infinite}.wd-st.retry{background:#EDE8FC;color:var(--accent)}.wd-last,.wd-n{font:500 12px 'IBM Plex Mono',monospace;color:var(--muted);font-variant-numeric:tabular-nums}.wd-n{color:var(--ink2)}.wd-spark{width:60px;height:18px}.wd-spark rect{fill:#CFC6EE}.wd-row.warn .wd-spark rect:last-child{fill:#E3A23B}.wd-row.fixed .wd-spark rect:last-child{fill:#2F9E68}.wd-log{border-top:1px solid var(--line);background:#141833;padding:12px 16px;min-height:118px}.wd-log-h{display:block;font:500 10.5px 'IBM Plex Mono',monospace;color:#8FE3EE;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}.wd-log p{margin:0;font:500 12px/1.75 'IBM Plex Mono',monospace;color:#D5D8EA;animation:afIn .4s both}.wd-log time{color:#6E7396;margin-right:10px}.wd-log .w{color:#F2C46D}.wd-log .ok{color:#7FD9A8}.wd-points{list-style:none;margin:0;padding:0;display:grid;gap:22px}.wd-points li{display:flex;gap:14px;align-items:flex-start;color:var(--muted);font-size:var(--fs-sm);line-height:1.55}.wd-points b{display:block;color:var(--ink);font:700 var(--fs-base) 'Sora',sans-serif;margin-bottom:2px}.wd-ic{flex-shrink:0;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(55,148,253,.14),rgba(181,82,251,.14));color:var(--accent)}.wd-ic svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.wd-points .wd-cta{display:block;margin-top:4px}@media(max-width:1000px){.wd-split{grid-template-columns:1fr;gap:36px}}@media(max-width:640px){.wd-kpis{grid-template-columns:repeat(2,1fr)}.wd-kpis div:nth-child(3){border-left:0}.wd-kpis div:nth-child(n+3){border-top:1px solid var(--line)}.wd-head{display:none}.wd-row{grid-template-columns:1fr auto;height:auto;padding:10px 14px;row-gap:4px}.wd-last,.wd-spark{display:none}.wd-n{grid-column:1}.wd-st{grid-column:2;grid-row:1}}
 .fx{position:relative}
 .fx-bar{display:flex;align-items:center;gap:14px;margin-bottom:14px;font:500 12px 'IBM Plex Mono',monospace;color:var(--muted)}
 .fx-run{color:var(--accent2)}.fx-run::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#B9B4CC;margin-right:7px;vertical-align:1px}
@@ -1231,61 +1232,27 @@ const FX_JSON=[
 }
 → 201 Created  { "number": "PI-104382", "status": "Open" }`];
 const FX_T=['PAYLOAD · CAPTURE','RULES · EVALUATION','API · BUSINESS CENTRAL'];
-const FX_SC=[
- {k:'Close the month',src:['Finance systems','#3794FD','Σ'],dst:['Your ERP','#0B7FC6','ERP'],ev:'period totals · 5 sources',via:'5 systems · 1.2 s',pkt:'CLOSE',
-  json:[['sales','1284300.00'],['payroll','412880.00'],['bank','871420.00'],['period','"October"']],
-  checks:[['Every source reported','5 of 5 systems sent their period totals'],['Totals reconciled','Sub-ledgers agree with the bank to the cent'],['Exceptions routed','2 unmatched items sent to the team, not ignored'],['Controls applied','Journals above the threshold wait for a second approver']],
-  map:[['sources.*.total','ledger.control'],['period','fiscalPeriod']],
-  kv:[['period','October'],['ledger','In balance'],['exceptions','Routed']],api:'POST /journals',res:'201 Created',dsub:'general ledger',done:'Ready to close'},
- {k:'Recover a failure',src:['Connected system','#C2413A','!'],dst:['Your ERP','#0B7FC6','ERP'],ev:'sync stalled · 02:14',via:'detected · 4 s',pkt:'RETRY',
-  json:[['status','"timeout"'],['held','38'],['since','"02:14"'],['attempt','3']],
-  checks:[['Failure caught in seconds','Nobody waits for the numbers to look wrong'],['Records held, not lost','38 records queued safely while the link is down'],['Retried automatically','Retries with back-off until the target responds'],['Team alerted','Your channel told what failed and why']],
-  map:[['held_records','replay_queue'],['last_success','resume_from']],
-  kv:[['replayed','38 of 38'],['lost','0'],['re-keyed','0']],api:'POST /replay',res:'200 OK',dsub:'back online',done:'Recovered'},
- {k:'Keep systems in agreement',src:['Three systems','#6A3BE4','3'],dst:['All systems','#2F8F5B','✓'],ev:'same figure, three answers',via:'compared · 90 ms',pkt:'SYNC',
-  json:[['crm','38200.00'],['erp','36950.00'],['reporting','41000.00'],['field','"customer balance"']],
-  checks:[['Conflict detected','The same figure differs across 3 systems'],['Source of truth applied','The ERP is the system of record for balances'],['Changes pushed out','The other systems updated to match'],['Trail recorded','Old and new values kept for audit']],
-  map:[['erp.balance','crm.balance'],['erp.balance','report.balance']],
-  kv:[['agree','3 of 3'],['value','36,950.00'],['drift','0']],api:'PATCH /balances',res:'200 OK',dsub:'synchronised',done:'In agreement'}
-];
-function initFlow(){const fx=document.getElementById('fx');if(!fx)return;
-  const $=id=>document.getElementById(id),nodes=[...fx.querySelectorAll('.fx-node')],wires=[...fx.querySelectorAll('.fx-wire')],run=$('fx-run'),prog=$('fx-prog'),tip=$('fx-tip'),tabs=[...document.querySelectorAll('#fx-tabs [role=tab]')];
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let timers=[],hover=false;
-  const at=(ms,f)=>timers.push(setTimeout(f,ms)),show=i=>nodes.forEach((n,k)=>n.classList.toggle('insp',k===i));
-  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
-  const sys=(s,sub)=>`<i style="--c:${s[1]}" aria-hidden="true">${s[2]}</i><span><b>${esc(s[0])}</b><small>${esc(sub)}</small></span>`;
-  const lines=sc=>['<span class="p">{</span>',...sc.json.map(([k,v],i)=>`  <span class="k">"${k}"</span><span class="p">:</span> <span class="v">${esc(v)}</span>${i<sc.json.length-1?'<span class="p">,</span>':''}`),'<span class="p">}</span>'];
-  const TIP='Hover a check to see the rule.';
-  function load(i){const sc=FX_SC[i];tabs.forEach((t,k)=>t.setAttribute('aria-selected',String(k===i)));
-    $('fx-src').innerHTML=sys(sc.src,sc.ev);$('fx-dst').innerHTML=sys(sc.dst,sc.dsub);$('fx-json').innerHTML='<span class="p">// waiting for event…</span>';
-    $('fx-checks').innerHTML=sc.checks.map(([t,d])=>`<span data-tip="${esc(d)}">${esc(t)}</span>`).join('');
-    $('fx-map').innerHTML=sc.map.map(([a,b])=>`<div><code>${esc(a)}</code><i>→</i><code>${esc(b)}</code></div>`).join('');
-    $('fx-kv').innerHTML=sc.kv.map(([k,v])=>`<span>${k}</span><b data-v="${esc(v)}">—</b>`).join('')+'<span>status</span><b class="fx-status">Waiting</b>';
-    $('fx-api').innerHTML=`${esc(sc.api)} → <em>${esc(sc.res)}</em>`;$('fx-log').textContent=`audit · run #${4180+i*37} logged`;
-    nodes[1].querySelector('.itag').dataset.done=`${sc.checks.length}/${sc.checks.length} rules passed`;
-    wires.forEach(w=>w.querySelector('.fx-pkt').textContent=sc.pkt);nodes[0].querySelector('.fx-ms').dataset.v=sc.via;tip.textContent=TIP;
-    fx.querySelectorAll('.fx-checks span').forEach(c=>{c.onmouseenter=()=>tip.textContent=c.dataset.tip;c.onmouseleave=()=>tip.textContent=TIP})}
-  const finish=n=>{n.querySelectorAll('[data-v]').forEach(e=>e.textContent=e.dataset.v);const t=n.querySelector('.itag');t.textContent=t.dataset.done;n.classList.add('done')};
-  function type(el,ms){const v=el.dataset.v;let i=0;const t=setInterval(()=>{el.textContent=v.slice(0,++i);if(i>=v.length)clearInterval(t)},ms);timers.push(t)}
-  function reset(){timers.forEach(t=>{clearTimeout(t);clearInterval(t)});timers=[];fx.classList.remove('live');nodes.forEach((n,k)=>{n.classList.remove('done','act');n.querySelectorAll('.fx-ms').forEach(e=>e.textContent='');n.querySelector('.itag').textContent=['Listening','Waiting','Pending'][k]});wires.forEach(w=>w.classList.remove('go'));prog.style.width='0';run.textContent='idle';show(0)}
-  function play(i){reset();load(i);const sc=FX_SC[i],ls=lines(sc),pre=$('fx-json'),status=()=>fx.querySelector('.fx-status');fx.classList.add('live');run.textContent='running · '+sc.k.toLowerCase();
-    if(reduce){pre.innerHTML=ls.join('\n');nodes.forEach(finish);fx.querySelectorAll('.fx-checks span').forEach(c=>c.classList.add('ok'));fx.querySelectorAll('.fx-map div').forEach(d=>d.classList.add('on'));status().textContent=sc.done;prog.style.width='100%';run.textContent='completed';return}
-    nodes[0].classList.add('act');if(!hover)show(0);
-    ls.forEach((l,k)=>at(300+k*220,()=>{pre.innerHTML=ls.slice(0,k+1).join('\n')}));
-    const t0=300+ls.length*220;
-    at(t0+200,()=>{finish(nodes[0]);nodes[0].classList.remove('act');prog.style.width='33%';wires[0].classList.add('go')});
-    at(t0+1000,()=>{nodes[1].classList.add('act');if(!hover)show(1)});
-    const cs=[...fx.querySelectorAll('.fx-checks span')],ms=[...fx.querySelectorAll('.fx-map div')];
-    cs.forEach((c,k)=>at(t0+1300+k*420,()=>c.classList.add('ok')));
-    const t1=t0+1300+cs.length*420;ms.forEach((d,k)=>at(t1+k*360,()=>d.classList.add('on')));
-    const t2=t1+ms.length*360+300;
-    at(t2,()=>{finish(nodes[1]);nodes[1].classList.remove('act');prog.style.width='66%';wires[1].classList.add('go')});
-    at(t2+800,()=>{nodes[2].classList.add('act');if(!hover)show(2);status().textContent='Sending…';nodes[2].querySelectorAll('b[data-v]').forEach((e,k)=>at(k*300,()=>type(e,26)))});
-    at(t2+2200,()=>{finish(nodes[2]);nodes[2].classList.remove('act');status().textContent=sc.done;prog.style.width='100%';run.textContent='completed · '+sc.k.toLowerCase()});
-    at(t2+5200,()=>{if(document.body.contains(fx))play((i+1)%FX_SC.length)})}
-  nodes.forEach((n,i)=>{const on=()=>{hover=true;show(i)},off=()=>{hover=false};n.addEventListener('mouseenter',on);n.addEventListener('focus',on);n.addEventListener('mouseleave',off);n.addEventListener('blur',off)});
-  tabs.forEach((t,k)=>t.onclick=()=>play(k));
-  play(0);
+function initFlow(){const wd=document.getElementById('wd');if(!wd)return;
+  const rows=[...wd.querySelectorAll('.wd-row')],lines=document.getElementById('wd-lines'),clock=document.getElementById('wd-clock'),total=document.getElementById('wd-total'),alerts=document.getElementById('wd-alerts');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let timers=[],t0=new Date(2026,0,1,9,41,0).getTime(),sec=0,round=0;
+  const fmt=n=>n.toLocaleString('en-AU'),ts=()=>new Date(t0+sec*1000).toTimeString().slice(0,8);
+  const at=(ms,f)=>timers.push(setTimeout(f,ms));
+  const sum=()=>{total.textContent=fmt(rows.reduce((s,r)=>s+(+r.querySelector('.wd-n').dataset.n),0))};
+  const log=(html)=>{const p=document.createElement('p');p.innerHTML=`<time>${ts()}</time>${html}`;lines.appendChild(p);while(lines.children.length>4)lines.firstElementChild.remove()};
+  const st=(r,cls,txt)=>{const s=r.querySelector('.wd-st');s.className='wd-st '+cls;s.querySelector('em').textContent=txt};
+  const name=r=>r.querySelector('.wd-name').textContent.replace(/\s+/g,' ').trim();
+  sum();if(reduce)return;
+  const tick=setInterval(()=>{if(!document.body.contains(wd)){clearInterval(tick);timers.forEach(clearTimeout);return}
+    sec++;clock.textContent=ts();
+    rows.forEach(r=>{if(r.classList.contains('warn'))return;if(Math.random()<.45){const n=r.querySelector('.wd-n'),v=+n.dataset.n+Math.ceil(Math.random()*9);n.dataset.n=v;n.textContent=fmt(v);r.querySelector('.wd-last').textContent='just now'}else if(Math.random()<.3){r.querySelector('.wd-last').textContent=(1+Math.floor(Math.random()*4))+' min ago'}});sum()},1000);
+  function cycle(){const r=rows[[1,3,0,5][round++%4]],held=20+Math.floor(Math.random()*40),nm=name(r);
+    at(3000,()=>{r.classList.add('warn');st(r,'warn','Delayed');alerts.textContent='1';alerts.className='a';log(`<span class="w">${nm}</span> · source not responding · ${held} records held`)});
+    at(4600,()=>log(`alert sent to support and your finance channel`));
+    at(6600,()=>{st(r,'retry','Retrying');log(`${nm} · source back · retrying`)});
+    at(8400,()=>{r.classList.remove('warn');r.classList.add('fixed');st(r,'ok','Healthy');alerts.textContent='0';alerts.className='';log(`<span class="ok">${held} of ${held} replayed · 0 lost</span>`)});
+    at(11400,()=>{r.classList.remove('fixed');log(`All integrations healthy`)});
+    at(15000,()=>{if(document.body.contains(wd))cycle()})}
+  cycle();
 }
 
 function initAcc(){const acc=document.getElementById('acc');if(!acc)return;acc.querySelectorAll('.acc-btn').forEach(b=>b.onclick=()=>{const it=b.parentElement,open=it.classList.contains('open');acc.querySelectorAll('.acc-item').forEach(x=>{x.classList.remove('open');x.querySelector('.acc-btn').setAttribute('aria-expanded','false')});if(!open){it.classList.add('open');b.setAttribute('aria-expanded','true')}})}
@@ -1474,67 +1441,6 @@ register('home',()=>`
 </section>
 <div class="statbar"><div class="container statbar-in">${[['15+','platforms we connect'],['6','major ERP families covered'],['4','clear steps, every project'],['1','accountable team, start to finish']].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('')}</div></div>
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
-<section class="section hc-section">
-  <div class="container hc-split">
-    <div><span class="mono">LIVE VIEW</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Every connection runs through one controlled layer between your systems. On the way through, each record is:</p><ul class="hc-points"><li><span>01</span><div><b>Checked</b> against your rules before it moves</div></li><li><span>02</span><div><b>Translated</b> into the format each system expects</div></li><li><span>03</span><div><b>Logged</b>, so a failure is seen straight away, not found weeks later</div></li></ul></div>
-    <div class="hc-stage">${IMAP}</div>
-  </div>
-</section>
-<section class="wwd">
-  <div class="container wwd-in">
-    <div class="wwd-head"><p class="eyebrow">What we do</p><h2 class="st">Built around the systems you already run</h2><p class="sd">From a single connection to a full ERP programme, every engagement is shaped to your environment.</p><ul class="wwd-points"><li>Your data stays in your own systems</li><li>Built inside your environment, under your access controls</li><li>Works alongside your ERP partner, not instead of them</li></ul><div class="wwd-actions"><button class="btn btn-primary" data-cta="wwd-services" onclick="navigate('services')">See All Services <span class="arrow">→</span></button></div></div>
-    <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div>${accFlow(ex)}${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div></div>`).join('')}</div>
-  </div>
-</section>
-<section class="section fx-sec">
-  <div class="container">
-    <div class="sh l"><p class="eyebrow">See it in action</p><h2 class="st">One Record. Every System.</h2><p class="sd">Late month-ends, silent failures, numbers that don't match. This is what the layer between your systems fixes.</p></div>
-    <div class="fx-stage">
-    <div class="fx-tabs" id="fx-tabs" role="tablist" aria-label="Example problems"><button class="fx-tab" role="tab" type="button" aria-selected="true">Close the month <small>5 sources → 1 ledger</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Recover a failure <small>held, retried, replayed</small></button><button class="fx-tab" role="tab" type="button" aria-selected="false">Keep systems in agreement <small>one source of truth</small></button></div>
-    <div class="fx" id="fx">
-      <div class="fx-bar"><span class="mono">PIPELINE</span><span class="fx-run" id="fx-run">idle</span><span class="fx-prog"><i id="fx-prog"></i></span></div>
-      <div class="iflow fx-row">
-        <div class="inode fx-node" data-s="0" tabindex="0">
-          <span class="mono">01 · WHAT HAPPENS</span>
-          <div class="fx-sys" id="fx-src"><i style="--c:#3794FD" aria-hidden="true">Σ</i><span><b>Finance systems</b><small>period totals · 5 sources</small></span></div>
-          <pre class="fx-json" id="fx-json" aria-label="Event payload"></pre>
-          <div class="fx-foot"><span class="itag" data-done="Captured ✓">Listening</span><span class="fx-ms" data-v="5 systems · 1.2 s"></span></div>
-        </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">CLOSE</span></div>
-        <div class="inode core fx-node" data-s="1" tabindex="0">
-          <span class="mono">02 · VALIDATE · TRANSFORM · ROUTE</span><h3><svg viewBox="0 0 100 100" width="18" height="18" aria-hidden="true"><use href="#mx-mark"/></svg>The Misnox layer</h3>
-          <div class="ichecks fx-checks" id="fx-checks"></div>
-          <div class="fx-map" id="fx-map" aria-label="Field mapping"></div>
-          <div class="fx-tip" id="fx-tip">Hover a check to see the rule.</div>
-          <div class="fx-foot"><span class="itag" data-done="4/4 rules passed">Waiting</span><span class="fx-ms" data-v="rules · 38 ms"></span></div>
-        </div>
-        <div class="fx-wire" aria-hidden="true"><svg viewBox="0 0 60 12" preserveAspectRatio="none"><path d="M0 6h54M49 1l5 5-5 5"/></svg><span class="fx-pkt">CLOSE</span></div>
-        <div class="inode fx-node" data-s="2" tabindex="0">
-          <span class="mono">03 · OUTCOME</span>
-          <div class="fx-sys" id="fx-dst"><i style="--c:#0B7FC6" aria-hidden="true">ERP</i><span><b>Your ERP</b><small>general ledger</small></span></div>
-          <div class="kv" id="fx-kv"></div>
-          <code class="fx-api" id="fx-api"></code>
-          <div class="fx-log" id="fx-log"></div>
-          <div class="fx-foot"><span class="itag" data-done="✓ Complete">Pending</span><span class="fx-ms" data-v="API · 164 ms"></span></div>
-        </div>
-      </div>
-    </div>
-    <div class="fx-traits" aria-label="Built into every integration"><span>Retries automatic</span><span>Duplicates ignored</span><span>Failures alerted</span><span>Every run logged</span></div>
-    </div>
-    <p class="inote">Illustrative examples. The same layer works across Business Central, NetSuite, MYOB Acumatica, TechnologyOne, SAP and others.</p>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container">
-    <div class="sh l"><p class="eyebrow">Explore</p><h2 class="st">Find Your Starting Point</h2><p class="sd">Pick the system you run, or the problem you have.</p></div>
-    <div class="tabs" role="tablist">
-      <button role="tab" id="tab-sys" aria-selected="true" aria-controls="tpanel" data-k="sys">By system</button>
-      <button role="tab" id="tab-prob" aria-selected="false" aria-controls="tpanel" data-k="prob">By problem</button>
-      <button role="tab" id="tab-svc" aria-selected="false" aria-controls="tpanel" data-k="svc">By service</button>
-    </div>
-    <div class="tgrid" id="tpanel" role="tabpanel" aria-labelledby="tab-sys">${homeTiles('sys')}</div>
-  </div>
-</section>
 <section class="section">
   <div class="container">
     <div class="sf-split"><div class="sf-photo" role="img" aria-label="Someone working at a desk with two screens"></div><div><div class="sh l"><p class="eyebrow">Common starting points</p><h2 class="st">Sound Familiar?</h2></div>
@@ -1548,6 +1454,51 @@ register('home',()=>`
     </div></div></div>
   </div>
 </section>
+<section class="section hc-section">
+  <div class="container hc-split">
+    <div><span class="mono">LIVE VIEW</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Every connection runs through one controlled layer between your systems. On the way through, each record is:</p><ul class="hc-points"><li><span>01</span><div><b>Checked</b> against your rules before it moves</div></li><li><span>02</span><div><b>Translated</b> into the format each system expects</div></li><li><span>03</span><div><b>Logged</b>, so a failure is seen straight away, not found weeks later</div></li></ul></div>
+    <div class="hc-stage">${IMAP}</div>
+  </div>
+</section>
+<section class="wwd">
+  <div class="container wwd-in">
+    <div class="wwd-head"><p class="eyebrow">What we do</p><h2 class="st">Built around the systems you already run</h2><p class="sd">From a single connection to a full ERP programme, every engagement is shaped to your environment.</p><ul class="wwd-points"><li>Your data stays in your own systems</li><li>Built inside your environment, under your access controls</li><li>Works alongside your ERP partner, not instead of them</li></ul><div class="wwd-actions"><button class="btn btn-primary" data-cta="wwd-services" onclick="navigate('services')">See All Services <span class="arrow">→</span></button></div></div>
+    <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div>${accFlow(ex)}${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div></div>`).join('')}</div>
+  </div>
+</section>
+<section class="section wd-sec">
+  <div class="container">
+    <div class="sh l"><p class="eyebrow">After go-live</p><h2 class="st">Your Integrations, Under Watch</h2><p class="sd">Go-live is not the finish line. Every integration we build is monitored, documented and yours to keep.</p></div>
+    <div class="wd-split">
+      <div class="wd" id="wd" aria-label="Illustrative integration health dashboard">
+        <div class="wd-top"><span class="wd-dots" aria-hidden="true"><i></i><i></i><i></i></span><b>Integration health</b><span class="wd-live"><i></i>Live · <span id="wd-clock">09:41:00</span></span></div>
+        <div class="wd-kpis"><div><span>Integrations</span><b>6</b></div><div><span>Records today</span><b id="wd-total">18,400</b></div><div><span>Records lost</span><b class="g">0</b></div><div><span>Open alerts</span><b id="wd-alerts">0</b></div></div>
+        <div class="wd-head"><span>Integration</span><span>Status</span><span>Last run</span><span>Records today</span><span>Last 10 runs</span></div>
+        <div class="wd-rows" id="wd-rows"><div class="wd-row" data-i="0"><span class="wd-name">Payroll <i>→</i> ERP</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">2 min ago</span><span class="wd-n" data-n="1240">1,240</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="5.2" width="4" height="12.8" rx="1"/><rect x="6" y="9.2" width="4" height="8.8" rx="1"/><rect x="12" y="3.6" width="4" height="14.4" rx="1"/><rect x="18" y="11.5" width="4" height="6.5" rx="1"/><rect x="24" y="11.0" width="4" height="7.0" rx="1"/><rect x="30" y="0.4" width="4" height="17.6" rx="1"/><rect x="36" y="10.4" width="4" height="7.6" rx="1"/><rect x="42" y="4.3" width="4" height="13.7" rx="1"/><rect x="48" y="11.3" width="4" height="6.7" rx="1"/><rect x="54" y="1.1" width="4" height="16.9" rx="1"/></svg></div><div class="wd-row" data-i="1"><span class="wd-name">Bank feed <i>→</i> ERP</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">1 min ago</span><span class="wd-n" data-n="3812">3,812</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="7.7" width="4" height="10.3" rx="1"/><rect x="6" y="11.9" width="4" height="6.1" rx="1"/><rect x="12" y="10.6" width="4" height="7.4" rx="1"/><rect x="18" y="2.7" width="4" height="15.3" rx="1"/><rect x="24" y="3.1" width="4" height="14.9" rx="1"/><rect x="30" y="11.2" width="4" height="6.8" rx="1"/><rect x="36" y="7.2" width="4" height="10.8" rx="1"/><rect x="42" y="10.6" width="4" height="7.4" rx="1"/><rect x="48" y="0.0" width="4" height="18.0" rx="1"/><rect x="54" y="2.9" width="4" height="15.1" rx="1"/></svg></div><div class="wd-row" data-i="2"><span class="wd-name">CRM <i>→</i> ERP</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">4 min ago</span><span class="wd-n" data-n="926">926</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="11.3" width="4" height="6.7" rx="1"/><rect x="6" y="9.9" width="4" height="8.1" rx="1"/><rect x="12" y="7.6" width="4" height="10.4" rx="1"/><rect x="18" y="11.3" width="4" height="6.7" rx="1"/><rect x="24" y="3.6" width="4" height="14.4" rx="1"/><rect x="30" y="11.5" width="4" height="6.5" rx="1"/><rect x="36" y="7.6" width="4" height="10.4" rx="1"/><rect x="42" y="11.7" width="4" height="6.3" rx="1"/><rect x="48" y="9.5" width="4" height="8.5" rx="1"/><rect x="54" y="5.9" width="4" height="12.1" rx="1"/></svg></div><div class="wd-row" data-i="3"><span class="wd-name">Procurement <i>→</i> ERP</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">3 min ago</span><span class="wd-n" data-n="418">418</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="3.1" width="4" height="14.9" rx="1"/><rect x="6" y="9.4" width="4" height="8.6" rx="1"/><rect x="12" y="0.2" width="4" height="17.8" rx="1"/><rect x="18" y="9.9" width="4" height="8.1" rx="1"/><rect x="24" y="5.6" width="4" height="12.4" rx="1"/><rect x="30" y="8.5" width="4" height="9.5" rx="1"/><rect x="36" y="10.3" width="4" height="7.7" rx="1"/><rect x="42" y="8.3" width="4" height="9.7" rx="1"/><rect x="48" y="4.1" width="4" height="13.9" rx="1"/><rect x="54" y="10.4" width="4" height="7.6" rx="1"/></svg></div><div class="wd-row" data-i="4"><span class="wd-name">ERP <i>→</i> Reporting</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">1 min ago</span><span class="wd-n" data-n="11240">11,240</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="0.0" width="4" height="18.0" rx="1"/><rect x="6" y="11.2" width="4" height="6.8" rx="1"/><rect x="12" y="11.3" width="4" height="6.7" rx="1"/><rect x="18" y="7.9" width="4" height="10.1" rx="1"/><rect x="24" y="1.3" width="4" height="16.7" rx="1"/><rect x="30" y="0.4" width="4" height="17.6" rx="1"/><rect x="36" y="2.9" width="4" height="15.1" rx="1"/><rect x="42" y="5.4" width="4" height="12.6" rx="1"/><rect x="48" y="2.0" width="4" height="16.0" rx="1"/><rect x="54" y="2.2" width="4" height="15.8" rx="1"/></svg></div><div class="wd-row" data-i="5"><span class="wd-name">Expenses <i>→</i> ERP</span><span class="wd-st ok"><b></b><em>Healthy</em></span><span class="wd-last">6 min ago</span><span class="wd-n" data-n="764">764</span><svg class="wd-spark" viewBox="0 0 60 18" aria-hidden="true"><rect x="0" y="4.3" width="4" height="13.7" rx="1"/><rect x="6" y="5.8" width="4" height="12.2" rx="1"/><rect x="12" y="7.0" width="4" height="11.0" rx="1"/><rect x="18" y="8.5" width="4" height="9.5" rx="1"/><rect x="24" y="7.0" width="4" height="11.0" rx="1"/><rect x="30" y="10.8" width="4" height="7.2" rx="1"/><rect x="36" y="5.8" width="4" height="12.2" rx="1"/><rect x="42" y="0.5" width="4" height="17.5" rx="1"/><rect x="48" y="1.3" width="4" height="16.7" rx="1"/><rect x="54" y="4.9" width="4" height="13.1" rx="1"/></svg></div></div>
+        <div class="wd-log" id="wd-log" aria-live="polite"><span class="wd-log-h">Event log</span><div id="wd-lines"><p><time>09:40:52</time>All integrations healthy</p></div></div>
+      </div>
+      <ul class="wd-points">
+        <li><span class="wd-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><div><b>Every run monitored</b>Nobody waits for the numbers to look wrong.</div></li>
+        <li><span class="wd-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg></span><div><b>Failures alerted, records held</b>Nothing is dropped. Held records are replayed once the cause is fixed.</div></li>
+        <li><span class="wd-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h4"/></svg></span><div><b>Documented</b>Runbooks and diagrams your own team can read.</div></li>
+        <li><span class="wd-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0"/></svg></span><div><b>Yours to keep</b>You own the code and configuration. No lock-in.</div></li>
+        <li class="wd-cta"><button class="btn btn-outline" type="button" onclick="navigate('services')">See Managed Support <span class="arrow">→</span></button></li>
+      </ul>
+    </div>
+    <p class="inote">Illustrative dashboard.</p>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="container">
+    <div class="sh l"><p class="eyebrow">Explore</p><h2 class="st">Find Your Starting Point</h2><p class="sd">Pick the system you run, or the problem you have.</p></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-sys" aria-selected="true" aria-controls="tpanel" data-k="sys">By system</button>
+      <button role="tab" id="tab-svc" aria-selected="false" aria-controls="tpanel" data-k="svc">By service</button>
+    </div>
+    <div class="tgrid" id="tpanel" role="tabpanel" aria-labelledby="tab-sys">${homeTiles('sys')}</div>
+  </div>
+</section>
+
 <section class="section section-alt">
   <div class="container">
     <div class="sh l"><p class="eyebrow">The process</p><h2 class="st">How We Work</h2><p class="sd">Every project follows the same four steps, so you always know what comes next.</p></div>

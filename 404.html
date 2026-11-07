@@ -894,7 +894,6 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
     </a>
     <ul class="nav-links">
       <li><a class="nav-link" href="/">Home</a></li>
-      <li><a class="nav-link" href="/about/">About</a></li>
       <li class="has-dropdown">
         <a class="nav-link" href="/services/" aria-haspopup="true">Services ▾</a>
         <div class="dropdown">
@@ -903,6 +902,7 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
         </div>
       </li>
       <li><a class="nav-link" href="/erp/">ERP Migrations</a></li>
+      <li><a class="nav-link" href="/about/">About</a></li>
       <li class="has-dropdown">
         <a class="nav-link" href="/security/" aria-haspopup="true">Trust ▾</a>
         <div class="dropdown">
@@ -921,9 +921,9 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
   </div>
   <div class="mobile-menu" id="mobile-menu" style="display:none">
     <a href="/" onclick="toggleMobile()">Home</a>
-    <a href="/about/" onclick="toggleMobile()">About</a>
     <a href="/services/" onclick="toggleMobile()">Services</a>
     <a href="/erp/" onclick="toggleMobile()">ERP Migrations</a>
+    <a href="/about/" onclick="toggleMobile()">About</a>
     <a href="/security/" onclick="toggleMobile()">Security &amp; Data</a>
     <a href="/faq/" onclick="toggleMobile()">FAQ</a>
     <a href="/contact/" onclick="toggleMobile()">Contact</a>
@@ -950,7 +950,7 @@ h1,h2,h3{line-height:1.2;text-wrap:balance}
 <section class="section hc-section">
   <div class="container hc-split">
     <div><span class="mono">LIVE VIEW</span><h2 class="st">How well do your systems work together?</h2><p class="sd">Every connection runs through one controlled layer between your systems. On the way through, each record is:</p><ul class="hc-points"><li><span>01</span><div><b>Checked</b> against your rules before it moves</div></li><li><span>02</span><div><b>Translated</b> into the format each system expects</div></li><li><span>03</span><div><b>Logged</b>, so a failure is seen straight away, not found weeks later</div></li></ul></div>
-    <div class="hc-stage"><div class="imap" aria-live="off"><svg class="imap-svg" viewBox="0 0 560 340" role="img" aria-label="Orders, deals and bank transactions flow from Salesforce, ADP payroll, HubSpot and bank feeds through the Misnox integration layer into Business Central, SAP, Xero and Power BI"><path id="pl0" class="imap-wire" d="M86 50 C170 50 170 170 234 170"></path><path id="pl1" class="imap-wire" d="M86 130 C170 130 170 170 234 170"></path><path id="pl2" class="imap-wire" d="M86 210 C170 210 170 170 234 170"></path><path id="pl3" class="imap-wire" d="M86 290 C170 290 170 170 234 170"></path><path id="pr0" class="imap-wire" d="M326 170 C390 170 390 50 474 50"></path><path id="pr1" class="imap-wire" d="M326 170 C390 170 390 130 474 130"></path><path id="pr2" class="imap-wire" d="M326 170 C390 170 390 210 474 210"></path><path id="pr3" class="imap-wire" d="M326 170 C390 170 390 290 474 290"></path><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#00A1E0"></rect><text x="0" y="3" text-anchor="middle">ORDER</text><animateMotion dur="3s" begin="0.0s" repeatCount="indefinite" rotate="0"><mpath href="#pl0"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#D0271D"></rect><text x="0" y="3" text-anchor="middle">PAY</text><animateMotion dur="3s" begin="0.75s" repeatCount="indefinite" rotate="0"><mpath href="#pl1"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="0.75s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#FF7A59"></rect><text x="0" y="3" text-anchor="middle">DEAL</text><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="0"><mpath href="#pl2"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="1.5s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#1A64C8"></rect><text x="0" y="3" text-anchor="middle">TXN</text><animateMotion dur="3s" begin="2.25s" repeatCount="indefinite" rotate="0"><mpath href="#pl3"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="2.25s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">INV</text><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="0"><mpath href="#pr0"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="1.5s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">PO</text><animateMotion dur="3s" begin="2.25s" repeatCount="indefinite" rotate="0"><mpath href="#pr1"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="2.25s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">JNL</text><animateMotion dur="3s" begin="3.0s" repeatCount="indefinite" rotate="0"><mpath href="#pr2"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="3.0s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">DATA</text><animateMotion dur="3s" begin="3.75s" repeatCount="indefinite" rotate="0"><mpath href="#pr3"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="3.75s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-node"><circle cx="62" cy="50" r="24"></circle><use href="#lg-sf" x="49" y="37" width="26" height="26"></use><text class="imap-lbl" x="62" y="88" text-anchor="middle">Salesforce</text></g><g class="imap-node"><circle cx="62" cy="130" r="24"></circle><use href="#lg-adp" x="49" y="117" width="26" height="26"></use><text class="imap-lbl" x="62" y="168" text-anchor="middle">ADP payroll</text></g><g class="imap-node"><circle cx="62" cy="210" r="24"></circle><use href="#lg-hs" x="49" y="197" width="26" height="26"></use><text class="imap-lbl" x="62" y="248" text-anchor="middle">HubSpot</text></g><g class="imap-node"><circle cx="62" cy="290" r="24"></circle><use href="#lg-bank" x="49" y="277" width="26" height="26"></use><text class="imap-lbl" x="62" y="328" text-anchor="middle">Bank feed</text></g><g class="imap-node"><circle cx="498" cy="50" r="24"></circle><use href="#lg-ms" x="485" y="37" width="26" height="26"></use><text class="imap-lbl" x="498" y="88" text-anchor="middle">Business Central</text></g><g class="imap-node"><circle cx="498" cy="130" r="24"></circle><use href="#lg-sap" x="485" y="117" width="26" height="26"></use><text class="imap-lbl" x="498" y="168" text-anchor="middle">SAP</text></g><g class="imap-node"><circle cx="498" cy="210" r="24"></circle><use href="#lg-xero" x="485" y="197" width="26" height="26"></use><text class="imap-lbl" x="498" y="248" text-anchor="middle">Xero</text></g><g class="imap-node"><circle cx="498" cy="290" r="24"></circle><use href="#lg-pbi" x="485" y="277" width="26" height="26"></use><text class="imap-lbl" x="498" y="328" text-anchor="middle">Power BI</text></g><g class="imap-hub"><circle class="imap-ring" cx="280" cy="170" r="56"></circle><circle cx="280" cy="170" r="44"></circle><image href="/brand/misnox-symbol.png" x="251.4" y="160.9" width="57.2" height="18.1"></image><text class="imap-hubt" x="280" y="248" text-anchor="middle">VALIDATE · MAP · ROUTE</text></g><text class="imap-col" x="62" y="14" text-anchor="middle">SOURCES</text><text class="imap-col" x="498" y="14" text-anchor="middle">TARGETS</text></svg><div class="imap-log" id="imap-log"><div class="imap-log-h"><span>EVENT LOG</span><span class="imap-live"><i></i>LIVE</span></div><div id="imap-rows"><div class="imap-row"><span class="t">16:16:59</span><span class="r">Salesforce → BC</span><span class="m">SO-2291 → sales order</span><span class="s ok">✓ synced</span></div><div class="imap-row"><span class="t">16:16:59</span><span class="r">Bank feed → Xero</span><span class="m">47 transactions matched</span><span class="s ok">✓ synced</span></div><div class="imap-row"><span class="t">16:16:59</span><span class="r">ADP payroll → SAP</span><span class="m">pay run → GL journal JNL-8812</span><span class="s ok">✓ synced</span></div></div></div></div></div>
+    <div class="hc-stage"><div class="imap" aria-live="off"><svg class="imap-svg" viewBox="0 0 560 340" role="img" aria-label="Orders, deals and bank transactions flow from Salesforce, ADP payroll, HubSpot and bank feeds through the Misnox integration layer into Business Central, SAP, Xero and Power BI"><path id="pl0" class="imap-wire" d="M86 50 C170 50 170 170 234 170"></path><path id="pl1" class="imap-wire" d="M86 130 C170 130 170 170 234 170"></path><path id="pl2" class="imap-wire" d="M86 210 C170 210 170 170 234 170"></path><path id="pl3" class="imap-wire" d="M86 290 C170 290 170 170 234 170"></path><path id="pr0" class="imap-wire" d="M326 170 C390 170 390 50 474 50"></path><path id="pr1" class="imap-wire" d="M326 170 C390 170 390 130 474 130"></path><path id="pr2" class="imap-wire" d="M326 170 C390 170 390 210 474 210"></path><path id="pr3" class="imap-wire" d="M326 170 C390 170 390 290 474 290"></path><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#00A1E0"></rect><text x="0" y="3" text-anchor="middle">ORDER</text><animateMotion dur="3s" begin="0.0s" repeatCount="indefinite" rotate="0"><mpath href="#pl0"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#D0271D"></rect><text x="0" y="3" text-anchor="middle">PAY</text><animateMotion dur="3s" begin="0.75s" repeatCount="indefinite" rotate="0"><mpath href="#pl1"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="0.75s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#FF7A59"></rect><text x="0" y="3" text-anchor="middle">DEAL</text><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="0"><mpath href="#pl2"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="1.5s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#1A64C8"></rect><text x="0" y="3" text-anchor="middle">TXN</text><animateMotion dur="3s" begin="2.25s" repeatCount="indefinite" rotate="0"><mpath href="#pl3"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="2.25s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">INV</text><animateMotion dur="3s" begin="1.5s" repeatCount="indefinite" rotate="0"><mpath href="#pr0"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="1.5s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">PO</text><animateMotion dur="3s" begin="2.25s" repeatCount="indefinite" rotate="0"><mpath href="#pr1"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="2.25s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">JNL</text><animateMotion dur="3s" begin="3.0s" repeatCount="indefinite" rotate="0"><mpath href="#pr2"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="3.0s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-pk" opacity="0"><rect x="-17" y="-7" width="34" height="14" rx="7" fill="#6A3BE4"></rect><text x="0" y="3" text-anchor="middle">DATA</text><animateMotion dur="3s" begin="3.75s" repeatCount="indefinite" rotate="0"><mpath href="#pr3"></mpath></animateMotion><animate attributeName="opacity" dur="3s" begin="3.75s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;.12;.85;1"></animate></g><g class="imap-node"><circle cx="62" cy="50" r="24"></circle><use href="#lg-sf" x="49" y="37" width="26" height="26"></use><text class="imap-lbl" x="62" y="88" text-anchor="middle">Salesforce</text></g><g class="imap-node"><circle cx="62" cy="130" r="24"></circle><use href="#lg-adp" x="49" y="117" width="26" height="26"></use><text class="imap-lbl" x="62" y="168" text-anchor="middle">ADP payroll</text></g><g class="imap-node"><circle cx="62" cy="210" r="24"></circle><use href="#lg-hs" x="49" y="197" width="26" height="26"></use><text class="imap-lbl" x="62" y="248" text-anchor="middle">HubSpot</text></g><g class="imap-node"><circle cx="62" cy="290" r="24"></circle><use href="#lg-bank" x="49" y="277" width="26" height="26"></use><text class="imap-lbl" x="62" y="328" text-anchor="middle">Bank feed</text></g><g class="imap-node"><circle cx="498" cy="50" r="24"></circle><use href="#lg-ms" x="485" y="37" width="26" height="26"></use><text class="imap-lbl" x="498" y="88" text-anchor="middle">Business Central</text></g><g class="imap-node"><circle cx="498" cy="130" r="24"></circle><use href="#lg-sap" x="485" y="117" width="26" height="26"></use><text class="imap-lbl" x="498" y="168" text-anchor="middle">SAP</text></g><g class="imap-node"><circle cx="498" cy="210" r="24"></circle><use href="#lg-xero" x="485" y="197" width="26" height="26"></use><text class="imap-lbl" x="498" y="248" text-anchor="middle">Xero</text></g><g class="imap-node"><circle cx="498" cy="290" r="24"></circle><use href="#lg-pbi" x="485" y="277" width="26" height="26"></use><text class="imap-lbl" x="498" y="328" text-anchor="middle">Power BI</text></g><g class="imap-hub"><circle class="imap-ring" cx="280" cy="170" r="56"></circle><circle cx="280" cy="170" r="44"></circle><image href="/brand/misnox-symbol.png" x="251.4" y="160.9" width="57.2" height="18.1"></image><text class="imap-hubt" x="280" y="248" text-anchor="middle">VALIDATE · MAP · ROUTE</text></g><text class="imap-col" x="62" y="14" text-anchor="middle">SOURCES</text><text class="imap-col" x="498" y="14" text-anchor="middle">TARGETS</text></svg><div class="imap-log" id="imap-log"><div class="imap-log-h"><span>EVENT LOG</span><span class="imap-live"><i></i>LIVE</span></div><div id="imap-rows"><div class="imap-row"><span class="t">16:31:55</span><span class="r">Salesforce → BC</span><span class="m">SO-2291 → sales order</span><span class="s ok">✓ synced</span></div><div class="imap-row"><span class="t">16:31:55</span><span class="r">Bank feed → Xero</span><span class="m">47 transactions matched</span><span class="s ok">✓ synced</span></div><div class="imap-row"><span class="t">16:31:55</span><span class="r">ADP payroll → SAP</span><span class="m">pay run → GL journal JNL-8812</span><span class="s ok">✓ synced</span></div></div></div></div></div>
   </div>
 </section>
 <section class="wwd">
@@ -1395,7 +1395,25 @@ register('home',()=>`
     <div class="acc" id="acc">${SERVICES.map(([t,icon,d,page,ex],i)=>`<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="acc-ic">${ic(icon,18)}</span><span class="acc-t">${t}</span><span class="acc-pm" aria-hidden="true"></span></button><div class="acc-body"><div>${accFlow(ex)}${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div></div></div>`).join('')}</div>
   </div>
 </section>
-<section class="section wd-sec">
+<section class="section section-alt">
+  <div class="container">
+    <div class="sh l"><p class="eyebrow">Explore</p><h2 class="st">Find Your Starting Point</h2><p class="sd">Pick the system you run, or the service you need.</p></div>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-sys" aria-selected="true" aria-controls="tpanel" data-k="sys">By system</button>
+      <button role="tab" id="tab-svc" aria-selected="false" aria-controls="tpanel" data-k="svc">By service</button>
+    </div>
+    <div class="tgrid" id="tpanel" role="tabpanel" aria-labelledby="tab-sys">${homeTiles('sys')}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sh l"><p class="eyebrow">The process</p><h2 class="st">How We Work</h2><p class="sd">Every project follows the same four steps, so you always know what comes next.</p></div>
+    <div class="phases ptl" id="ptl"><div class="ptl-track" aria-hidden="true"><span class="ptl-fill"></span><span class="ptl-dot"></span></div>${PHASES.map(([n,t,d],i)=>`<div class="phase" style="--i:${i}"><span class="ptl-node" aria-hidden="true">${PH_ICON[i]}</span><span class="n">${n}</span><h3>${t}</h3><p>${d}</p><span class="ptl-chip" aria-hidden="true">${PH_CHIP[i]}</span></div>`).join('')}</div>
+    <p style="margin-top:28px"><a class="card-link" href="/services/#how">How we work in detail <span class="arrow">→</span></a></p>
+  </div>
+</section>
+<section class="section section-alt wd-sec">
   <div class="container">
     <div class="sh l"><p class="eyebrow">After go-live</p><h2 class="st">Your Integrations, Under Watch</h2><p class="sd">Go-live is not the finish line. Every integration we build is monitored, documented and yours to keep.</p></div>
     <div class="wd-split">
@@ -1417,28 +1435,10 @@ register('home',()=>`
     <p class="inote">Illustrative dashboard.</p>
   </div>
 </section>
-<section class="section section-alt">
-  <div class="container">
-    <div class="sh l"><p class="eyebrow">Explore</p><h2 class="st">Find Your Starting Point</h2><p class="sd">Pick the system you run, or the problem you have.</p></div>
-    <div class="tabs" role="tablist">
-      <button role="tab" id="tab-sys" aria-selected="true" aria-controls="tpanel" data-k="sys">By system</button>
-      <button role="tab" id="tab-svc" aria-selected="false" aria-controls="tpanel" data-k="svc">By service</button>
-    </div>
-    <div class="tgrid" id="tpanel" role="tabpanel" aria-labelledby="tab-sys">${homeTiles('sys')}</div>
-  </div>
-</section>
-
 <section class="section pn-sec">
   <div class="container">
     <div class="sh c reveal"><p class="eyebrow">Common starting points</p><h2 class="st">Sound Familiar?</h2></div>
     <div class="pn-grid" id="pn"><button class="pn-card" type="button" aria-pressed="false"><span class="pn-top"><span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="pn-n">01</span><span class="pn-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span></span><b class="pn-t">Month-end takes days</b><span class="pn-d">Manual journals and spreadsheet reconciliations, because the systems that should be connected aren't.</span><span class="pn-fix"><em>How we fix it</em>Systems feed the ledger automatically, so reconciliation becomes checking, not typing.</span></button><button class="pn-card" type="button" aria-pressed="false"><span class="pn-top"><span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg></span><span class="pn-n">02</span><span class="pn-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span></span><b class="pn-t">The same data is typed in twice</b><span class="pn-d">Records keyed into one system, then again into the ERP. Slow, and a common source of errors.</span><span class="pn-fix"><em>How we fix it</em>Enter it once. The integration carries it everywhere else, with checks on the way.</span></button><button class="pn-card" type="button" aria-pressed="false"><span class="pn-top"><span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="pn-n">03</span><span class="pn-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span></span><b class="pn-t">Approval limits live on paper</b><span class="pn-d">Policy says $50k needs two sign-offs, but nothing in the system stops it.</span><span class="pn-fix"><em>How we fix it</em>Limits enforced inside the workflow, with a record of who approved what and when.</span></button><button class="pn-card" type="button" aria-pressed="false"><span class="pn-top"><span class="pn-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span><span class="pn-n">04</span><span class="pn-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span></span><b class="pn-t">Failures are found by accident</b><span class="pn-d">A sync stops quietly and nobody notices until the numbers look wrong.</span><span class="pn-fix"><em>How we fix it</em>Every run monitored. Failures alert your team and records are held for replay.</span></button></div>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container">
-    <div class="sh l"><p class="eyebrow">The process</p><h2 class="st">How We Work</h2><p class="sd">Every project follows the same four steps, so you always know what comes next.</p></div>
-    <div class="phases ptl" id="ptl"><div class="ptl-track" aria-hidden="true"><span class="ptl-fill"></span><span class="ptl-dot"></span></div>${PHASES.map(([n,t,d],i)=>`<div class="phase" style="--i:${i}"><span class="ptl-node" aria-hidden="true">${PH_ICON[i]}</span><span class="n">${n}</span><h3>${t}</h3><p>${d}</p><span class="ptl-chip" aria-hidden="true">${PH_CHIP[i]}</span></div>`).join('')}</div>
-    <p style="margin-top:28px"><a class="card-link" href="/services/#how">How we work in detail <span class="arrow">→</span></a></p>
   </div>
 </section>
 ${ctaBand('Let\'s Talk','A free 30-minute call to understand your systems and whether we can help.')}`);
@@ -1462,8 +1462,72 @@ ${ctaBand('Is This You?','Tell us about your setup and we will tell you honestly
 register('services',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">Our Services</p><h1>Integration Services</h1><p>Five services, one goal: systems that share data reliably and enforce your controls.</p></div></div></section>
 <section class="section"><div class="container"><h2 class="sr-only">Our services</h2><div class="grid-3">${SERVICES.map(([title,icon,desc,page])=>`<div class="card reveal">${miniFlow(title)}<h3>${title}</h3><p>${desc}</p>${page?`<a class="card-link" href="/${page}/">Learn more <span class="arrow">→</span></a>`:''}</div>`).join('')}</div></div></section>
-<!-- PLATFORM DEPTH — tiered -->
+<!-- ENGAGEMENT SHAPE -->
 <section class="section section-alt">
+  <div class="container">
+    <div class="sh c reveal">
+      <p class="eyebrow">How Engagements Work</p>
+      <h2 class="st">How Engagements Are Structured</h2>
+    </div>
+    <div class="grid-3">
+      ${[
+        ['search','Discovery Engagement','A paid review that ends in a findings report and a recommended design, so you decide on facts.','You keep the findings'],
+        ['cpu','Project Delivery','Each project is quoted individually, based on the signed-off design.','Written quote first'],
+        ['wrench','Managed Support','A monthly retainer for monitoring, fixes and improvements, priced by the number of integrations.','Monthly retainer'],
+      ].map(([icon,t,d,tag])=>`
+      <div class="card reveal">
+        <div class="card-icon">${ic(icon,22)}</div>
+        <h3>${t}</h3>
+        <p>${d}</p>
+        <div class="chips" style="margin-top:16px"><span class="chip">${tag}</span></div>
+      </div>`).join('')}
+    </div>
+    <p style="text-align:center;margin-top:32px;font-size:var(--fs-sm);color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7" class="reveal">Most clients go discovery → build → support, but you can stop after any stage and keep everything produced so far.</p>
+  </div>
+</section>
+<section class="section" id="how"><div class="container">
+  <div class="sh c reveal"><p class="eyebrow">How we work</p><h2 class="st">Four Phases, No Surprises</h2><p class="sd">For each phase: what we do, what you get, and what has to be true before we move on.</p></div>
+  ${[
+    ['01','Discover','Understand the environment before proposing anything.',
+      ['Current systems inventory and integration touchpoints','Data flow mapping — what moves, when, and who owns it','Control objectives: approval thresholds, SoD requirements, audit needs','Constraints: licensing, upgrade cycles, internal capacity'],
+      ['Integration Assessment document','Systems and data flow map','Prioritised gap list with indicative effort'],
+      'You confirm the findings are accurate and agree the priorities.'],
+    ['02','Design','Document the solution before writing code.',
+      ['Integration architecture and pattern selection','Field-level data mappings and transformation rules','Error handling, retry, and exception routing design','Security model: accounts, permissions, credential storage','Test scenarios including negative and edge cases'],
+      ['Integration Design Document','Field mapping specification','Test plan with acceptance criteria'],
+      'You sign off the design document.'],
+    ['03','Build &amp; go live','Build, test, and deploy against the agreed design.',
+      ['Development in a non-production environment','Unit and integration testing against the test plan','User acceptance testing with your team','Cutover rehearsal and rollback plan','Production deployment in a controlled window'],
+      ['Working integration in production','UAT sign-off record','Cutover runbook and rollback procedure','Technical documentation and handover pack'],
+      'You have signed off testing, the integration is live, and your team can run it.'],
+    ['04','Support','Keep it running and improve it over time.',
+      ['Monitoring and alerting configured to your channels','Exception review and resolution','Platform upgrade impact assessment','Periodic optimisation review'],
+      ['Support handbook','Monitoring and alert configuration','Regular exception and performance reporting'],
+      'Reviewed with you at agreed intervals.'],
+  ].map(([n,t,intro,activities,deliverables,exit],i)=>`
+  <div class="reveal" style="margin-bottom:${i<3?'56px':'0'};padding-bottom:${i<3?'56px':'0'};${i<3?'border-bottom:1px solid var(--line)':''}">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+      <div class="ps-num" style="margin-bottom:0">${n}</div>
+      <div><h3 style="font-size:1.5rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin:0">${t}</h3><p style="font-size:var(--fs-sm);color:var(--muted);margin-top:3px">${intro}</p></div>
+    </div>
+    <div class="grid-3" style="gap:20px">
+      <div><p class="eyebrow" style="font-size:var(--fs-xs)">What Happens</p><ul class="feature-list" style="gap:9px">${activities.map(a=>`<li style="font-size:var(--fs-sm)">${a}</li>`).join('')}</ul></div>
+      <div><p class="eyebrow" style="font-size:var(--fs-xs)">You Receive</p><div style="display:flex;flex-direction:column;gap:8px">${deliverables.map(d=>`<div style="padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:9px;font-size:var(--fs-sm);color:var(--ink2)">${d}</div>`).join('')}</div></div>
+      <div><p class="eyebrow" style="font-size:var(--fs-xs)">Exit Criteria</p><div style="padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:11px;font-size:var(--fs-sm);color:var(--muted);line-height:1.65">${exit}</div></div>
+    </div>
+  </div>`).join('')}
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <div class="sh c reveal"><p class="eyebrow">Governance</p><h2 class="st">During the Project</h2></div>
+  <div class="grid-3">${[
+    ['users','Regular Updates','A short written update at an agreed rhythm: what moved, what is blocked, what changed.'],
+    ['lock','Proper Handover','Documentation and a walkthrough, so your team can run the integration without us.'],
+    ['check','One Team Accountable','The team that designs your solution stays with it through build and go-live.'],
+  ].map(([icon,t,d])=>`<div class="glass-card reveal"><div style="color:var(--accent2);margin-bottom:14px">${ic(icon,26)}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
+</div></section>
+<!-- PLATFORM DEPTH — tiered -->
+<section class="section">
   <div class="container">
     <div class="sh c reveal">
       <p class="eyebrow">Platforms</p>
@@ -1503,80 +1567,12 @@ register('services',()=>`
     <p style="text-align:center;margin-top:28px;font-size:var(--fs-sm);color:var(--muted)" class="reveal">Not on the list? If it has an API, we can usually connect it.</p>
   </div>
 </section>
-<!-- ENGAGEMENT SHAPE -->
-<section class="section">
-  <div class="container">
-    <div class="sh c reveal">
-      <p class="eyebrow">How Engagements Work</p>
-      <h2 class="st">How Engagements Are Structured</h2>
-    </div>
-    <div class="grid-3">
-      ${[
-        ['search','Discovery Engagement','A paid review that ends in a findings report and a recommended design, so you decide on facts.','You keep the findings'],
-        ['cpu','Project Delivery','Each project is quoted individually, based on the signed-off design.','Written quote first'],
-        ['wrench','Managed Support','A monthly retainer for monitoring, fixes and improvements, priced by the number of integrations.','Monthly retainer'],
-      ].map(([icon,t,d,tag])=>`
-      <div class="card reveal">
-        <div class="card-icon">${ic(icon,22)}</div>
-        <h3>${t}</h3>
-        <p>${d}</p>
-        <div class="chips" style="margin-top:16px"><span class="chip">${tag}</span></div>
-      </div>`).join('')}
-    </div>
-    <p style="text-align:center;margin-top:32px;font-size:var(--fs-sm);color:var(--muted);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7" class="reveal">Most clients go discovery → build → support, but you can stop after any stage and keep everything produced so far.</p>
-  </div>
-</section>
-<section class="section section-alt" id="how"><div class="container">
-  <div class="sh c reveal"><p class="eyebrow">How we work</p><h2 class="st">Four Phases, No Surprises</h2><p class="sd">For each phase: what we do, what you get, and what has to be true before we move on.</p></div>
-  ${[
-    ['01','Discover','Understand the environment before proposing anything.',
-      ['Current systems inventory and integration touchpoints','Data flow mapping — what moves, when, and who owns it','Control objectives: approval thresholds, SoD requirements, audit needs','Constraints: licensing, upgrade cycles, internal capacity'],
-      ['Integration Assessment document','Systems and data flow map','Prioritised gap list with indicative effort'],
-      'You confirm the findings are accurate and agree the priorities.'],
-    ['02','Design','Document the solution before writing code.',
-      ['Integration architecture and pattern selection','Field-level data mappings and transformation rules','Error handling, retry, and exception routing design','Security model: accounts, permissions, credential storage','Test scenarios including negative and edge cases'],
-      ['Integration Design Document','Field mapping specification','Test plan with acceptance criteria'],
-      'You sign off the design document.'],
-    ['03','Build &amp; go live','Build, test, and deploy against the agreed design.',
-      ['Development in a non-production environment','Unit and integration testing against the test plan','User acceptance testing with your team','Cutover rehearsal and rollback plan','Production deployment in a controlled window'],
-      ['Working integration in production','UAT sign-off record','Cutover runbook and rollback procedure','Technical documentation and handover pack'],
-      'You have signed off testing, the integration is live, and your team can run it.'],
-    ['04','Support','Keep it running and improve it over time.',
-      ['Monitoring and alerting configured to your channels','Exception review and resolution','Platform upgrade impact assessment','Periodic optimisation review'],
-      ['Support handbook','Monitoring and alert configuration','Regular exception and performance reporting'],
-      'Reviewed with you at agreed intervals.'],
-  ].map(([n,t,intro,activities,deliverables,exit],i)=>`
-  <div class="reveal" style="margin-bottom:${i<3?'56px':'0'};padding-bottom:${i<3?'56px':'0'};${i<3?'border-bottom:1px solid var(--line)':''}">
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-      <div class="ps-num" style="margin-bottom:0">${n}</div>
-      <div><h3 style="font-size:1.5rem;font-weight:700;color:var(--ink);letter-spacing:-0.02em;margin:0">${t}</h3><p style="font-size:var(--fs-sm);color:var(--muted);margin-top:3px">${intro}</p></div>
-    </div>
-    <div class="grid-3" style="gap:20px">
-      <div><p class="eyebrow" style="font-size:var(--fs-xs)">What Happens</p><ul class="feature-list" style="gap:9px">${activities.map(a=>`<li style="font-size:var(--fs-sm)">${a}</li>`).join('')}</ul></div>
-      <div><p class="eyebrow" style="font-size:var(--fs-xs)">You Receive</p><div style="display:flex;flex-direction:column;gap:8px">${deliverables.map(d=>`<div style="padding:10px 14px;background:var(--surface);border:1px solid var(--line);border-radius:9px;font-size:var(--fs-sm);color:var(--ink2)">${d}</div>`).join('')}</div></div>
-      <div><p class="eyebrow" style="font-size:var(--fs-xs)">Exit Criteria</p><div style="padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:11px;font-size:var(--fs-sm);color:var(--muted);line-height:1.65">${exit}</div></div>
-    </div>
-  </div>`).join('')}
-</div></section>
-
-<section class="section"><div class="container">
-  <div class="sh c reveal"><p class="eyebrow">Governance</p><h2 class="st">During the Project</h2></div>
-  <div class="grid-3">${[
-    ['users','Regular Updates','A short written update at an agreed rhythm: what moved, what is blocked, what changed.'],
-    ['lock','Proper Handover','Documentation and a walkthrough, so your team can run the integration without us.'],
-    ['check','One Team Accountable','The team that designs your solution stays with it through build and go-live.'],
-  ].map(([icon,t,d])=>`<div class="glass-card reveal"><div style="color:var(--accent2);margin-bottom:14px">${ic(icon,26)}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
-</div></section>
 ${ctaBand('Discuss Your Project','Tell us which systems are involved and what needs to connect.','Book an Intro Call','Read the FAQ','faq')}`);
 
 // ══ ERP ══
 register('erp',()=>`
 <section class="page-hero"><div class="container"><div class="page-hero-content"><p class="eyebrow">ERP Migrations</p><h1>Change Your ERP Without Breaking the Business</h1><p>An ERP is only as useful as what is connected to it. When you move, from Dynamics GP, older MYOB or any legacy system, we re-connect everything around it so finance keeps running.</p></div></div></section>
-<section class="section"><div class="container"><div class="split">
-  <div class="reveal"><p class="eyebrow">Where we fit</p><h2 class="st">The Connections Around Your ERP</h2><p style="color:var(--muted);line-height:1.75;font-size:var(--fs-lg)">Your ERP partner configures the new ERP. We handle everything that connects to it: payroll, banking, CRM, procurement, reporting and the data that has to move across. We work alongside your ERP partner or internal team, not instead of them.</p></div>
-  <div class="reveal reveal-delay-1"><div class="steps">${ERP_PHASES.map(([n,t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div>
-</div></div></section>
-<section class="section section-alt"><div class="container">
+<section class="section"><div class="container">
   <div class="sh c reveal"><p class="eyebrow">Why migrations stall</p><h2 class="st">What Breaks When the ERP Changes</h2><p class="sd">The new ERP is configured on time. The things connected to the old one are what delay go-live.</p></div>
   <div class="grid-3">${[
     ['network','Hidden connections','Payroll files, bank feeds, scheduled exports and scripts nobody documented. We find and list every one before cutover planning starts.'],
@@ -1584,6 +1580,10 @@ register('erp',()=>`
     ['check','A cutover with no way back','Old and new run side by side, results are compared, and a rollback plan is agreed before switch-over day.'],
   ].map(([icon,t,d])=>`<div class="card reveal"><div class="card-icon">${ic(icon,22)}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
 </div></section>
+<section class="section section-alt"><div class="container"><div class="split">
+  <div class="reveal"><p class="eyebrow">Where we fit</p><h2 class="st">The Connections Around Your ERP</h2><p style="color:var(--muted);line-height:1.75;font-size:var(--fs-lg)">Your ERP partner configures the new ERP. We handle everything that connects to it: payroll, banking, CRM, procurement, reporting and the data that has to move across. We work alongside your ERP partner or internal team, not instead of them.</p></div>
+  <div class="reveal reveal-delay-1"><div class="steps">${ERP_PHASES.map(([n,t,d],i)=>`<div class="step"><div class="step-num">${i+1}</div><div class="step-body"><h3>${t}</h3><p>${d}</p></div></div>`).join('')}</div></div>
+</div></div></section>
 ${platformsGrid('section')}
 ${ctaBand('Planning an ERP Change?','A free call to talk through what needs to connect, before you commit to anything.','Book an Intro Call','View Services')}`);
 

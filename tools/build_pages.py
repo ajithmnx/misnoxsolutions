@@ -22,7 +22,7 @@ PAGES = {  # route: (title, description)
     'privacy': ('Privacy Policy | Misnox Solutions',
                 'How Misnox Solutions handles personal information under the Australian Privacy Principles.'),
     'contact': ('Contact | Misnox Solutions',
-                'Book a free intro call with Misnox Solutions, Sydney.'),
+                'Book an intro call with Misnox Solutions, Sydney.'),
 }
 # Retired pages: kept as small redirect files so old links keep working.
 REDIRECTS = {'industries': '/about/#who', 'delivery': '/services/#how'}

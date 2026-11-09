@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-09 | Location changed from Sydney to Canberra everywhere (footer, contact page location and 'Canberra-based' chip, contact page search/share description, business schema now Canberra ACT) to match the registered business for DMP2; About 'Who We Work With' intro now adds 'in the private sector and in federal and state government' | da8940d |
 | 2026-11-09 | Logo wordmark now reads "misnox solutions" — "solutions" drawn in the same stroke style, weight and colour as "misnox" (light + dark lockups); header logo sized 30/26/22/20px by screen width and nav padding tightened at 961–1100px so the menu and button still fit; footer logo scales to its column | 6b011c4 |
 | 2026-11-04 | Removed the Website Terms of Use page (route, /terms/ copy, footer link, sitemap entry, side-backdrop CSS); Privacy kept | 5d2c724 |
 | 2026-11-04 | Hero: removed the decorative X logo mark floating over the background photo (elements + CSS) | 9ebad9c |

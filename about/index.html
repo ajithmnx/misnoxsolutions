@@ -786,7 +786,7 @@ h4,.expect-list h4{font-size:var(--fs-xs)}
 .statbar{background:var(--navy);color:#fff;position:relative;z-index:2;margin-top:-56px}
 .statbar-in{display:grid;grid-template-columns:repeat(4,1fr);padding-top:26px;padding-bottom:26px}
 .stat{display:grid;gap:4px;padding:0 24px;border-left:1px solid #2E345C}.stat:first-child{border-left:0;padding-left:0}
-.stat b{font:700 2rem/1 'Sora',sans-serif;color:#fff}.stat span{font-size:var(--fs-sm);color:#BFC3DA}
+.stat b{font:700 2rem/1 'Sora',sans-serif;color:#fff}@media(max-width:600px){.stat{min-width:0}.stat b{font-size:1.2rem}}.stat span{font-size:var(--fs-sm);color:#BFC3DA}
 .hero.hero-photo{clip-path:none}
 .wwd{position:relative;color:#fff;background:linear-gradient(90deg,rgba(14,17,38,.94) 0%,rgba(14,17,38,.85) 45%,rgba(14,17,38,.55) 100%),url("https://images.unsplash.com/photo-1686100511314-7d4a52987f2f?w=1800&q=65&auto=format&fit=crop") center/cover no-repeat}
 .wwd-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:start;padding-top:96px;padding-bottom:96px}
@@ -1313,7 +1313,7 @@ register('home',()=>`
   </div>
   
 </section>
-<div class="statbar"><div class="container statbar-in">${[['15+','platforms we connect'],['6','major ERP families covered'],['5+','years of hands-on ERP &amp; API integration'],['100%','Australian-based, working your business hours']].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('')}</div></div>
+<div class="statbar"><div class="container statbar-in">${[['15+','platforms we connect'],['6','major ERP families covered'],['Vendor-neutral','We work alongside your ERP partner. We don&#39;t resell software.'],['Signed off first','Every field is mapped and approved by you before anything is built.']].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join('')}</div></div>
 <div class="logo-strip" aria-label="Systems we connect"><span class="mono ls-label">SYSTEMS WE CONNECT</span><div class="ls-viewport"><ul class="ls-track">${LOGOS}${LOGOS.replaceAll('<li ','<li aria-hidden="true" ')}</ul></div></div>
 <section class="section hc-section">
   <div class="container hc-split">

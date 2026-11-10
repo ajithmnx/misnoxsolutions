@@ -8,6 +8,7 @@ Every change to the live site is committed straight to `main` and logged here (n
 
 | Date | Change | Commit |
 |---|---|---|
+| 2026-11-11 | Stat bar: '5+ years of hands-on ERP & API integration' → 'Vendor-neutral — We work alongside your ERP partner. We don't resell software.'; '100% Australian-based' → 'Signed off first — Every field is mapped and approved by you before anything is built.'; stat headings 1.2rem on phones (≤600px) so word stats fit | 026ce17 |
 | 2026-11-09 | Location changed from Sydney to Canberra everywhere (footer, contact page location and 'Canberra-based' chip, contact page search/share description, business schema now Canberra ACT) to match the registered business for DMP2; About 'Who We Work With' intro now adds 'in the private sector and in federal and state government' | da8940d |
 | 2026-11-09 | Logo wordmark now reads "misnox solutions" — "solutions" drawn in the same stroke style, weight and colour as "misnox" (light + dark lockups); header logo sized 30/26/22/20px by screen width and nav padding tightened at 961–1100px so the menu and button still fit; footer logo scales to its column | 6b011c4 |
 | 2026-11-04 | Removed the Website Terms of Use page (route, /terms/ copy, footer link, sitemap entry, side-backdrop CSS); Privacy kept | 5d2c724 |
